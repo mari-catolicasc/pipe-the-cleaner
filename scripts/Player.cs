@@ -25,26 +25,25 @@ public partial class Player : CharacterBody2D
     {
         if (direction == Vector2.Zero)
         {
-			// _animatedSprite.Play("idle");
+			_animatedSprite.Play("idle");
             return;
         }
 
-        if (direction.X < 0)
+        if (direction.X < 0) // esquerda
         {
             if (direction.Y < 0) _animatedSprite.Play("left-up");
-            // else if (direction.Y > 0) _animatedSprite.Play("left-down");
+            else if (direction.Y > 0) _animatedSprite.Play("left-down");
             else _animatedSprite.Play("left");
         }
-        else if (direction.X > 0)
+        else if (direction.X > 0) // direita
         {
             if (direction.Y < 0) _animatedSprite.Play("right-up");
-            // else if (direction.Y > 0) _animatedSprite.Play("right-down");
+            else if (direction.Y > 0) _animatedSprite.Play("right-down");
             else _animatedSprite.Play("right");
         }
-        else // Only Y movement
+        else // Cima e baixo - mesma animação
         {
-            if (direction.Y < 0) _animatedSprite.Play("up");
-            // else if (direction.Y > 0) _animatedSprite.Play("down");
+            _animatedSprite.Play("up");
         }
     }
 }

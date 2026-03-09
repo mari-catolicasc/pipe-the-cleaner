@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://cy5ela7qvlwf6"]
 
 [ext_resource type="Script" uid="uid://dclg7rr7ppox5" path="res://scripts/Player.cs" id="1_fjrip"]
+[ext_resource type="Texture2D" uid="uid://bvdrskxywet81" path="res://assets/images/creatures/pipe/pipe-idle.png" id="2_i4ail"]
 [ext_resource type="Texture2D" uid="uid://bjvyg5j0wn14t" path="res://assets/images/creatures/pipe/pipe-left.PNG" id="2_jej6c"]
+[ext_resource type="Texture2D" uid="uid://c8jpukvlm3kdi" path="res://assets/images/creatures/pipe/pipe-idle-2.png" id="3_a38lo"]
 [ext_resource type="Texture2D" uid="uid://f2soikfucd1s" path="res://assets/images/creatures/pipe/pipe-left-2.PNG" id="3_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://b328g7betyr5l" path="res://assets/images/creatures/pipe/pipe-idle-3.png" id="4_4ni07"]
 [ext_resource type="Texture2D" uid="uid://by2xqfxv4c0i6" path="res://assets/images/creatures/pipe/pipe-left-3.PNG" id="4_oprun"]
 [ext_resource type="Texture2D" uid="uid://cuhl55yl78qef" path="res://assets/images/creatures/pipe/pipe-left-up.PNG" id="5_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://ddjojavp7jrei" path="res://assets/images/creatures/pipe/pipe-left-down.png" id="5_qfm1y"]
+[ext_resource type="Texture2D" uid="uid://bti1tqfxota2u" path="res://assets/images/creatures/pipe/pipe-left-down-2.png" id="6_fulsm"]
 [ext_resource type="Texture2D" uid="uid://b348qxoxenrky" path="res://assets/images/creatures/pipe/pipe-left-up-2.PNG" id="6_qfm1y"]
 [ext_resource type="Texture2D" uid="uid://cw1nhsnj5inww" path="res://assets/images/creatures/pipe/pipe-right.PNG" id="7_fulsm"]
 [ext_resource type="Texture2D" uid="uid://p8birp5un4xh" path="res://assets/images/creatures/pipe/pipe-right-2.PNG" id="8_4r5pv"]
@@ -12,11 +17,34 @@
 [ext_resource type="Texture2D" uid="uid://c64uld5bvhqqv" path="res://assets/images/creatures/pipe/pipe-right-up.PNG" id="10_i4ail"]
 [ext_resource type="Texture2D" uid="uid://diw0whu8mvmy1" path="res://assets/images/creatures/pipe/pipe-right-up-2.PNG" id="11_a38lo"]
 [ext_resource type="Texture2D" uid="uid://cb2qo07awby3k" path="res://assets/images/creatures/pipe/pipe-up.PNG" id="12_4ni07"]
+[ext_resource type="Texture2D" uid="uid://ck8u44cah2vqm" path="res://assets/images/creatures/pipe/pipe-right-down.png" id="12_4r5pv"]
+[ext_resource type="Texture2D" uid="uid://cmrycgho43p04" path="res://assets/images/creatures/pipe/pipe-right-down-2.png" id="13_60mlk"]
 [ext_resource type="Texture2D" uid="uid://cseujyyko0don" path="res://assets/images/creatures/pipe/pipe-up-2.PNG" id="13_l71n6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3v2ag"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_a38lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a38lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4ni07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4ni07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4ni07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_i4ail")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_i4ail")
+}],
 "loop": true,
 "name": &"idle",
 "speed": 10.0
@@ -36,6 +64,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_qfm1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fulsm")
+}],
+"loop": true,
+"name": &"left-down",
 "speed": 5.0
 }, {
 "frames": [{
@@ -68,6 +107,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("12_4r5pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_60mlk")
+}],
+"loop": true,
+"name": &"right-down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("10_i4ail")
 }, {
 "duration": 1.0,
@@ -97,11 +147,12 @@ script = ExtResource("1_fjrip")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=882491579]
 texture_filter = 1
-position = Vector2(-2, 0)
+position = Vector2(-1, 0)
 scale = Vector2(1.1531248, 1.1531248)
 sprite_frames = SubResource("SpriteFrames_3v2ag")
-animation = &"right"
+animation = &"idle"
 autoplay = "right"
+frame_progress = 0.7760821
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438099145]
 position = Vector2(-2, -1)
