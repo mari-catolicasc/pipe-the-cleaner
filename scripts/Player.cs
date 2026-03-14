@@ -4,6 +4,7 @@ using System;
 public partial class Player : CharacterBody2D
 {
     public const float Speed = 300.0f;
+    public const float SwimGravity = 80.0f;
     private AnimatedSprite2D _animatedSprite;
 
     public override void _Ready()
@@ -14,8 +15,25 @@ public partial class Player : CharacterBody2D
     public override void _PhysicsProcess(double delta)
     {
         Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
-        
-        Velocity = direction * Speed;
+        Vector2 velocity = Velocity;
+
+        // Movimentação horizontal
+        velocity.X = direction.X * Speed;
+
+        // Movimentação vertical
+        if (direction.Y != 0)
+        {
+            velocity.Y = direction.Y * Speed;
+        }
+        else
+        {
+            // Apply slow downward drift when not pressing up/down
+            velocity.Y += SwimGravity * (float)delta;
+        }
+
+        velocity *= 0.98f;
+
+        Velocity = velocity;
 
         DefineAnimation(direction);
         MoveAndSlide();
