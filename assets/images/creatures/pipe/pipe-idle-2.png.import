@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ycm06o1w8dcn"
-path="res://.godot/imported/right-up.png-e96543580119e9b08ae6eda57e5ae603.ctex"
+uid="uid://c8jpukvlm3kdi"
+path="res://.godot/imported/pipe-idle-2.png-96660a6ca48b366275a21c09e1c54e90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/creatures/pipe/right-up.png"
-dest_files=["res://.godot/imported/right-up.png-e96543580119e9b08ae6eda57e5ae603.ctex"]
+source_file="res://assets/images/creatures/pipe/pipe-idle-2.png"
+dest_files=["res://.godot/imported/pipe-idle-2.png-96660a6ca48b366275a21c09e1c54e90.ctex"]
 
 [params]
 

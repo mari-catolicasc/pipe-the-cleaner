@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuwwsxw8i2guw"
-path="res://.godot/imported/left-down.png-40a0ebb7413f803e0d0fc9581d262828.ctex"
+uid="uid://dgb58tanbyxx5"
+path="res://.godot/imported/4.png-891bd7ad4cdfaccaa0ffaa387d2c6fb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/creatures/pipe/left-down.png"
-dest_files=["res://.godot/imported/left-down.png-40a0ebb7413f803e0d0fc9581d262828.ctex"]
+source_file="res://assets/images/backgrounds/4.png"
+dest_files=["res://.godot/imported/4.png-891bd7ad4cdfaccaa0ffaa387d2c6fb9.ctex"]
 
 [params]
 
