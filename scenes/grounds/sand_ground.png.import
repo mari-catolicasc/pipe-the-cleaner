@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bficu3evh0ckp"
-path="res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"
+uid="uid://c4l0bd6vkno6j"
+path="res://.godot/imported/sand_ground.png-0e73ed0f793e97979ba93b074e3eb4b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/main_menu_background.jpg"
-dest_files=["res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"]
+source_file="res://scenes/grounds/sand_ground.png"
+dest_files=["res://.godot/imported/sand_ground.png-0e73ed0f793e97979ba93b074e3eb4b8.ctex"]
 
 [params]
 

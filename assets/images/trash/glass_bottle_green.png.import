@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bficu3evh0ckp"
-path="res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"
+uid="uid://dm70h37p07vdr"
+path="res://.godot/imported/glass_bottle_green.png-29716cf96dace567ce60914f0f1124c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/main_menu_background.jpg"
-dest_files=["res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"]
+source_file="res://assets/images/trash/glass_bottle_green.png"
+dest_files=["res://.godot/imported/glass_bottle_green.png-29716cf96dace567ce60914f0f1124c4.ctex"]
 
 [params]
 

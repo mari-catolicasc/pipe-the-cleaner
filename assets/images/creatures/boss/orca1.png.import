@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bficu3evh0ckp"
-path="res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"
+uid="uid://c2ao47l5q1ewy"
+path="res://.godot/imported/orca1.png-d391306695779233f449df00e5e15103.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/main_menu_background.jpg"
-dest_files=["res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"]
+source_file="res://assets/images/creatures/boss/orca1.png"
+dest_files=["res://.godot/imported/orca1.png-d391306695779233f449df00e5e15103.ctex"]
 
 [params]
 

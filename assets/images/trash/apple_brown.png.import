@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bficu3evh0ckp"
-path="res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"
+uid="uid://dtg2o3pno3iq4"
+path="res://.godot/imported/apple_brown.png-05e6e486375123aae0914cc40a8344be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/main_menu_background.jpg"
-dest_files=["res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"]
+source_file="res://assets/images/trash/apple_brown.png"
+dest_files=["res://.godot/imported/apple_brown.png-05e6e486375123aae0914cc40a8344be.ctex"]
 
 [params]
 

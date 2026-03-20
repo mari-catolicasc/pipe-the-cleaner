@@ -142,7 +142,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyoq"]
 size = Vector2(70, 70)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hurtbox"]
+size = Vector2(60, 60)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1622332219]
+collision_layer = 1
+collision_mask = 4
 script = ExtResource("1_fjrip")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=882491579]
@@ -157,3 +162,11 @@ frame_progress = 0.7760821
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438099145]
 position = Vector2(-2, -1)
 shape = SubResource("RectangleShape2D_tuyoq")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 1
+collision_mask = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(-2, -1)
+shape = SubResource("RectangleShape2D_hurtbox")

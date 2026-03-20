@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bficu3evh0ckp"
-path="res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"
+uid="uid://bm5bw88l75dmv"
+path="res://.godot/imported/sand_grass_ground.png-604f6930dda7696eea26863728ab8271.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/main_menu_background.jpg"
-dest_files=["res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"]
+source_file="res://scenes/grounds/sand_grass_ground.png"
+dest_files=["res://.godot/imported/sand_grass_ground.png-604f6930dda7696eea26863728ab8271.ctex"]
 
 [params]
 

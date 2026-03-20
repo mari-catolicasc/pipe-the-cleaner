@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bficu3evh0ckp"
-path="res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"
+uid="uid://baxvurt0wl7n1"
+path="res://.godot/imported/rock_less_grass_ground.png-3d4adb8a76408ac46a5ff6cb75a93e1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/main_menu_background.jpg"
-dest_files=["res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"]
+source_file="res://scenes/grounds/rock_less_grass_ground.png"
+dest_files=["res://.godot/imported/rock_less_grass_ground.png-3d4adb8a76408ac46a5ff6cb75a93e1d.ctex"]
 
 [params]
 

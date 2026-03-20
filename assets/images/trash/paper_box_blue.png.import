@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bficu3evh0ckp"
-path="res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"
+uid="uid://cv7tf08jjeelk"
+path="res://.godot/imported/paper_box_blue.png-444154231e40fde23ef5f01ea810425d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/main_menu_background.jpg"
-dest_files=["res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"]
+source_file="res://assets/images/trash/paper_box_blue.png"
+dest_files=["res://.godot/imported/paper_box_blue.png-444154231e40fde23ef5f01ea810425d.ctex"]
 
 [params]
 

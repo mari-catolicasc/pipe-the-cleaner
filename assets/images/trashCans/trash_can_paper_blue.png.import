@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bficu3evh0ckp"
-path="res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"
+uid="uid://cynbosxxtll07"
+path="res://.godot/imported/trash_can_paper_blue.png-aed06ab915de9d93b97fed5ff6e4e330.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/main_menu_background.jpg"
-dest_files=["res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"]
+source_file="res://assets/images/trashCans/trash_can_paper_blue.png"
+dest_files=["res://.godot/imported/trash_can_paper_blue.png-aed06ab915de9d93b97fed5ff6e4e330.ctex"]
 
 [params]
 

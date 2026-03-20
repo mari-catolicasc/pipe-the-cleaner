@@ -3,6 +3,45 @@
 [ext_resource type="PackedScene" uid="uid://cy5ela7qvlwf6" path="res://scenes/player.tscn" id="1_g2h75"]
 [ext_resource type="Texture2D" uid="uid://kf1uhfeantxq" path="res://assets/images/backgrounds/1.png" id="2_m7ahb"]
 [ext_resource type="Texture2D" uid="uid://dgb58tanbyxx5" path="res://assets/images/backgrounds/4.png" id="3_dwgg1"]
+[ext_resource type="PackedScene" path="res://scenes/fish.tscn" id="4_fish"]
+[ext_resource type="PackedScene" path="res://scenes/crab.tscn" id="5_crab"]
+[ext_resource type="PackedScene" path="res://scenes/jellyfish.tscn" id="6_jelly"]
+[ext_resource type="PackedScene" path="res://scenes/hud.tscn" id="12_hud"]
+[ext_resource type="PackedScene" path="res://scenes/trash.tscn" id="13_trash"]
+[ext_resource type="Texture2D" path="res://assets/images/trash/plastc_bag_red.png" id="14_plastic_bag"]
+[ext_resource type="Texture2D" path="res://assets/images/trash/soda_can_yellow.png" id="15_soda_can"]
+[ext_resource type="Texture2D" path="res://assets/images/trash/glass_bottle_green.png" id="16_glass_bottle"]
+[ext_resource type="Texture2D" path="res://assets/images/trash/newspaper_blue.png" id="17_newspaper"]
+[ext_resource type="Texture2D" path="res://assets/images/trash/banana_brown.png" id="18_banana"]
+[ext_resource type="Texture2D" path="res://assets/images/trash/straw_red.png" id="19_straw"]
+[ext_resource type="Texture2D" path="res://assets/images/trash/paper_box_blue.png" id="20_paper_box"]
+[ext_resource type="Texture2D" path="res://assets/images/trash/canned_yellow.png" id="21_canned"]
+[ext_resource type="Texture2D" uid="uid://b44pb1e8xvlny" path="res://scenes/grounds/rock_grass_ground.png" id="7_rock_grass"]
+[ext_resource type="Texture2D" uid="uid://c4l0bd6vkno6j" path="res://scenes/grounds/sand_ground.png" id="8_sand"]
+[ext_resource type="Texture2D" uid="uid://ufskbsqqu5y3" path="res://scenes/grounds/grass_top_rock_ground.png" id="9_grass_rock"]
+[ext_resource type="Texture2D" uid="uid://baxvurt0wl7n1" path="res://scenes/grounds/rock_less_grass_ground.png" id="10_rock"]
+[ext_resource type="Texture2D" uid="uid://bm5bw88l75dmv" path="res://scenes/grounds/sand_grass_ground.png" id="11_sand_grass"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
+size = Vector2(3200, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ceiling"]
+size = Vector2(3200, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_left"]
+size = Vector2(40, 600)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_right"]
+size = Vector2(40, 600)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plat_medium"]
+size = Vector2(205, 164.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plat_small"]
+size = Vector2(120, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plat_large"]
+size = Vector2(250, 25)
 
 [node name="Main" type="Node2D" unique_id=1680725934]
 
@@ -18,3 +57,243 @@ texture = ExtResource("3_dwgg1")
 
 [node name="CharacterBody2D" parent="." unique_id=1622332219 instance=ExtResource("1_g2h75")]
 position = Vector2(113, 258)
+
+[node name="HUD" parent="." instance=ExtResource("12_hud")]
+
+[node name="ScenarioCollision" type="StaticBody2D" parent="." unique_id=487419694]
+collision_layer = 4
+collision_mask = 0
+
+[node name="GroundCollision" type="CollisionShape2D" parent="ScenarioCollision" unique_id=381476166]
+position = Vector2(1600, 500)
+shape = SubResource("RectangleShape2D_ground")
+
+[node name="CeilingCollision" type="CollisionShape2D" parent="ScenarioCollision" unique_id=2009864262]
+position = Vector2(1600, -20)
+shape = SubResource("RectangleShape2D_ceiling")
+
+[node name="WallLeftCollision" type="CollisionShape2D" parent="ScenarioCollision" unique_id=456428845]
+position = Vector2(-20, 250)
+shape = SubResource("RectangleShape2D_wall_left")
+
+[node name="WallRightCollision" type="CollisionShape2D" parent="ScenarioCollision" unique_id=1478190564]
+position = Vector2(3220, 250)
+shape = SubResource("RectangleShape2D_wall_right")
+
+[node name="Platforms" type="Node2D" parent="." unique_id=747461745]
+
+[node name="Platform1" type="StaticBody2D" parent="Platforms" unique_id=1904840411]
+position = Vector2(300, 420)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform1" unique_id=590161348]
+texture_filter = 1
+scale = Vector2(1.2, 0.8)
+texture = ExtResource("7_rock_grass")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform1" unique_id=246525180]
+shape = SubResource("RectangleShape2D_plat_medium")
+
+[node name="Platform2" type="StaticBody2D" parent="Platforms" unique_id=1185228189]
+position = Vector2(550, 340)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform2" unique_id=2052688051]
+texture_filter = 1
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_sand")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform2" unique_id=500188120]
+shape = SubResource("RectangleShape2D_plat_small")
+
+[node name="Platform3" type="StaticBody2D" parent="Platforms" unique_id=385492658]
+position = Vector2(800, 400)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform3" unique_id=14391809]
+texture_filter = 1
+scale = Vector2(1.5, 0.8)
+texture = ExtResource("9_grass_rock")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform3" unique_id=1981130592]
+shape = SubResource("RectangleShape2D_plat_large")
+
+[node name="Platform4" type="StaticBody2D" parent="Platforms" unique_id=1777394402]
+position = Vector2(1050, 300)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform4" unique_id=1288717193]
+texture_filter = 1
+scale = Vector2(1, 0.8)
+texture = ExtResource("10_rock")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform4" unique_id=197892867]
+position = Vector2(-0.5, -0.125)
+shape = SubResource("RectangleShape2D_plat_medium")
+
+[node name="Platform5" type="StaticBody2D" parent="Platforms" unique_id=1491441159]
+position = Vector2(1350, 380)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform5" unique_id=1387845258]
+texture_filter = 1
+scale = Vector2(1.3, 0.8)
+texture = ExtResource("11_sand_grass")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform5" unique_id=1921410864]
+shape = SubResource("RectangleShape2D_plat_large")
+
+[node name="Platform6" type="StaticBody2D" parent="Platforms" unique_id=1447460842]
+position = Vector2(1650, 440)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform6" unique_id=1769522052]
+texture_filter = 1
+scale = Vector2(1, 0.8)
+texture = ExtResource("7_rock_grass")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform6" unique_id=1459282358]
+shape = SubResource("RectangleShape2D_plat_small")
+
+[node name="Platform7" type="StaticBody2D" parent="Platforms" unique_id=784238989]
+position = Vector2(1900, 350)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform7" unique_id=993181734]
+texture_filter = 1
+scale = Vector2(1.2, 0.8)
+texture = ExtResource("9_grass_rock")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform7" unique_id=1527807877]
+shape = SubResource("RectangleShape2D_plat_medium")
+
+[node name="Platform8" type="StaticBody2D" parent="Platforms" unique_id=1587558395]
+position = Vector2(2200, 420)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform8" unique_id=1364460031]
+texture_filter = 1
+scale = Vector2(1.4, 0.8)
+texture = ExtResource("8_sand")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform8" unique_id=1281421734]
+shape = SubResource("RectangleShape2D_plat_large")
+
+[node name="Platform9" type="StaticBody2D" parent="Platforms" unique_id=169011798]
+position = Vector2(2500, 280)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform9" unique_id=349621662]
+texture_filter = 1
+scale = Vector2(0.9, 0.8)
+texture = ExtResource("10_rock")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform9" unique_id=470048266]
+shape = SubResource("RectangleShape2D_plat_small")
+
+[node name="Platform10" type="StaticBody2D" parent="Platforms" unique_id=826447376]
+position = Vector2(2800, 400)
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform10" unique_id=478020345]
+texture_filter = 1
+scale = Vector2(1.5, 0.8)
+texture = ExtResource("11_sand_grass")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform10" unique_id=778962412]
+shape = SubResource("RectangleShape2D_plat_large")
+
+[node name="Creatures" type="Node2D" parent="." unique_id=675734078]
+
+[node name="Fish1" parent="Creatures" unique_id=374204105 instance=ExtResource("4_fish")]
+position = Vector2(500, 200)
+
+[node name="Fish2" parent="Creatures" unique_id=979807152 instance=ExtResource("4_fish")]
+position = Vector2(900, 350)
+
+[node name="Fish3" parent="Creatures" unique_id=1864094248 instance=ExtResource("4_fish")]
+position = Vector2(1400, 150)
+
+[node name="Crab1" parent="Creatures" unique_id=1585664382 instance=ExtResource("5_crab")]
+position = Vector2(600, 470)
+
+[node name="Crab2" parent="Creatures" unique_id=54446269 instance=ExtResource("5_crab")]
+position = Vector2(1200, 470)
+
+[node name="Jellyfish1" parent="Creatures" unique_id=958182459 instance=ExtResource("6_jelly")]
+position = Vector2(350, 250)
+
+[node name="Jellyfish2" parent="Creatures" unique_id=907767192 instance=ExtResource("6_jelly")]
+position = Vector2(800, 180)
+
+[node name="Jellyfish3" parent="Creatures" unique_id=1862438479 instance=ExtResource("6_jelly")]
+position = Vector2(1600, 300)
+
+[node name="TrashItems" type="Node2D" parent="."]
+
+[node name="Trash1" parent="TrashItems" instance=ExtResource("13_trash")]
+position = Vector2(250, 350)
+
+[node name="Trash2" parent="TrashItems" instance=ExtResource("13_trash")]
+position = Vector2(450, 150)
+
+[node name="Sprite2D" parent="TrashItems/Trash2" index="0"]
+texture = ExtResource("14_plastic_bag")
+
+[node name="Trash3" parent="TrashItems" instance=ExtResource("13_trash")]
+position = Vector2(700, 300)
+
+[node name="Sprite2D" parent="TrashItems/Trash3" index="0"]
+texture = ExtResource("15_soda_can")
+
+[node name="Trash4" parent="TrashItems" instance=ExtResource("13_trash")]
+position = Vector2(950, 200)
+
+[node name="Sprite2D" parent="TrashItems/Trash4" index="0"]
+texture = ExtResource("16_glass_bottle")
+
+[node name="Trash5" parent="TrashItems" instance=ExtResource("13_trash")]
+position = Vector2(1150, 400)
+
+[node name="Sprite2D" parent="TrashItems/Trash5" index="0"]
+texture = ExtResource("17_newspaper")
+
+[node name="Trash6" parent="TrashItems" instance=ExtResource("13_trash")]
+position = Vector2(1400, 280)
+
+[node name="Sprite2D" parent="TrashItems/Trash6" index="0"]
+texture = ExtResource("18_banana")
+
+[node name="Trash7" parent="TrashItems" instance=ExtResource("13_trash")]
+position = Vector2(1700, 180)
+
+[node name="Sprite2D" parent="TrashItems/Trash7" index="0"]
+texture = ExtResource("19_straw")
+
+[node name="Trash8" parent="TrashItems" instance=ExtResource("13_trash")]
+position = Vector2(2000, 350)
+
+[node name="Sprite2D" parent="TrashItems/Trash8" index="0"]
+texture = ExtResource("20_paper_box")
+
+[node name="Trash9" parent="TrashItems" instance=ExtResource("13_trash")]
+position = Vector2(2300, 250)
+
+[node name="Sprite2D" parent="TrashItems/Trash9" index="0"]
+texture = ExtResource("21_canned")
+
+[node name="Trash10" parent="TrashItems" instance=ExtResource("13_trash")]
+position = Vector2(2600, 380)
+
+[node name="Sprite2D" parent="TrashItems/Trash10" index="0"]
+texture = ExtResource("14_plastic_bag")

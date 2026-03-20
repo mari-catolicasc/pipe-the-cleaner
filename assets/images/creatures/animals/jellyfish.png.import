@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bficu3evh0ckp"
-path="res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"
+uid="uid://b65o4i1cideyg"
+path="res://.godot/imported/jellyfish.png-945763541b0b0bf3e71cf479030b674c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/main_menu_background.jpg"
-dest_files=["res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"]
+source_file="res://assets/images/creatures/animals/jellyfish.png"
+dest_files=["res://.godot/imported/jellyfish.png-945763541b0b0bf3e71cf479030b674c.ctex"]
 
 [params]
 

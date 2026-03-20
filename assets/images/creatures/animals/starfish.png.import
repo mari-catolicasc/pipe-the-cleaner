@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bficu3evh0ckp"
-path="res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"
+uid="uid://ct7xabidmdpin"
+path="res://.godot/imported/starfish.png-a59143ef00c1bbf3ad055b94a9182093.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/main_menu_background.jpg"
-dest_files=["res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"]
+source_file="res://assets/images/creatures/animals/starfish.png"
+dest_files=["res://.godot/imported/starfish.png-a59143ef00c1bbf3ad055b94a9182093.ctex"]
 
 [params]
 

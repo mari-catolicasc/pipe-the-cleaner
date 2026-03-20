@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bficu3evh0ckp"
-path="res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"
+uid="uid://dwu1jf476fm13"
+path="res://.godot/imported/straw_red.png-174c29762f25a9c832ff7b364e360ba2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/main_menu_background.jpg"
-dest_files=["res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"]
+source_file="res://assets/images/trash/straw_red.png"
+dest_files=["res://.godot/imported/straw_red.png-174c29762f25a9c832ff7b364e360ba2.ctex"]
 
 [params]
 

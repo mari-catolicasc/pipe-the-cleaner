@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bficu3evh0ckp"
-path="res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"
+uid="uid://ddbxpo6ysw2ep"
+path="res://.godot/imported/antartico.png-cfa10fa336c799952549d5468d41bc08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/main_menu_background.jpg"
-dest_files=["res://.godot/imported/main_menu_background.jpg-7a43075dc44522cdde15cf5207104739.ctex"]
+source_file="res://scenes/backgrounds/antartico.png"
+dest_files=["res://.godot/imported/antartico.png-cfa10fa336c799952549d5468d41bc08.ctex"]
 
 [params]
 
