@@ -29,9 +29,8 @@ public partial class Player : CharacterBody2D
         {
             // Apply slow downward drift when not pressing up/down
             velocity.Y += SwimGravity * (float)delta;
+            velocity.Y *= 0.98f;
         }
-
-        velocity *= 0.98f;
 
         Velocity = velocity;
 
