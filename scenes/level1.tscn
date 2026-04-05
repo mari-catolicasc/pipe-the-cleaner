@@ -6,21 +6,13 @@
 [ext_resource type="PackedScene" path="res://scenes/fish.tscn" id="4_fish"]
 [ext_resource type="PackedScene" path="res://scenes/crab.tscn" id="5_crab"]
 [ext_resource type="PackedScene" path="res://scenes/jellyfish.tscn" id="6_jelly"]
-[ext_resource type="PackedScene" path="res://scenes/hud.tscn" id="12_hud"]
-[ext_resource type="PackedScene" path="res://scenes/trash.tscn" id="13_trash"]
-[ext_resource type="Texture2D" path="res://assets/images/trash/plastc_bag_red.png" id="14_plastic_bag"]
-[ext_resource type="Texture2D" path="res://assets/images/trash/soda_can_yellow.png" id="15_soda_can"]
-[ext_resource type="Texture2D" path="res://assets/images/trash/glass_bottle_green.png" id="16_glass_bottle"]
-[ext_resource type="Texture2D" path="res://assets/images/trash/newspaper_blue.png" id="17_newspaper"]
-[ext_resource type="Texture2D" path="res://assets/images/trash/banana_brown.png" id="18_banana"]
-[ext_resource type="Texture2D" path="res://assets/images/trash/straw_red.png" id="19_straw"]
-[ext_resource type="Texture2D" path="res://assets/images/trash/paper_box_blue.png" id="20_paper_box"]
-[ext_resource type="Texture2D" path="res://assets/images/trash/canned_yellow.png" id="21_canned"]
 [ext_resource type="Texture2D" uid="uid://b44pb1e8xvlny" path="res://scenes/grounds/rock_grass_ground.png" id="7_rock_grass"]
 [ext_resource type="Texture2D" uid="uid://c4l0bd6vkno6j" path="res://scenes/grounds/sand_ground.png" id="8_sand"]
 [ext_resource type="Texture2D" uid="uid://ufskbsqqu5y3" path="res://scenes/grounds/grass_top_rock_ground.png" id="9_grass_rock"]
 [ext_resource type="Texture2D" uid="uid://baxvurt0wl7n1" path="res://scenes/grounds/rock_less_grass_ground.png" id="10_rock"]
 [ext_resource type="Texture2D" uid="uid://bm5bw88l75dmv" path="res://scenes/grounds/sand_grass_ground.png" id="11_sand_grass"]
+[ext_resource type="PackedScene" path="res://scenes/hud.tscn" id="12_hud"]
+[ext_resource type="PackedScene" path="res://scenes/trash.tscn" id="13_trash"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
 size = Vector2(3200, 40)
@@ -46,7 +38,7 @@ size = Vector2(250, 25)
 [node name="Main" type="Node2D" unique_id=1680725934]
 
 [node name="1" type="Sprite2D" parent="." unique_id=1941059699]
-position = Vector2(1596.9999, 326.00003)
+position = Vector2(1600, 325)
 scale = Vector2(5.5486107, 2.0123458)
 texture = ExtResource("2_m7ahb")
 
@@ -58,7 +50,7 @@ texture = ExtResource("3_dwgg1")
 [node name="CharacterBody2D" parent="." unique_id=1622332219 instance=ExtResource("1_g2h75")]
 position = Vector2(113, 258)
 
-[node name="HUD" parent="." instance=ExtResource("12_hud")]
+[node name="HUD" parent="." unique_id=1014100817 instance=ExtResource("12_hud")]
 
 [node name="ScenarioCollision" type="StaticBody2D" parent="." unique_id=487419694]
 collision_layer = 4
@@ -239,61 +231,34 @@ position = Vector2(800, 180)
 [node name="Jellyfish3" parent="Creatures" unique_id=1862438479 instance=ExtResource("6_jelly")]
 position = Vector2(1600, 300)
 
-[node name="TrashItems" type="Node2D" parent="."]
+[node name="TrashItems" type="Node2D" parent="." unique_id=1278735944]
 
-[node name="Trash1" parent="TrashItems" instance=ExtResource("13_trash")]
+[node name="Trash1" parent="TrashItems" unique_id=1922195260 instance=ExtResource("13_trash")]
 position = Vector2(250, 350)
 
-[node name="Trash2" parent="TrashItems" instance=ExtResource("13_trash")]
-position = Vector2(450, 150)
+[node name="Trash2" parent="TrashItems" unique_id=84341463 instance=ExtResource("13_trash")]
+position = Vector2(449, 157)
 
-[node name="Sprite2D" parent="TrashItems/Trash2" index="0"]
-texture = ExtResource("14_plastic_bag")
-
-[node name="Trash3" parent="TrashItems" instance=ExtResource("13_trash")]
+[node name="Trash3" parent="TrashItems" unique_id=1136070673 instance=ExtResource("13_trash")]
 position = Vector2(700, 300)
 
-[node name="Sprite2D" parent="TrashItems/Trash3" index="0"]
-texture = ExtResource("15_soda_can")
-
-[node name="Trash4" parent="TrashItems" instance=ExtResource("13_trash")]
+[node name="Trash4" parent="TrashItems" unique_id=1659571948 instance=ExtResource("13_trash")]
 position = Vector2(950, 200)
 
-[node name="Sprite2D" parent="TrashItems/Trash4" index="0"]
-texture = ExtResource("16_glass_bottle")
-
-[node name="Trash5" parent="TrashItems" instance=ExtResource("13_trash")]
+[node name="Trash5" parent="TrashItems" unique_id=1770967879 instance=ExtResource("13_trash")]
 position = Vector2(1150, 400)
 
-[node name="Sprite2D" parent="TrashItems/Trash5" index="0"]
-texture = ExtResource("17_newspaper")
-
-[node name="Trash6" parent="TrashItems" instance=ExtResource("13_trash")]
+[node name="Trash6" parent="TrashItems" unique_id=1332585303 instance=ExtResource("13_trash")]
 position = Vector2(1400, 280)
 
-[node name="Sprite2D" parent="TrashItems/Trash6" index="0"]
-texture = ExtResource("18_banana")
-
-[node name="Trash7" parent="TrashItems" instance=ExtResource("13_trash")]
+[node name="Trash7" parent="TrashItems" unique_id=1386539540 instance=ExtResource("13_trash")]
 position = Vector2(1700, 180)
 
-[node name="Sprite2D" parent="TrashItems/Trash7" index="0"]
-texture = ExtResource("19_straw")
-
-[node name="Trash8" parent="TrashItems" instance=ExtResource("13_trash")]
+[node name="Trash8" parent="TrashItems" unique_id=1768203568 instance=ExtResource("13_trash")]
 position = Vector2(2000, 350)
 
-[node name="Sprite2D" parent="TrashItems/Trash8" index="0"]
-texture = ExtResource("20_paper_box")
-
-[node name="Trash9" parent="TrashItems" instance=ExtResource("13_trash")]
+[node name="Trash9" parent="TrashItems" unique_id=1381147071 instance=ExtResource("13_trash")]
 position = Vector2(2300, 250)
 
-[node name="Sprite2D" parent="TrashItems/Trash9" index="0"]
-texture = ExtResource("21_canned")
-
-[node name="Trash10" parent="TrashItems" instance=ExtResource("13_trash")]
+[node name="Trash10" parent="TrashItems" unique_id=773387697 instance=ExtResource("13_trash")]
 position = Vector2(2600, 380)
-
-[node name="Sprite2D" parent="TrashItems/Trash10" index="0"]
-texture = ExtResource("14_plastic_bag")
