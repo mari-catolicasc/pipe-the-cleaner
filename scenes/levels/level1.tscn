@@ -57,7 +57,6 @@ point_count = 2
 [node name="Main" type="Node2D" unique_id=1680725934]
 
 [node name="background_1" type="Sprite2D" parent="." unique_id=1941059699]
-visible = false
 position = Vector2(1600, 325)
 scale = Vector2(5.5486107, 2.0123458)
 texture = ExtResource("1_nfihu")

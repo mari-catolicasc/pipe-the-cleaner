@@ -10,7 +10,7 @@ size = Vector2(25.75, 46)
 scale = Vector2(0.8, 0.8)
 collision_layer = 8
 script = ExtResource("1_148cs")
-Type = 3
+Type = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=502896695]
 position = Vector2(4.125, -1.9999996)
