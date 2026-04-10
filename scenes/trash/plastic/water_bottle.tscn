@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://eutuwgypkxm2"]
 
 [ext_resource type="Script" uid="uid://chcofuv2uvr3y" path="res://scripts/Trash.cs" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://8rtx6jd7s47l" path="res://assets/images/trash/water_bottle_red.png" id="2_texture"]
+[ext_resource type="Texture2D" uid="uid://8rtx6jd7s47l" path="res://assets/trash/plastic/water_bottle_red.png" id="2_texture"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trash"]
 size = Vector2(24, 57)
