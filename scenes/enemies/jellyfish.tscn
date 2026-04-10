@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c6m0csjq24qad"]
+
+[ext_resource type="Script" uid="uid://cv7qvy4qnvm4b" path="res://scripts/Jellyfish.cs" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://b65o4i1cideyg" path="res://assets/creatures/animals/jellyfish.png" id="2_texture"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jelly"]
+radius = 25.0
+
+[node name="Jellyfish" type="Area2D" unique_id=698093757]
+collision_layer = 2
+script = ExtResource("1_script")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1195187486]
+texture_filter = 1
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_texture")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1393188997]
+shape = SubResource("CircleShape2D_jelly")

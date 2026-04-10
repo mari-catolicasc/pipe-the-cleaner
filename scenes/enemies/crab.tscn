@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cg7osukeopd46"]
+
+[ext_resource type="Script" uid="uid://sksfhfnstdya" path="res://scripts/Crab.cs" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dvphcm6n0sste" path="res://assets/images/creatures/crab/crab_pose_1.png" id="2_pose1"]
+[ext_resource type="Texture2D" uid="uid://5eo4y77cuk1f" path="res://assets/images/creatures/crab/crab_pose_2.png" id="3_pose2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crab"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pose1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pose2")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crab"]
+size = Vector2(29, 22)
+
+[node name="Crab" type="Area2D" unique_id=875993688]
+scale = Vector2(2, 2)
+collision_layer = 2
+script = ExtResource("1_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=743318854]
+texture_filter = 1
+position = Vector2(2, -2)
+scale = Vector2(0.06666669, 0.07637545)
+sprite_frames = SubResource("SpriteFrames_crab")
+animation = &"walk"
+autoplay = "walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=432910273]
+position = Vector2(1.5, -2)
+shape = SubResource("RectangleShape2D_crab")

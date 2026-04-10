@@ -1,18 +1,20 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://d1sf6gvpi4q4t"]
 
-[ext_resource type="Texture2D" path="res://scenes/grounds/rock_grass_ground.png" id="1_texture"]
+[ext_resource type="Texture2D" uid="uid://b44pb1e8xvlny" path="res://scenes/grounds/rock_grass_ground.png" id="1_texture"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_platform"]
-size = Vector2(150, 30)
+size = Vector2(75, 74.5)
 
-[node name="Platform" type="StaticBody2D"]
+[node name="Platform" type="StaticBody2D" unique_id=214444400]
 collision_layer = 4
 collision_mask = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=528167057]
 texture_filter = 1
+position = Vector2(-1.0000153, -1.5258789e-05)
+scale = Vector2(0.3511628, 0.33333334)
 texture = ExtResource("1_texture")
-scale = Vector2(1, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1223666300]
+position = Vector2(-1.5, -0.25)
 shape = SubResource("RectangleShape2D_platform")
