@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://cvkmcctnlgee6"]
+
+[ext_resource type="Script" path="res://scripts/MainMenu.cs" id="1_2wh52"]
+[ext_resource type="Texture2D" uid="uid://bficu3evh0ckp" path="res://scenes/backgrounds/main_menu_background.jpg" id="1_48ign"]
+[ext_resource type="Texture2D" uid="uid://ck5kw3mth487d" path="res://assets/backgrounds/PIPE_LOGO.png" id="2_l7wge"]
+
+[node name="MainMenu" type="Node2D" unique_id=62587315]
+script = ExtResource("1_2wh52")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1579282337]
+position = Vector2(680, 384)
+texture = ExtResource("1_48ign")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1926587588]
+
+[node name="Logo" type="Sprite2D" parent="UI" unique_id=1823960846]
+position = Vector2(680, 200)
+texture = ExtResource("2_l7wge")
+
+[node name="MenuButtons" type="VBoxContainer" parent="UI" unique_id=619230946]
+custom_minimum_size = Vector2(300, 50)
+offset_left = 530.0
+offset_top = 380.0
+offset_right = 830.0
+offset_bottom = 607.0
+
+[node name="ButtonJogar" type="Button" parent="UI/MenuButtons" unique_id=1607604463]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+text = "JOGAR"
+
+[node name="ButtonInstrucoes" type="Button" parent="UI/MenuButtons" unique_id=1526924484]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+text = "INSTRUÇÕES"
+
+[node name="ButtonCreditos" type="Button" parent="UI/MenuButtons" unique_id=1232856905]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+text = "CRÉDITOS"
+
+[node name="ButtonSair" type="Button" parent="UI/MenuButtons" unique_id=23785355]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+text = "SAIR"
+
+[node name="Copyright" type="Label" parent="UI" unique_id=47264772]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PanelInstrucoes" type="Panel" parent="UI" unique_id=1515749369]
+visible = false
+self_modulate = Color(0.011764706, 0.011764706, 0.011764706, 1)
+offset_left = 405.0
+offset_top = 210.0
+offset_right = 955.0
+offset_bottom = 530.0
+
+[node name="LabelInstrucoes" type="Label" parent="UI/PanelInstrucoes" unique_id=1016303474]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 506.0
+offset_bottom = 255.0
+text = "CONTROLES
+
+W A S D ou setas: movimentar a Pipe
+Objetivo: recolher resíduos no oceano
+Evite obstáculos e continue limpando o ambiente
+
+Este jogo foi desenvolvido como ferramenta educativa
+sobre preservação marinha e descarte correto de resíduos."
+
+[node name="ButtonFecharInstrucoes" type="Button" parent="UI/PanelInstrucoes" unique_id=757587688]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 335.0
+offset_right = 550.0
+offset_bottom = 367.0
+text = "FECHAR"
+
+[node name="PanelCreditos" type="Panel" parent="UI" unique_id=996094372]
+visible = false
+modulate = Color(1, 1, 0.99607843, 1)
+self_modulate = Color(0.012617188, 0.012617188, 0.012617188, 1)
+offset_left = 405.0
+offset_top = 210.0
+offset_right = 955.0
+offset_bottom = 620.0
+
+[node name="LabelCreditos" type="Label" parent="UI/PanelCreditos" unique_id=1295973321]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 350.0
+offset_bottom = 359.0
+text = "PIPE THE CLEANER
+
+Projeto desenvolvido por:
+Guilherme Izidoro da Silva
+Marina Rosa Oliveira
+Nathalia Aline Berri Silva
+Vinicius Borges Jacinto
+
+PAC Extensionista
+Engenharia de Software
+Católica de Santa Catarina
+Professor responsável: Paulo Manseira"
+
+[node name="ButtonFecharCreditos" type="Button" parent="UI/PanelCreditos" unique_id=143902671]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 424.0
+offset_right = 550.0
+offset_bottom = 456.0
+text = "FECHAR"

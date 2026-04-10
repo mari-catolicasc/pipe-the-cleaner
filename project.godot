@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="PipeTheCleaner"
-run/main_scene="uid://dby7h7gmve350"
+run/main_scene="uid://da3kvi11xrv3n"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1360
+window/size/viewport_height=768
 
 [dotnet]
 
