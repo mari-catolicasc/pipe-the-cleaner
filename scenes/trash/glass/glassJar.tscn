@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c2aymlv1cj7qb"]
+
+[ext_resource type="Script" uid="uid://chcofuv2uvr3y" path="res://scripts/Trash.cs" id="1_cfgxl"]
+[ext_resource type="Texture2D" uid="uid://0t7jkohd2747" path="res://assets/trash/glass/glass_jar_green.png" id="2_cfgxl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trash"]
+size = Vector2(30.000004, 46)
+
+[node name="Trash" type="Area2D" unique_id=1685426321 groups=["trash"]]
+scale = Vector2(0.8, 0.8)
+collision_layer = 8
+script = ExtResource("1_cfgxl")
+Type = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=502896695]
+position = Vector2(4.999998, -1.999999)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_trash")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=585526263]
+position = Vector2(5, -2.5)
+scale = Vector2(0.36239493, 0.41039813)
+texture = ExtResource("2_cfgxl")

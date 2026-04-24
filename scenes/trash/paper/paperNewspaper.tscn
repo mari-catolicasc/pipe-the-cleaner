@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ipjy2jmco55l"]
 
 [ext_resource type="Script" uid="uid://chcofuv2uvr3y" path="res://scripts/Trash.cs" id="1_qu6me"]
-[ext_resource type="Texture2D" uid="uid://b2fyqeu3i7tu4" path="res://assets/trash/paper/paper_page_blue.png" id="2_x88mm"]
+[ext_resource type="Texture2D" uid="uid://fowo8vhbfadj" path="res://assets/trash/paper/newspaper_blue.png" id="2_cp4es"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trash"]
 size = Vector2(38, 46)
@@ -14,7 +14,7 @@ Type = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1938939835]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_x88mm")
+texture = ExtResource("2_cp4es")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=502896695]
 position = Vector2(-2, -2)

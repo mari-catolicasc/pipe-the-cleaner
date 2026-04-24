@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dgp82rxqg5e2f"]
+
+[ext_resource type="Script" uid="uid://chcofuv2uvr3y" path="res://scripts/Trash.cs" id="1_ffa4o"]
+[ext_resource type="Texture2D" uid="uid://cvag4xmbpovc8" path="res://assets/trash/metal/coin_yellow.png" id="2_ffa4o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trash"]
+size = Vector2(25.000006, 22.500008)
+
+[node name="Trash" type="Area2D" unique_id=1685426321 groups=["trash"]]
+scale = Vector2(0.8, 0.8)
+collision_layer = 8
+script = ExtResource("1_ffa4o")
+Type = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=502896695]
+position = Vector2(3.7499986, -2.4999995)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_trash")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=585526263]
+position = Vector2(5, -2.5)
+scale = Vector2(0.36239493, 0.41039813)
+texture = ExtResource("2_ffa4o")

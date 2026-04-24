@@ -1,5 +1,6 @@
 using Godot;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class HUD : CanvasLayer
 {
@@ -17,6 +18,8 @@ public partial class HUD : CanvasLayer
 
     private TextureRect _plasticIconNode;
     private Label _plasticCount;
+
+    private Label _capacityLabel;
 
     private TextureRect _paperIconNode;
     private Label _paperCount;
@@ -37,6 +40,8 @@ public partial class HUD : CanvasLayer
 
         _plasticIconNode = GetNode<TextureRect>("Control/InventoryContainer/PlasticSlot/Icon");
         _plasticCount    = GetNode<Label>("Control/InventoryContainer/PlasticSlot/Count");
+
+        _capacityLabel = GetNodeOrNull<Label>("Control/InventoryContainer/Capacity");
 
         _paperIconNode = GetNode<TextureRect>("Control/InventoryContainer/PaperSlot/Icon");
         _paperCount    = GetNode<Label>("Control/InventoryContainer/PaperSlot/Count");
@@ -68,7 +73,7 @@ public partial class HUD : CanvasLayer
         ApplyHeartTextures();
         ApplyTrashIcon();
 
-        UpdateInventory(new List<Trash.TrashType>());
+        UpdateInventory(new Dictionary<Trash.TrashType, int>());
     }
 
     private void ApplyInventoryIcons()
@@ -80,7 +85,7 @@ public partial class HUD : CanvasLayer
         _organicIconNode.Texture = OrganicIconTexture ?? GD.Load<Texture2D>("res://assets/trash/organic/apple_brown.png");
     }
 
-    public void UpdateInventory(List<Trash.TrashType> inventory)
+    public void UpdateInventory(Dictionary<Trash.TrashType, int> inventory, int maxCapacity = 3)
     {
         int plastic = 0;
         int paper = 0;
@@ -88,16 +93,13 @@ public partial class HUD : CanvasLayer
         int metal = 0;
         int organic = 0;
 
-        foreach (var item in inventory)
+        if (inventory != null)
         {
-            switch (item)
-            {
-                case Trash.TrashType.Plastic: plastic++; break;
-                case Trash.TrashType.Paper: paper++; break;
-                case Trash.TrashType.Glass: glass++; break;
-                case Trash.TrashType.Metal: metal++; break;
-                case Trash.TrashType.Organic: organic++; break;
-            }
+            inventory.TryGetValue(Trash.TrashType.Plastic, out plastic);
+            inventory.TryGetValue(Trash.TrashType.Paper, out paper);
+            inventory.TryGetValue(Trash.TrashType.Glass, out glass);
+            inventory.TryGetValue(Trash.TrashType.Metal, out metal);
+            inventory.TryGetValue(Trash.TrashType.Organic, out organic);
         }
 
         SetSlot(_plasticIconNode, _plasticCount, plastic);
@@ -105,6 +107,14 @@ public partial class HUD : CanvasLayer
         SetSlot(_glassIconNode, _glassCount, glass);
         SetSlot(_metalIconNode, _metalCount, metal);
         SetSlot(_organicIconNode, _organicCount, organic);
+
+        // Atualiza capacidade total
+        var total = plastic + paper + glass + metal + organic;
+        if (_capacityLabel != null)
+        {
+            _capacityLabel.Text = $"{total} / {maxCapacity}";
+            _capacityLabel.Modulate = total >= maxCapacity ? new Color(1, 0.4f, 0.4f) : Colors.White;
+        }
     }
 
     public void UpdateSelection(Trash.TrashType? selected)
@@ -313,8 +323,8 @@ public partial class HUD : CanvasLayer
         }
     }
 
-    public void UpdateTrash(int collected, int total)
+    public void UpdateTrash(int discarded, int total)
     {
-        _trashLabel.Text = $"{collected} / {total}";
+        _trashLabel.Text = $"{discarded} / {total}";
     }
 }

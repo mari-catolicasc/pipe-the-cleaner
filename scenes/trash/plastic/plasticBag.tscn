@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dyba3npsmiuj2"]
+
+[ext_resource type="Texture2D" uid="uid://dvyxx0ah4qm52" path="res://assets/trash/plastic/plastic_bag_red.png" id="1_173p4"]
+[ext_resource type="Script" uid="uid://chcofuv2uvr3y" path="res://scripts/Trash.cs" id="2_pmync"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trash"]
+size = Vector2(46.25, 53.500008)
+
+[node name="Trash" type="Area2D" unique_id=1685426321 groups=["trash"]]
+scale = Vector2(0.8, 0.8)
+collision_layer = 8
+script = ExtResource("2_pmync")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=282523296]
+texture_filter = 1
+position = Vector2(13.749999, 2.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_173p4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=502896695]
+position = Vector2(-0.6250008, 0.75000215)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_trash")

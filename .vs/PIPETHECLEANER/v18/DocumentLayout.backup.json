@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\marin\\git\\pipe-the-cleaner\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E8F10A9-1E4C-4AA7-8B6C-117C88A17BBE}|PipeTheCleaner.csproj|c:\\users\\marin\\git\\pipe-the-cleaner\\scripts\\jellyfish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8F10A9-1E4C-4AA7-8B6C-117C88A17BBE}|PipeTheCleaner.csproj|solutionrelative:scripts\\jellyfish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E8F10A9-1E4C-4AA7-8B6C-117C88A17BBE}|PipeTheCleaner.csproj|c:\\users\\marin\\git\\pipe-the-cleaner\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E8F10A9-1E4C-4AA7-8B6C-117C88A17BBE}|PipeTheCleaner.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\MachinePiece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\MachinePiece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E8F10A9-1E4C-4AA7-8B6C-117C88A17BBE}|PipeTheCleaner.csproj|c:\\users\\marin\\git\\pipe-the-cleaner\\scripts\\trashcan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E8F10A9-1E4C-4AA7-8B6C-117C88A17BBE}|PipeTheCleaner.csproj|solutionrelative:scripts\\trashcan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8F10A9-1E4C-4AA7-8B6C-117C88A17BBE}|PipeTheCleaner.csproj|c:\\users\\marin\\git\\pipe-the-cleaner\\scripts\\hud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8F10A9-1E4C-4AA7-8B6C-117C88A17BBE}|PipeTheCleaner.csproj|solutionrelative:scripts\\hud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8F10A9-1E4C-4AA7-8B6C-117C88A17BBE}|PipeTheCleaner.csproj|c:\\users\\marin\\git\\pipe-the-cleaner\\scripts\\crab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8F10A9-1E4C-4AA7-8B6C-117C88A17BBE}|PipeTheCleaner.csproj|solutionrelative:scripts\\crab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E8F10A9-1E4C-4AA7-8B6C-117C88A17BBE}|PipeTheCleaner.csproj|c:\\users\\marin\\git\\pipe-the-cleaner\\scripts\\trash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E8F10A9-1E4C-4AA7-8B6C-117C88A17BBE}|PipeTheCleaner.csproj|solutionrelative:scripts\\trash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,69 +26,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Crab.cs",
-              "DocumentMoniker": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\Crab.cs",
-              "RelativeDocumentMoniker": "scripts\\Crab.cs",
-              "ToolTip": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\Crab.cs",
-              "RelativeToolTip": "scripts\\Crab.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\Player.cs",
+              "RelativeDocumentMoniker": "scripts\\Player.cs",
+              "ToolTip": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\Player.cs",
+              "RelativeToolTip": "scripts\\Player.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAawIQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T22:11:01.986Z"
+              "WhenOpened": "2026-04-24T13:33:11.521Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "TrashCan.cs",
               "DocumentMoniker": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\TrashCan.cs",
               "RelativeDocumentMoniker": "scripts\\TrashCan.cs",
               "ToolTip": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\TrashCan.cs",
               "RelativeToolTip": "scripts\\TrashCan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwCwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T21:41:29.426Z",
+              "WhenOpened": "2026-04-24T20:01:00.45Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Trash.cs",
-              "DocumentMoniker": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\Trash.cs",
-              "RelativeDocumentMoniker": "scripts\\Trash.cs",
-              "ToolTip": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\Trash.cs",
-              "RelativeToolTip": "scripts\\Trash.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "MachinePiece.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\MachinePiece.cs",
+              "RelativeDocumentMoniker": "scripts\\MachinePiece.cs",
+              "ToolTip": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\MachinePiece.cs",
+              "RelativeToolTip": "scripts\\MachinePiece.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAASwCIAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T21:16:22.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Jellyfish.cs",
-              "DocumentMoniker": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\Jellyfish.cs",
-              "RelativeDocumentMoniker": "scripts\\Jellyfish.cs",
-              "ToolTip": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\Jellyfish.cs",
-              "RelativeToolTip": "scripts\\Jellyfish.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T20:49:18.051Z",
+              "WhenOpened": "2026-04-24T18:25:08.853Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "HUD.cs",
-              "DocumentMoniker": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\HUD.cs",
-              "RelativeDocumentMoniker": "scripts\\HUD.cs",
-              "ToolTip": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\HUD.cs",
-              "RelativeToolTip": "scripts\\HUD.cs",
-              "ViewState": "AgIAANcAAAAAAAAAAAAMwNsAAAAAAAAAAAAAAA==",
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\marin\\git\\pipe-the-cleaner\\scripts\\GameManager.cs",
+              "RelativeToolTip": "scripts\\GameManager.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T16:29:33.301Z"
+              "WhenOpened": "2026-04-24T14:50:06.109Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -6,17 +6,19 @@
 [ext_resource type="Texture2D" uid="uid://dgb58tanbyxx5" path="res://assets/backgrounds/sand_1.png" id="3_nkeig"]
 [ext_resource type="PackedScene" uid="uid://d1sf6gvpi4q4t" path="res://scenes/platform.tscn" id="5_nfihu"]
 [ext_resource type="PackedScene" uid="uid://cg7osukeopd46" path="res://scenes/enemies/crab.tscn" id="6_lgguw"]
-[ext_resource type="PackedScene" uid="uid://eutuwgypkxm2" path="res://scenes/trash/plastic/water_bottle.tscn" id="7_jprdt"]
-[ext_resource type="PackedScene" uid="uid://bsw6jk65ed1vv" path="res://scenes/trash/glass/glass_bottle.tscn" id="7_plydf"]
-[ext_resource type="PackedScene" uid="uid://plruf0ub3qe3" path="res://scenes/trash/metal/soda_can.tscn" id="8_5ntmo"]
-[ext_resource type="PackedScene" uid="uid://feg344svaehn" path="res://scenes/trash/organic/rotten_apple.tscn" id="8_nkeig"]
-[ext_resource type="PackedScene" uid="uid://cq3hjo1oca6rt" path="res://scenes/trash/paper/paper_page.tscn" id="8_ps2vj"]
+[ext_resource type="PackedScene" uid="uid://eutuwgypkxm2" path="res://scenes/trash/plastic/plasticWaterBottle.tscn" id="7_jprdt"]
+[ext_resource type="PackedScene" uid="uid://c6mwhtqoe6ory" path="res://scenes/trash/plastic/plasticStraw.tscn" id="8_g7tkf"]
+[ext_resource type="PackedScene" uid="uid://cq3hjo1oca6rt" path="res://scenes/trash/paper/paperPage.tscn" id="9_4fww7"]
 [ext_resource type="PackedScene" uid="uid://c6m0csjq24qad" path="res://scenes/enemies/jellyfish.tscn" id="9_plydf"]
+[ext_resource type="PackedScene" uid="uid://dyba3npsmiuj2" path="res://scenes/trash/plastic/plasticBag.tscn" id="10_1xax6"]
+[ext_resource type="PackedScene" uid="uid://ipjy2jmco55l" path="res://scenes/trash/paper/paperNewspaper.tscn" id="10_gvm5i"]
+[ext_resource type="PackedScene" uid="uid://cgwbkrve5xg8e" path="res://scenes/trash/paper/paperBox.tscn" id="11_jrfo0"]
 [ext_resource type="PackedScene" uid="uid://d2d083dnhd5m4" path="res://scenes/trash_cans/plasticTrashCan.tscn" id="13_lgguw"]
 [ext_resource type="PackedScene" uid="uid://dhagc1j7fxdh8" path="res://scenes/trash_cans/glassTrashCan.tscn" id="14_1xax6"]
 [ext_resource type="PackedScene" uid="uid://daxqghlepcgsd" path="res://scenes/trash_cans/metalTrashCan.tscn" id="15_g7tkf"]
 [ext_resource type="PackedScene" uid="uid://tun35bvqrcb1" path="res://scenes/trash_cans/organicTrashCan.tscn" id="16_4fww7"]
 [ext_resource type="PackedScene" uid="uid://b52bxh2swqccc" path="res://scenes/trash_cans/paperTrashCan.tscn" id="17_gvm5i"]
+[ext_resource type="PackedScene" uid="uid://w1dj6vdc2k7m" path="res://scenes/machine/piece1.tscn" id="19_4fww7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ceiling"]
 size = Vector2(3200, 40)
@@ -32,7 +34,7 @@ size = Vector2(577.0817, 66)
 
 [sub_resource type="Curve2D" id="Curve2D_6sh32"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -16.266357, 1.5559998, 0, 0, 0, 0, 126.23364, 0.55599976)
+"points": PackedVector2Array(0, 0, 0, 0, -16.266357, 1.5559998, 0, 0, 0, 0, 64.23364, 3.5559998)
 }
 point_count = 2
 
@@ -57,7 +59,7 @@ point_count = 2
 [node name="Main" type="Node2D" unique_id=1680725934]
 
 [node name="background_1" type="Sprite2D" parent="." unique_id=1941059699]
-position = Vector2(1600, 325)
+position = Vector2(1601.0001, 325)
 scale = Vector2(5.5486107, 2.0123458)
 texture = ExtResource("1_nfihu")
 
@@ -234,26 +236,6 @@ position = Vector2(2060, 444)
 [node name="Platform40" parent="Platforms" unique_id=866330609 instance=ExtResource("5_nfihu")]
 position = Vector2(1983, 444)
 
-[node name="TrashItems" type="Node2D" parent="." unique_id=1301508639 groups=["trash"]]
-
-[node name="Trash2" parent="TrashItems" unique_id=1685426321 instance=ExtResource("7_jprdt")]
-position = Vector2(846, 103)
-
-[node name="Trash3" parent="TrashItems" unique_id=2090298952 instance=ExtResource("8_ps2vj")]
-position = Vector2(420, 330)
-
-[node name="Trash" parent="TrashItems" unique_id=1182270703 instance=ExtResource("7_jprdt")]
-position = Vector2(435, 505)
-
-[node name="Trash4" parent="TrashItems" unique_id=546168178 instance=ExtResource("8_5ntmo")]
-position = Vector2(1272, 331.00003)
-
-[node name="Trash5" parent="TrashItems" unique_id=1272062334 instance=ExtResource("7_plydf")]
-position = Vector2(1866, 32.000023)
-
-[node name="Trash6" parent="TrashItems" unique_id=1156678199 instance=ExtResource("8_nkeig")]
-position = Vector2(1946, 363)
-
 [node name="Creatures" type="Node2D" parent="." unique_id=529217953 groups=["enemy"]]
 
 [node name="Crab" parent="Creatures" unique_id=423285791 instance=ExtResource("6_lgguw")]
@@ -318,3 +300,29 @@ position = Vector2(3134, 368)
 
 [node name="plasticTrashCan3" parent="TrashCans" unique_id=327638420 instance=ExtResource("17_gvm5i")]
 position = Vector2(3133, 453)
+
+[node name="Collectibles" type="Node2D" parent="." unique_id=1717791881]
+
+[node name="TrashItems" type="Node2D" parent="Collectibles" unique_id=1301508639]
+
+[node name="PlasticWaterBottle" parent="Collectibles/TrashItems" unique_id=1182270703 instance=ExtResource("7_jprdt")]
+position = Vector2(435, 505)
+
+[node name="PlasticBag" parent="Collectibles/TrashItems" unique_id=1847477096 instance=ExtResource("10_1xax6")]
+position = Vector2(409, 326)
+
+[node name="PlasticStraw" parent="Collectibles/TrashItems" unique_id=1613153103 instance=ExtResource("8_g7tkf")]
+position = Vector2(1939, 368)
+
+[node name="PaperPage" parent="Collectibles/TrashItems" unique_id=1685426321 instance=ExtResource("9_4fww7")]
+position = Vector2(819.99994, 142.99998)
+
+[node name="PaperNewspaper" parent="Collectibles/TrashItems" unique_id=1695040013 instance=ExtResource("10_gvm5i")]
+position = Vector2(1285.9999, 334.99997)
+
+[node name="PaperBox" parent="Collectibles/TrashItems" unique_id=1992801606 instance=ExtResource("11_jrfo0")]
+position = Vector2(1906, 92)
+
+[node name="Piece1" parent="Collectibles" unique_id=1801577733 groups=["machine_piece"] instance=ExtResource("19_4fww7")]
+position = Vector2(2964, 312)
+input_pickable = false
