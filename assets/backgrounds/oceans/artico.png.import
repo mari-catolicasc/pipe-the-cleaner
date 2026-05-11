@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck5kw3mth487d"
-path="res://.godot/imported/PIPE_LOGO.png-b14a655bdee0192ba1386b0d4aed8700.ctex"
+uid="uid://3e2a3a44xq67"
+path="res://.godot/imported/artico.png-00bb504741a510d4d3d9714984730ce9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/PIPE_LOGO.png"
-dest_files=["res://.godot/imported/PIPE_LOGO.png-b14a655bdee0192ba1386b0d4aed8700.ctex"]
+source_file="res://assets/backgrounds/oceans/artico.png"
+dest_files=["res://.godot/imported/artico.png-00bb504741a510d4d3d9714984730ce9.ctex"]
 
 [params]
 

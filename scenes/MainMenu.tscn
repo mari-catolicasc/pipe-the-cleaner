@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://cvkmcctnlgee6"]
 
-[ext_resource type="Script" path="res://scripts/MainMenu.cs" id="1_2wh52"]
-[ext_resource type="Texture2D" uid="uid://bficu3evh0ckp" path="res://scenes/backgrounds/main_menu_background.jpg" id="1_48ign"]
-[ext_resource type="Texture2D" uid="uid://ck5kw3mth487d" path="res://assets/backgrounds/PIPE_LOGO.png" id="2_l7wge"]
+[ext_resource type="Script" uid="uid://70cuy44tjqpl" path="res://scripts/MainMenu.cs" id="1_2wh52"]
+[ext_resource type="Texture2D" uid="uid://cl84nh4ysxee2" path="res://assets/backgrounds/oceans/main_menu_background.jpg" id="2_2wh52"]
+[ext_resource type="Texture2D" uid="uid://ck5kw3mth487d" path="res://assets/PIPE_LOGO.png" id="2_l7wge"]
 
 [node name="MainMenu" type="Node2D" unique_id=62587315]
 script = ExtResource("1_2wh52")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1579282337]
 position = Vector2(680, 384)
-texture = ExtResource("1_48ign")
+texture = ExtResource("2_2wh52")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1926587588]
 
