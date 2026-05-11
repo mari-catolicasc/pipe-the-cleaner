@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blgy7ransn50l"
-path="res://.godot/imported/grass_low_rock_ground.png-64923dfc41e3ebfc788da0b5f987b8a8.ctex"
+uid="uid://c4l0bd6vkno6j"
+path="res://.godot/imported/sand_ground.png-1a410fa022509de1d868e0b7e85ad7fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/grounds/grass_low_rock_ground.png"
-dest_files=["res://.godot/imported/grass_low_rock_ground.png-64923dfc41e3ebfc788da0b5f987b8a8.ctex"]
+source_file="res://assets/backgrounds/platforms/sand_ground.png"
+dest_files=["res://.godot/imported/sand_ground.png-1a410fa022509de1d868e0b7e85ad7fe.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmmxfg7ynknwg"
-path="res://.godot/imported/indico.png-57377e048bb8c934f08b46e568c87e54.ctex"
+uid="uid://b44pb1e8xvlny"
+path="res://.godot/imported/rock_grass_ground.png-9cc3a0e41602ddb89b773ef7a8179985.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/indico.png"
-dest_files=["res://.godot/imported/indico.png-57377e048bb8c934f08b46e568c87e54.ctex"]
+source_file="res://assets/backgrounds/platforms/rock_grass_ground.png"
+dest_files=["res://.godot/imported/rock_grass_ground.png-9cc3a0e41602ddb89b773ef7a8179985.ctex"]
 
 [params]
 

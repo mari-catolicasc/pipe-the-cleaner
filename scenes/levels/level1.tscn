@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dby7h7gmve350"]
 
-[ext_resource type="Texture2D" uid="uid://kf1uhfeantxq" path="res://assets/backgrounds/background_1.png" id="1_nfihu"]
+[ext_resource type="Texture2D" uid="uid://bjijka1vwfujj" path="res://assets/backgrounds/oceans/atlantico.png" id="1_4fww7"]
 [ext_resource type="PackedScene" uid="uid://cy5ela7qvlwf6" path="res://scenes/player.tscn" id="2_plydf"]
 [ext_resource type="PackedScene" uid="uid://qhliutounhxp" path="res://scenes/hud.tscn" id="3_5ntmo"]
-[ext_resource type="Texture2D" uid="uid://dgb58tanbyxx5" path="res://assets/backgrounds/sand_1.png" id="3_nkeig"]
+[ext_resource type="Texture2D" uid="uid://dgb58tanbyxx5" path="res://assets/backgrounds/grounds/sand_1.png" id="3_nkeig"]
 [ext_resource type="PackedScene" uid="uid://d1sf6gvpi4q4t" path="res://scenes/platform.tscn" id="5_nfihu"]
 [ext_resource type="PackedScene" uid="uid://cg7osukeopd46" path="res://scenes/enemies/crab.tscn" id="6_lgguw"]
 [ext_resource type="PackedScene" uid="uid://eutuwgypkxm2" path="res://scenes/trash/plastic/plasticWaterBottle.tscn" id="7_jprdt"]
@@ -59,9 +59,9 @@ point_count = 2
 [node name="Main" type="Node2D" unique_id=1680725934]
 
 [node name="background_1" type="Sprite2D" parent="." unique_id=1941059699]
-position = Vector2(1601.0001, 325)
-scale = Vector2(5.5486107, 2.0123458)
-texture = ExtResource("1_nfihu")
+position = Vector2(1598.5, 313)
+scale = Vector2(1.1055536, 1.7907608)
+texture = ExtResource("1_4fww7")
 
 [node name="Player" parent="." unique_id=1622332219 groups=["player"] instance=ExtResource("2_plydf")]
 position = Vector2(113, 258)
@@ -105,17 +105,14 @@ scale = Vector2(0.9999999, 0.99999964)
 shape = SubResource("RectangleShape2D_dwgg1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor/StaticBody2D" unique_id=22353003]
-scale = Vector2(0.99999994, 0.99999994)
+position = Vector2(0, 61.999996)
+scale = Vector2(0.99999994, 0.6172839)
 texture = ExtResource("3_nkeig")
 
 [node name="Platforms" type="Node2D" parent="." unique_id=864672386]
 
 [node name="Platform33" parent="Platforms" unique_id=214444400 instance=ExtResource("5_nfihu")]
 position = Vector2(7831.09, 1206.4075)
-scale = Vector2(5.5486107, 2.0123458)
-
-[node name="Platform32" parent="Platforms" unique_id=855299278 instance=ExtResource("5_nfihu")]
-position = Vector2(6976.6035, 1206.4075)
 scale = Vector2(5.5486107, 2.0123458)
 
 [node name="Platform" parent="Platforms" unique_id=234876704 instance=ExtResource("5_nfihu")]
@@ -216,10 +213,6 @@ position = Vector2(855, 438)
 
 [node name="Platform35" parent="Platforms" unique_id=405948509 instance=ExtResource("5_nfihu")]
 position = Vector2(1831, 153)
-
-[node name="Platform36" parent="Platforms" unique_id=188350386 instance=ExtResource("5_nfihu")]
-position = Vector2(7831.09, 1206.4075)
-scale = Vector2(5.5486107, 2.0123458)
 
 [node name="Platform37" parent="Platforms" unique_id=509898037 instance=ExtResource("5_nfihu")]
 position = Vector2(1906, 153)

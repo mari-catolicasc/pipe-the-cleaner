@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmrjt7opxi35j"
-path="res://.godot/imported/pacifico.png-fae0239fa625087e267c10ce0b4b914a.ctex"
+uid="uid://bpu7vjbnmv1kn"
+path="res://.godot/imported/pacifico.png-ca7ea9bc29d822a57f2c5c80c0859157.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/pacifico.png"
-dest_files=["res://.godot/imported/pacifico.png-fae0239fa625087e267c10ce0b4b914a.ctex"]
+source_file="res://assets/backgrounds/oceans/pacifico.png"
+dest_files=["res://.godot/imported/pacifico.png-ca7ea9bc29d822a57f2c5c80c0859157.ctex"]
 
 [params]
 

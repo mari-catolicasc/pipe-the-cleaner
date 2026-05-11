@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baxvurt0wl7n1"
-path="res://.godot/imported/rock_less_grass_ground.png-3d4adb8a76408ac46a5ff6cb75a93e1d.ctex"
+uid="uid://ck5kw3mth487d"
+path="res://.godot/imported/PIPE_LOGO.png-32ebf2b288f897c8ffd7934f0db2c302.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/grounds/rock_less_grass_ground.png"
-dest_files=["res://.godot/imported/rock_less_grass_ground.png-3d4adb8a76408ac46a5ff6cb75a93e1d.ctex"]
+source_file="res://assets/PIPE_LOGO.png"
+dest_files=["res://.godot/imported/PIPE_LOGO.png-32ebf2b288f897c8ffd7934f0db2c302.ctex"]
 
 [params]
 

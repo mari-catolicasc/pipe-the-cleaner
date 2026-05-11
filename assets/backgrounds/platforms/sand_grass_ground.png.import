@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbnjey7gi04ok"
-path="res://.godot/imported/atlantico.png-6d49a2ec8c665c3d67180a58f6c8f0b6.ctex"
+uid="uid://bm5bw88l75dmv"
+path="res://.godot/imported/sand_grass_ground.png-f545666072dd9cef5a9fa6efab563350.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/backgrounds/atlantico.png"
-dest_files=["res://.godot/imported/atlantico.png-6d49a2ec8c665c3d67180a58f6c8f0b6.ctex"]
+source_file="res://assets/backgrounds/platforms/sand_grass_ground.png"
+dest_files=["res://.godot/imported/sand_grass_ground.png-f545666072dd9cef5a9fa6efab563350.ctex"]
 
 [params]
 

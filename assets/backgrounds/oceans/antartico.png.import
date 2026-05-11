@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ufskbsqqu5y3"
-path="res://.godot/imported/grass_top_rock_ground.png-eb825a410ed7a4b6df5abb5ddf146edb.ctex"
+uid="uid://bbxpynpex1hl7"
+path="res://.godot/imported/antartico.png-2bda78dfc8dd21493baaa65e041529f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/grounds/grass_top_rock_ground.png"
-dest_files=["res://.godot/imported/grass_top_rock_ground.png-eb825a410ed7a4b6df5abb5ddf146edb.ctex"]
+source_file="res://assets/backgrounds/oceans/antartico.png"
+dest_files=["res://.godot/imported/antartico.png-2bda78dfc8dd21493baaa65e041529f0.ctex"]
 
 [params]
 
