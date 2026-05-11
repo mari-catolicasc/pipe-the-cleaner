@@ -12,41 +12,40 @@ public partial class TrashCan : StaticBody2D
     {
         _area = GetNode<Area2D>("Area2D");
         _area.AreaEntered += OnAreaEntered;
+        _area.AreaExited += OnAreaExited;
     }
 
     private void OnAreaEntered(Area2D area)
 	{
-		_playerInside = area.GetParent<Player>();
+       var player = area.GetParent() as Player;
+		if (player != null)
+		{
+			_playerInside = player;
+		}
 	}
 
 	private void OnAreaExited(Area2D area)
 	{
-		if (area.GetParent<Player>() != null)
+       var player = area.GetParent() as Player;
+		if (player != null && _playerInside == player)
+		{
 			_playerInside = null;
+		}
 	}
 
     private void DepositTrash(Player player)
 	{
-		var selected = player.GetSelectedTrash();
-
-		if (selected == null)
-		{
-			GD.Print("Nenhum lixo selecionado.");
-			return;
-		}
-
-		if (selected != AcceptedType)
-		{
-			// TODO: adicionar lógica de dedução de pontos e retorno do lixo ao local inicial
-			GD.Print("Tipo errado!");
-			return;
-		}
-
-		bool removed = player.RemoveOneTrash(selected.Value);
+		bool removed = player.RemoveOneTrash(AcceptedType);
 
 		if (removed)
 		{
 			GD.Print("Lixo descartado corretamente!");
+
+            player.OnTrashDisposed(AcceptedType);
+        }
+		else
+		{
+			GD.Print($"Nenhum lixo do tipo {AcceptedType} para descartar.");
 		}
 	}
 

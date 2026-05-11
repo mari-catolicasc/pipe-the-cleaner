@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cgwbkrve5xg8e"]
+
+[ext_resource type="Script" uid="uid://chcofuv2uvr3y" path="res://scripts/Trash.cs" id="1_tgyea"]
+[ext_resource type="Texture2D" uid="uid://cv7tf08jjeelk" path="res://assets/trash/paper/paper_box_blue.png" id="2_tgyea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trash"]
+size = Vector2(38.5, 41.25)
+
+[node name="Trash" type="Area2D" unique_id=1685426321 groups=["trash"]]
+scale = Vector2(0.8, 0.8)
+collision_layer = 8
+script = ExtResource("1_tgyea")
+Type = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1938939835]
+position = Vector2(1.25, -9.536743e-07)
+scale = Vector2(0.38513514, 0.38513514)
+texture = ExtResource("2_tgyea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=502896695]
+position = Vector2(-1.7499985, -0.6250009)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_trash")

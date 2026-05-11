@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://w1dj6vdc2k7m"]
+
+[ext_resource type="Texture2D" uid="uid://257nlagklyya" path="res://assets/machine/piece1.png" id="1_ad28r"]
+[ext_resource type="Script" uid="uid://b4s11mnh5g1nm" path="res://scripts/MachinePiece.cs" id="2_s4ogu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4ogu"]
+size = Vector2(92, 56)
+
+[node name="Piece1" type="Area2D" unique_id=1801577733]
+collision_layer = 8
+script = ExtResource("2_s4ogu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=605402189]
+position = Vector2(-7.6293945e-06, -1.9073486e-06)
+scale = Vector2(0.515748, 0.515748)
+texture = ExtResource("1_ad28r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1570390037]
+position = Vector2(-10, 1)
+shape = SubResource("RectangleShape2D_s4ogu")

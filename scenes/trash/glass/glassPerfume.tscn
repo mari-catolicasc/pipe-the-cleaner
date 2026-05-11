@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://gqmmrw6whonx"]
+
+[ext_resource type="Script" uid="uid://chcofuv2uvr3y" path="res://scripts/Trash.cs" id="1_cq0x4"]
+[ext_resource type="Texture2D" uid="uid://b7b0xrxridw6n" path="res://assets/trash/glass/perfume_bottle_green.png" id="2_cq0x4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trash"]
+size = Vector2(25.75, 38.750004)
+
+[node name="Trash" type="Area2D" unique_id=1685426321 groups=["trash"]]
+scale = Vector2(0.8, 0.8)
+collision_layer = 8
+script = ExtResource("1_cq0x4")
+Type = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=502896695]
+position = Vector2(4.1249986, -3.1249983)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_trash")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=585526263]
+position = Vector2(6.250001, 3.7500005)
+scale = Vector2(0.37468964, 0.42432132)
+texture = ExtResource("2_cq0x4")

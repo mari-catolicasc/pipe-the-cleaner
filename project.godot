@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="PipeTheCleaner"
-run/main_scene="uid://da3kvi11xrv3n"
+run/main_scene="uid://dby7h7gmve350"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://cxw7ktp1w3ldy"
 
 [display]
 
@@ -23,6 +27,11 @@ window/size/viewport_height=768
 [dotnet]
 
 project/assembly_name="PipeTheCleaner"
+
+[global_group]
+
+trash=""
+machine_piece=""
 
 [input]
 

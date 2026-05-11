@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://mtjh2rni2ueu"]
+
+[ext_resource type="Script" uid="uid://chcofuv2uvr3y" path="res://scripts/Trash.cs" id="1_0myh2"]
+[ext_resource type="Texture2D" uid="uid://d4i6p3gxof2j4" path="res://assets/trash/organic/banana_brown.png" id="2_0myh2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trash"]
+size = Vector2(38, 46)
+
+[node name="Trash" type="Area2D" unique_id=1685426321 groups=["trash"]]
+scale = Vector2(0.8, 0.8)
+collision_layer = 8
+script = ExtResource("1_0myh2")
+Type = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=502896695]
+position = Vector2(2.4999995, -2.5)
+shape = SubResource("RectangleShape2D_trash")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=585526263]
+position = Vector2(5, -2.5)
+scale = Vector2(0.36239493, 0.41039813)
+texture = ExtResource("2_0myh2")
