@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvphcm6n0sste"
-path="res://.godot/imported/crab_pose_1.png-194222a5f6e12a29aa1e2984222ec585.ctex"
+uid="uid://dj76ogwndsrov"
+path="res://.godot/imported/lion_fish.png-e6e6aea5e6794333766d232ed62a0da7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/creatures/crab/crab_pose_1.png"
-dest_files=["res://.godot/imported/crab_pose_1.png-194222a5f6e12a29aa1e2984222ec585.ctex"]
+source_file="res://assets/creatures/animals/lion_fish.png"
+dest_files=["res://.godot/imported/lion_fish.png-e6e6aea5e6794333766d232ed62a0da7.ctex"]
 
 [params]
 

@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://ccfv7efc348do"]
+
+[ext_resource type="Script" uid="uid://bhlfnd7ejoxd1" path="res://scripts/Stonefish.cs" id="1_25845"]
+[ext_resource type="Texture2D" uid="uid://bilp0mjiaq6pt" path="res://assets/creatures/animals/stonefish.png" id="2_25845"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25845"]
+atlas = ExtResource("2_25845")
+region = Rect2(352, 0, 352, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4g0t"]
+atlas = ExtResource("2_25845")
+region = Rect2(0, 192, 352, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvbte"]
+atlas = ExtResource("2_25845")
+region = Rect2(704, 192, 352, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4p34o"]
+atlas = ExtResource("2_25845")
+region = Rect2(1056, 192, 352, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jgwm"]
+atlas = ExtResource("2_25845")
+region = Rect2(704, 192, 352, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwr1o"]
+atlas = ExtResource("2_25845")
+region = Rect2(352, 192, 352, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbkj5"]
+atlas = ExtResource("2_25845")
+region = Rect2(352, 0, 352, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6tkj"]
+atlas = ExtResource("2_25845")
+region = Rect2(0, 0, 352, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crab"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25845")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4g0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvbte")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4p34o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jgwm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwr1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbkj5")
+}],
+"loop": true,
+"name": &"bite",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6tkj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crab"]
+size = Vector2(41.5, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4g0t"]
+size = Vector2(216, 52.5)
+
+[node name="Stonefish" type="Area2D" unique_id=875993688]
+scale = Vector2(2, 2)
+collision_layer = 2
+script = ExtResource("1_25845")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=743318854]
+texture_filter = 1
+position = Vector2(5.500001, -1.5)
+scale = Vector2(0.12104404, 0.13867186)
+sprite_frames = SubResource("SpriteFrames_crab")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=432910273 groups=["enemy"]]
+position = Vector2(7.75, -2)
+shape = SubResource("RectangleShape2D_crab")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1510819575]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1119631233]
+position = Vector2(8, -17.25)
+shape = SubResource("RectangleShape2D_f4g0t")

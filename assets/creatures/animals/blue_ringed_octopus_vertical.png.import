@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5eo4y77cuk1f"
-path="res://.godot/imported/crab_pose_2.png-300931541864a22ccbfbb2b933c949e8.ctex"
+uid="uid://dcgit5x48t6ha"
+path="res://.godot/imported/blue_ringed_octopus_vertical.png-3ca8e5188f6907a528740524f9b6a845.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/creatures/crab/crab_pose_2.png"
-dest_files=["res://.godot/imported/crab_pose_2.png-300931541864a22ccbfbb2b933c949e8.ctex"]
+source_file="res://assets/creatures/animals/blue_ringed_octopus_vertical.png"
+dest_files=["res://.godot/imported/blue_ringed_octopus_vertical.png-3ca8e5188f6907a528740524f9b6a845.ctex"]
 
 [params]
 

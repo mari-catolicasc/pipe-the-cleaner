@@ -145,7 +145,7 @@ size = Vector2(70, 70)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hurtbox"]
 size = Vector2(60, 60)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1622332219]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1622332219 groups=["player"]]
 collision_mask = 6
 script = ExtResource("1_fjrip")
 

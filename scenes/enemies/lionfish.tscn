@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://co1ivb2bxjnai"]
+
+[ext_resource type="Script" uid="uid://bqaafrv7sy1fh" path="res://scripts/FreeMovement.cs" id="1_2vegb"]
+[ext_resource type="Texture2D" uid="uid://dj76ogwndsrov" path="res://assets/creatures/animals/lion_fish.png" id="2_2vegb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7l1s"]
+atlas = ExtResource("2_2vegb")
+region = Rect2(0, 0, 357, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drtur"]
+atlas = ExtResource("2_2vegb")
+region = Rect2(0, 256, 357, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nu2na"]
+atlas = ExtResource("2_2vegb")
+region = Rect2(0, 512, 357, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crab"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7l1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drtur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nu2na")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crab"]
+size = Vector2(34.5, 27)
+
+[node name="Lionfish" type="Area2D" unique_id=875993688 groups=["enemy"]]
+scale = Vector2(2, 2)
+collision_layer = 2
+script = ExtResource("1_2vegb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=743318854]
+texture_filter = 1
+position = Vector2(5.500001, -1.5)
+scale = Vector2(0.12104404, 0.13867186)
+sprite_frames = SubResource("SpriteFrames_crab")
+animation = &"walk"
+autoplay = "walk"
+frame = 2
+frame_progress = 0.7325457
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=432910273]
+position = Vector2(4.25, 0.5)
+shape = SubResource("RectangleShape2D_crab")

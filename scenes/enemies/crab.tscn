@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cg7osukeopd46"]
 
-[ext_resource type="Script" uid="uid://sksfhfnstdya" path="res://scripts/Crab.cs" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://dvphcm6n0sste" path="res://assets/images/creatures/crab/crab_pose_1.png" id="2_pose1"]
-[ext_resource type="Texture2D" uid="uid://5eo4y77cuk1f" path="res://assets/images/creatures/crab/crab_pose_2.png" id="3_pose2"]
+[ext_resource type="Script" path="res://scripts/HorizontalWalk.cs" id="1_sqms0"]
+[ext_resource type="Texture2D" uid="uid://dvphcm6n0sste" path="res://assets/creatures/animals/crab_pose_1.png" id="2_pose1"]
+[ext_resource type="Texture2D" uid="uid://5eo4y77cuk1f" path="res://assets/creatures/animals/crab_pose_2.png" id="3_pose2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_crab"]
 animations = [{
@@ -24,7 +24,7 @@ size = Vector2(29, 22)
 [node name="Crab" type="Area2D" unique_id=875993688]
 scale = Vector2(2, 2)
 collision_layer = 2
-script = ExtResource("1_script")
+script = ExtResource("1_sqms0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=743318854]
 texture_filter = 1
