@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c68utmus3nn5u"
-path="res://.godot/imported/fish4.png-7e5222f9f5c237c282802cbfb8900d28.ctex"
+uid="uid://b2oqo8jjnm4g4"
+path="res://.godot/imported/blue_ringed_octopus.png-25d574e2578ea5e355d8411c7b70300a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/creatures/fish/fish4.png"
-dest_files=["res://.godot/imported/fish4.png-7e5222f9f5c237c282802cbfb8900d28.ctex"]
+source_file="res://assets/creatures/animals/blue_ringed_octopus.png"
+dest_files=["res://.godot/imported/blue_ringed_octopus.png-25d574e2578ea5e355d8411c7b70300a.ctex"]
 
 [params]
 

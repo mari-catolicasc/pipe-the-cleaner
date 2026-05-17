@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuf7o8inyuxt5"
-path="res://.godot/imported/fish1.png-92dbbe860f3b03aa73819af1bab3f1a3.ctex"
+uid="uid://c11obrecx00it"
+path="res://.godot/imported/tiger_shark.png-7453d1b6a6ec7237c8068c3dac4ec166.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/creatures/fish/fish1.png"
-dest_files=["res://.godot/imported/fish1.png-92dbbe860f3b03aa73819af1bab3f1a3.ctex"]
+source_file="res://assets/creatures/animals/tiger_shark.png"
+dest_files=["res://.godot/imported/tiger_shark.png-7453d1b6a6ec7237c8068c3dac4ec166.ctex"]
 
 [params]
 

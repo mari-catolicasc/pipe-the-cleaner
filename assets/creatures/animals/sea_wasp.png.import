@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpd5eqq7ryewx"
-path="res://.godot/imported/fish3.png-47c9d728afe3e47dd23c62523a79f449.ctex"
+uid="uid://2t5vvlddfjyh"
+path="res://.godot/imported/sea_wasp.png-4ac7d897719d5df36affb9e13d9c1018.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/creatures/fish/fish3.png"
-dest_files=["res://.godot/imported/fish3.png-47c9d728afe3e47dd23c62523a79f449.ctex"]
+source_file="res://assets/creatures/animals/sea_wasp.png"
+dest_files=["res://.godot/imported/sea_wasp.png-4ac7d897719d5df36affb9e13d9c1018.ctex"]
 
 [params]
 

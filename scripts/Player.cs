@@ -164,10 +164,15 @@ public partial class Player : CharacterBody2D
         if (!_inventory.TryGetValue(type, out var count) || count <= 0)
             return;
 
-        if (count == 1)
+        if (count <= 1)
+        {
             _inventory.Remove(type);
+            _selectedType = null;
+        }
         else
+        {
             _inventory[type] = count - 1;
+        }
 
         if (!_inventory.ContainsKey(type))
             _selectedType = null;
@@ -181,10 +186,15 @@ public partial class Player : CharacterBody2D
         if (!_inventory.TryGetValue(type, out var count) || count <= 0)
             return false;
 
-        if (count == 1)
+        if (count <= 1)
+        {
             _inventory.Remove(type);
+            _selectedType = null;
+        }
         else
+        {
             _inventory[type] = count - 1;
+        }
 
         if (!_inventory.ContainsKey(type))
             _selectedType = null;

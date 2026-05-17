@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://cqlevrwd6suet"]
+
+[ext_resource type="Script" uid="uid://bqaafrv7sy1fh" path="res://scripts/FreeMovement.cs" id="1_kbb1n"]
+[ext_resource type="Texture2D" uid="uid://tjpe1iwj4kq6" path="res://assets/creatures/animals/sea_wasp2.png" id="2_kbb1n"]
+[ext_resource type="Texture2D" uid="uid://2t5vvlddfjyh" path="res://assets/creatures/animals/sea_wasp.png" id="2_ktpn3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0h5o"]
+atlas = ExtResource("2_kbb1n")
+region = Rect2(0, 250, 345, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8jks"]
+atlas = ExtResource("2_kbb1n")
+region = Rect2(345, 250, 345, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stlog"]
+atlas = ExtResource("2_kbb1n")
+region = Rect2(690, 250, 345, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrvra"]
+atlas = ExtResource("2_kbb1n")
+region = Rect2(1035, 250, 345, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbb1n"]
+atlas = ExtResource("2_ktpn3")
+region = Rect2(0, 256, 352, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n78th"]
+atlas = ExtResource("2_ktpn3")
+region = Rect2(352, 256, 352, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jeq0"]
+atlas = ExtResource("2_ktpn3")
+region = Rect2(704, 256, 352, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amdr6"]
+atlas = ExtResource("2_ktpn3")
+region = Rect2(1056, 256, 352, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crab"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0h5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8jks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stlog")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrvra")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbb1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n78th")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jeq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amdr6")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crab"]
+size = Vector2(35.5, 36.5)
+
+[node name="Seawasp" type="Area2D" unique_id=875993688 groups=["enemy"]]
+scale = Vector2(2, 2)
+collision_layer = 2
+script = ExtResource("1_kbb1n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=743318854]
+texture_filter = 1
+position = Vector2(-1.0000007, -1.5000005)
+scale = Vector2(0.13468283, 0.15429688)
+sprite_frames = SubResource("SpriteFrames_crab")
+animation = &"up"
+autoplay = "walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=432910273]
+position = Vector2(0.75, 0.25)
+shape = SubResource("RectangleShape2D_crab")

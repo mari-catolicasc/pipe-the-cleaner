@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sq0sjxlo58jv"
-path="res://.godot/imported/orca3.png-568545d027173c2152ac6e8b4cabc012.ctex"
+uid="uid://bilp0mjiaq6pt"
+path="res://.godot/imported/stonefish.png-a87ae97c13ae47c6b32ec0145d46572a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/creatures/boss/orca3.png"
-dest_files=["res://.godot/imported/orca3.png-568545d027173c2152ac6e8b4cabc012.ctex"]
+source_file="res://assets/creatures/animals/stonefish.png"
+dest_files=["res://.godot/imported/stonefish.png-a87ae97c13ae47c6b32ec0145d46572a.ctex"]
 
 [params]
 
