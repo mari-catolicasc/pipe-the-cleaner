@@ -113,7 +113,7 @@ namespace PipeTheCleaner.scripts
         {
             if (body.Name == "Player")
             {
-                GD.Print("Tubarão-Tigre: Ignorando patrulha para caçar o Pipe!");
+                GD.Print("Ignorando patrulha para caçar o Pipe!");
                 _targetPlayer = body;
                 _isChasing = true;
             }
@@ -123,7 +123,7 @@ namespace PipeTheCleaner.scripts
         {
             if (body == _targetPlayer)
             {
-                GD.Print("Tubarão-Tigre: Player escapou. Retornando ao circuito de patrulha.");
+                GD.Print("Player escapou. Retornando ao circuito de patrulha.");
                 _targetPlayer = null;
                 _isChasing = false;
             }

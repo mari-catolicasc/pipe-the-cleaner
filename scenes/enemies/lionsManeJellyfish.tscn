@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bi8vq0fqyfbw8"]
+
+[ext_resource type="Script" uid="uid://bqaafrv7sy1fh" path="res://scripts/FreeMovement.cs" id="1_50scw"]
+[ext_resource type="Texture2D" uid="uid://bf6uohrw5t44l" path="res://assets/creatures/animals/lions_mane_jellyfish2.png" id="2_50scw"]
+[ext_resource type="Texture2D" uid="uid://de3whbm0qr727" path="res://assets/creatures/animals/lions_mane_jellyfish1.png" id="3_lnuoo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fr4r4"]
+atlas = ExtResource("2_50scw")
+region = Rect2(0, 0, 270, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kln3r"]
+atlas = ExtResource("2_50scw")
+region = Rect2(270, 0, 270, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcq51"]
+atlas = ExtResource("2_50scw")
+region = Rect2(540, 0, 270, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7usc"]
+atlas = ExtResource("2_50scw")
+region = Rect2(810, 0, 270, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8yj7"]
+atlas = ExtResource("3_lnuoo")
+region = Rect2(0, 0, 282, 166)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gll81"]
+atlas = ExtResource("3_lnuoo")
+region = Rect2(282, 0, 282, 166)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_crab"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fr4r4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kln3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcq51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7usc")
+}],
+"loop": true,
+"name": &"up",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8yj7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gll81")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crab"]
+size = Vector2(55.5, 50.75)
+
+[node name="LionsManeJellyfish" type="Area2D" unique_id=875993688 groups=["enemy"]]
+scale = Vector2(2, 2)
+collision_layer = 2
+script = ExtResource("1_50scw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=743318854]
+texture_filter = 1
+position = Vector2(-21.308573, 5.781971)
+scale = Vector2(0.28016374, 0.3209643)
+sprite_frames = SubResource("SpriteFrames_crab")
+animation = &"walk"
+autoplay = "walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=432910273]
+position = Vector2(-23.25, 7.625)
+shape = SubResource("RectangleShape2D_crab")
