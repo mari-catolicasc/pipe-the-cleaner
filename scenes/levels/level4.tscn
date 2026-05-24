@@ -63,7 +63,7 @@ position = Vector2(2694.7407, 316.2389)
 scale = Vector2(1.8471348, 1.8110807)
 texture = ExtResource("1_ev8xs")
 
-[node name="Player" parent="." unique_id=1622332219 groups=["player"] instance=ExtResource("2_q6dln")]
+[node name="Player" parent="." unique_id=1622332219 instance=ExtResource("2_q6dln")]
 position = Vector2(113, 258)
 collision_mask = 5
 
@@ -240,6 +240,7 @@ position = Vector2(1983, 444)
 
 [node name="Crab" parent="Creatures" unique_id=423285791 instance=ExtResource("6_m1gbu")]
 position = Vector2(313, 577)
+script = null
 
 [node name="Path2D" type="Path2D" parent="Creatures/Crab" unique_id=1632626695]
 position = Vector2(5.2663574, -3.5559998)
@@ -259,12 +260,14 @@ collision_mask = 5
 
 [node name="Crab2" parent="Creatures" unique_id=1631220184 instance=ExtResource("6_m1gbu")]
 position = Vector2(471, 152)
+script = null
 
 [node name="Path2D" type="Path2D" parent="Creatures/Crab2" unique_id=392053973]
 curve = SubResource("Curve2D_nfihu")
 
 [node name="Crab3" parent="Creatures" unique_id=1287451485 instance=ExtResource("6_m1gbu")]
 position = Vector2(1219, 149)
+script = null
 
 [node name="Path2D" type="Path2D" parent="Creatures/Crab3" unique_id=1422009917]
 rotation = 6.2831855
@@ -272,6 +275,7 @@ curve = SubResource("Curve2D_lgguw")
 
 [node name="Crab4" parent="Creatures" unique_id=875993688 instance=ExtResource("6_m1gbu")]
 position = Vector2(1826, 94)
+script = null
 
 [node name="Path2D" type="Path2D" parent="Creatures/Crab4" unique_id=1361909368]
 position = Vector2(5.2663574, -3.5559998)
@@ -279,6 +283,7 @@ curve = SubResource("Curve2D_6sh32")
 
 [node name="Crab5" parent="Creatures" unique_id=673738268 instance=ExtResource("6_m1gbu")]
 position = Vector2(1823, 558)
+script = null
 
 [node name="Path2D" type="Path2D" parent="Creatures/Crab5" unique_id=848800376]
 position = Vector2(5.2663574, -3.5559998)
@@ -286,7 +291,7 @@ curve = SubResource("Curve2D_jprdt")
 
 [node name="TrashCans" type="Node2D" parent="." unique_id=1712659179 groups=["trashCan"]]
 
-[node name="plasticTrashCan" parent="TrashCans" unique_id=770737096 groups=["trashCan"] instance=ExtResource("8_1wpw8")]
+[node name="plasticTrashCan" parent="TrashCans" unique_id=770737096 instance=ExtResource("8_1wpw8")]
 position = Vector2(5302, 123)
 
 [node name="glassTrashCan" parent="TrashCans" unique_id=2036630516 instance=ExtResource("9_w1hcc")]

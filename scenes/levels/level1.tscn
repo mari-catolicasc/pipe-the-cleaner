@@ -75,7 +75,7 @@ position = Vector2(1598.5, 313)
 scale = Vector2(1.1055536, 1.7907608)
 texture = ExtResource("1_4fww7")
 
-[node name="Player" parent="." unique_id=1622332219 groups=["player"] instance=ExtResource("2_plydf")]
+[node name="Player" parent="." unique_id=1622332219 instance=ExtResource("2_plydf")]
 position = Vector2(113, 258)
 collision_mask = 5
 
@@ -299,7 +299,7 @@ rotation = -1.5707964
 
 [node name="TrashCans" type="Node2D" parent="." unique_id=1712659179 groups=["trashCan"]]
 
-[node name="plasticTrashCan" parent="TrashCans" unique_id=770737096 groups=["trashCan"] instance=ExtResource("13_lgguw")]
+[node name="plasticTrashCan" parent="TrashCans" unique_id=770737096 instance=ExtResource("13_lgguw")]
 position = Vector2(3133, 132)
 
 [node name="glassTrashCan" parent="TrashCans" unique_id=2036630516 instance=ExtResource("14_1xax6")]

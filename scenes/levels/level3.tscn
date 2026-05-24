@@ -5,74 +5,82 @@
 [ext_resource type="PackedScene" uid="uid://qhliutounhxp" path="res://scenes/hud.tscn" id="3_022ip"]
 [ext_resource type="Texture2D" uid="uid://dgb58tanbyxx5" path="res://assets/backgrounds/grounds/sand_1.png" id="4_hl16f"]
 [ext_resource type="PackedScene" uid="uid://d1sf6gvpi4q4t" path="res://scenes/platform.tscn" id="5_v6yyo"]
-[ext_resource type="PackedScene" uid="uid://cg7osukeopd46" path="res://scenes/enemies/crab.tscn" id="6_fhpi3"]
-[ext_resource type="PackedScene" uid="uid://c6m0csjq24qad" path="res://scenes/enemies/jellyfish.tscn" id="7_db4wd"]
+[ext_resource type="PackedScene" uid="uid://bi8vq0fqyfbw8" path="res://scenes/enemies/lionsManeJellyfish.tscn" id="6_wb0vq"]
+[ext_resource type="PackedScene" uid="uid://t3mbodvp7t5i" path="res://scenes/enemies/walrus.tscn" id="7_522sc"]
+[ext_resource type="PackedScene" uid="uid://bp8b7ktr4m2x2" path="res://scenes/enemies/greenlandShark.tscn" id="8_hl16f"]
 [ext_resource type="PackedScene" uid="uid://d2d083dnhd5m4" path="res://scenes/trash_cans/plasticTrashCan.tscn" id="8_yc51k"]
 [ext_resource type="PackedScene" uid="uid://dhagc1j7fxdh8" path="res://scenes/trash_cans/glassTrashCan.tscn" id="9_ojkn5"]
 [ext_resource type="PackedScene" uid="uid://daxqghlepcgsd" path="res://scenes/trash_cans/metalTrashCan.tscn" id="10_6vxnv"]
 [ext_resource type="PackedScene" uid="uid://tun35bvqrcb1" path="res://scenes/trash_cans/organicTrashCan.tscn" id="11_flme0"]
 [ext_resource type="PackedScene" uid="uid://b52bxh2swqccc" path="res://scenes/trash_cans/paperTrashCan.tscn" id="12_0qxt0"]
-[ext_resource type="PackedScene" uid="uid://eutuwgypkxm2" path="res://scenes/trash/plastic/plasticWaterBottle.tscn" id="13_lsxft"]
-[ext_resource type="PackedScene" uid="uid://dyba3npsmiuj2" path="res://scenes/trash/plastic/plasticBag.tscn" id="14_rfqup"]
-[ext_resource type="PackedScene" uid="uid://c6mwhtqoe6ory" path="res://scenes/trash/plastic/plasticStraw.tscn" id="15_0y7c6"]
-[ext_resource type="PackedScene" uid="uid://cq3hjo1oca6rt" path="res://scenes/trash/paper/paperPage.tscn" id="16_d1mne"]
-[ext_resource type="PackedScene" uid="uid://ipjy2jmco55l" path="res://scenes/trash/paper/paperNewspaper.tscn" id="17_ul42b"]
-[ext_resource type="PackedScene" uid="uid://cgwbkrve5xg8e" path="res://scenes/trash/paper/paperBox.tscn" id="18_dc8aq"]
-[ext_resource type="PackedScene" uid="uid://w1dj6vdc2k7m" path="res://scenes/machine/piece1.tscn" id="19_5bnxw"]
+[ext_resource type="PackedScene" uid="uid://gqmmrw6whonx" path="res://scenes/trash/glass/glassPerfume.tscn" id="12_ah4rv"]
+[ext_resource type="PackedScene" uid="uid://eutuwgypkxm2" path="res://scenes/trash/plastic/plasticWaterBottle.tscn" id="14_t14x3"]
+[ext_resource type="PackedScene" uid="uid://feg344svaehn" path="res://scenes/trash/organic/organicApple.tscn" id="15_ahaer"]
+[ext_resource type="PackedScene" uid="uid://plruf0ub3qe3" path="res://scenes/trash/metal/metalSodaCan.tscn" id="16_ahaer"]
+[ext_resource type="PackedScene" uid="uid://bxq524fvet2xh" path="res://scenes/machine/piece3.tscn" id="16_wt4k6"]
+[ext_resource type="PackedScene" uid="uid://c6mwhtqoe6ory" path="res://scenes/trash/plastic/plasticStraw.tscn" id="18_v6yyo"]
+[ext_resource type="PackedScene" uid="uid://utihnvwr1pjy" path="res://scenes/trash/organic/organicFish.tscn" id="19_fhpi3"]
+[ext_resource type="PackedScene" uid="uid://cat481duor1yk" path="res://scenes/trash/metal/metalCan.tscn" id="20_db4wd"]
+[ext_resource type="PackedScene" uid="uid://c2aymlv1cj7qb" path="res://scenes/trash/glass/glassJar.tscn" id="21_yc51k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ceiling"]
-size = Vector2(5405, 40)
+size = Vector2(4402, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_left"]
-size = Vector2(38, 703)
+size = Vector2(38, 695)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_right"]
-size = Vector2(40, 697)
+size = Vector2(40, 689.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwgg1"]
-size = Vector2(3201.5, 66)
+size = Vector2(785.6677, 66)
 
-[sub_resource type="Curve2D" id="Curve2D_6sh32"]
+[sub_resource type="Curve2D" id="Curve2D_wb0vq"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -16.266357, 1.5559998, 0, 0, 0, 0, 64.23364, 3.5559998)
-}
-point_count = 2
-
-[sub_resource type="Curve2D" id="Curve2D_nfihu"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -80.5, -3.5, 0, 0, 0, 0, 185.5, -3.5)
-}
-point_count = 2
-
-[sub_resource type="Curve2D" id="Curve2D_lgguw"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 10, 1.5, 0, 0, 0, 0, -187.5, 1.5000305, 0, 0, 0, 0, 82.5, 1.4999847)
+"points": PackedVector2Array(0, 0, 0, 0, 191, 521, 0, 0, 0, 0, 1105, 521, 0, 0, 0, 0, 191, 521)
 }
 point_count = 3
 
-[sub_resource type="Curve2D" id="Curve2D_jprdt"]
+[sub_resource type="Curve2D" id="Curve2D_a82vw"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -16.266357, 1.5559998, 0, 0, 0, 0, 126.23364, 0.55599976)
+"points": PackedVector2Array(0, 0, 0, 0, 222, 268, 0, 0, 0, 0, 998, 268, 0, 0, 0, 0, 222, 268)
 }
-point_count = 2
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_t14x3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1304, 33, 0, 0, 0, 0, 2401, 530, 0, 0, 0, 0, 1304, 33)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_ahaer"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2401, 33, 0, 0, 0, 0, 1304, 530, 0, 0, 0, 0, 2401, 33)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_ojkn5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2685, 536, 0, 0, 0, 0, 3915, 536, 0, 0, 0, 0, 3915, 63, 0, 0, 0, 0, 2685, 63, 0, 0, 0, 0, 2685, 536)
+}
+point_count = 5
 
 [node name="Main" type="Node2D" unique_id=1680725934]
 
 [node name="background_1" type="Sprite2D" parent="." unique_id=1941059699]
-position = Vector2(2694.7407, 316.2389)
-scale = Vector2(1.8471348, 1.8110807)
+position = Vector2(2177, 312.5)
+scale = Vector2(1.4926393, 1.790761)
 texture = ExtResource("1_wo5bm")
 
-[node name="Player" parent="." unique_id=1622332219 groups=["player"] instance=ExtResource("2_edoqj")]
+[node name="Player" parent="." unique_id=1622332219 instance=ExtResource("2_edoqj")]
 position = Vector2(113, 258)
 collision_mask = 5
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=68315889]
-visible = false
 position = Vector2(458, 69)
 limit_left = 0
 limit_top = 0
-limit_right = 3220
+limit_right = 4361
 limit_bottom = 656
 
 [node name="HUD" parent="." unique_id=1014100817 instance=ExtResource("3_022ip")]
@@ -82,15 +90,15 @@ collision_layer = 4
 collision_mask = 0
 
 [node name="CeilingCollision" type="CollisionShape2D" parent="ScenarioCollision" unique_id=2009864262]
-position = Vector2(2702.5, -20)
+position = Vector2(2201, -20)
 shape = SubResource("RectangleShape2D_ceiling")
 
 [node name="WallLeftCollision" type="CollisionShape2D" parent="ScenarioCollision" unique_id=456428845]
-position = Vector2(-21, 301.5)
+position = Vector2(-21, 305.5)
 shape = SubResource("RectangleShape2D_wall_left")
 
 [node name="WallRightCollision" type="CollisionShape2D" parent="ScenarioCollision" unique_id=1478190564]
-position = Vector2(5405, 315)
+position = Vector2(4382, 304.75)
 shape = SubResource("RectangleShape2D_wall_right")
 
 [node name="Floor" type="Node2D" parent="." unique_id=1919712305]
@@ -100,231 +108,252 @@ position = Vector2(1600.5, 490)
 collision_layer = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=848317820]
-position = Vector2(0, 127)
+position = Vector2(104.29297, 126.99997)
+scale = Vector2(0.9999999, 0.9999996)
 shape = SubResource("RectangleShape2D_dwgg1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor/StaticBody2D" unique_id=22353003]
-position = Vector2(1092.6, 0)
-scale = Vector2(9.34, 1)
+position = Vector2(104.47324, 0)
+scale = Vector2(1.3627543, 0.99999994)
 texture = ExtResource("4_hl16f")
 
 [node name="Platforms" type="Node2D" parent="." unique_id=864672386]
 
-[node name="Platform33" parent="Platforms" unique_id=214444400 instance=ExtResource("5_v6yyo")]
-position = Vector2(7831.09, 1206.4075)
-scale = Vector2(5.5486107, 2.0123458)
+[node name="Platform1" parent="Platforms" unique_id=214444400 instance=ExtResource("5_v6yyo")]
+position = Vector2(174.99998, 451)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform32" parent="Platforms" unique_id=855299278 instance=ExtResource("5_v6yyo")]
-position = Vector2(6976.6035, 1206.4075)
-scale = Vector2(5.5486107, 2.0123458)
+[node name="Platform2" parent="Platforms" unique_id=1212873227 instance=ExtResource("5_v6yyo")]
+position = Vector2(235, 451)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform" parent="Platforms" unique_id=234876704 instance=ExtResource("5_v6yyo")]
-position = Vector2(319, 437)
+[node name="Platform3" parent="Platforms" unique_id=1094397541 instance=ExtResource("5_v6yyo")]
+position = Vector2(295, 451)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform2" parent="Platforms" unique_id=1469759951 instance=ExtResource("5_v6yyo")]
-position = Vector2(548, 437)
+[node name="Platform4" parent="Platforms" unique_id=406158961 instance=ExtResource("5_v6yyo")]
+position = Vector2(356, 451)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform3" parent="Platforms" unique_id=282610809 instance=ExtResource("5_v6yyo")]
-position = Vector2(471, 437)
+[node name="Platform5" parent="Platforms" unique_id=442398200 instance=ExtResource("5_v6yyo")]
+position = Vector2(416, 451)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform4" parent="Platforms" unique_id=1335837271 instance=ExtResource("5_v6yyo")]
-position = Vector2(396, 437)
+[node name="Platform6" parent="Platforms" unique_id=214798517 instance=ExtResource("5_v6yyo")]
+position = Vector2(477, 451)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform5" parent="Platforms" unique_id=1151446375 instance=ExtResource("5_v6yyo")]
-position = Vector2(319, 287)
+[node name="Platform16" parent="Platforms" unique_id=1903853993 instance=ExtResource("5_v6yyo")]
+position = Vector2(477, 391)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform19" parent="Platforms" unique_id=1807471702 instance=ExtResource("5_v6yyo")]
-position = Vector2(1384, 213)
+[node name="Platform17" parent="Platforms" unique_id=723029732 instance=ExtResource("5_v6yyo")]
+position = Vector2(477, 332)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform18" parent="Platforms" unique_id=406268840 instance=ExtResource("5_v6yyo")]
-position = Vector2(1307, 213)
+[node name="Platform7" parent="Platforms" unique_id=1168631974 instance=ExtResource("5_v6yyo")]
+position = Vector2(538, 332)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform17" parent="Platforms" unique_id=1665117234 instance=ExtResource("5_v6yyo")]
-position = Vector2(1231, 213)
+[node name="Platform9" parent="Platforms" unique_id=1090029077 instance=ExtResource("5_v6yyo")]
+position = Vector2(659, 332)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform16" parent="Platforms" unique_id=32602045 instance=ExtResource("5_v6yyo")]
-position = Vector2(1154, 213)
+[node name="Platform8" parent="Platforms" unique_id=1202441379 instance=ExtResource("5_v6yyo")]
+position = Vector2(599, 332)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform15" parent="Platforms" unique_id=372027309 instance=ExtResource("5_v6yyo")]
-position = Vector2(1078, 213)
+[node name="Platform18" parent="Platforms" unique_id=1529465346 instance=ExtResource("5_v6yyo")]
+position = Vector2(720, 391)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform14" parent="Platforms" unique_id=2143073129 instance=ExtResource("5_v6yyo")]
-position = Vector2(1001, 213)
+[node name="Platform19" parent="Platforms" unique_id=274540517 instance=ExtResource("5_v6yyo")]
+position = Vector2(720, 332)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform13" parent="Platforms" unique_id=215215178 instance=ExtResource("5_v6yyo")]
-position = Vector2(925, 213)
+[node name="Platform10" parent="Platforms" unique_id=1394321177 instance=ExtResource("5_v6yyo")]
+position = Vector2(720, 451)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform12" parent="Platforms" unique_id=1662902029 instance=ExtResource("5_v6yyo")]
-position = Vector2(849, 213)
+[node name="Platform11" parent="Platforms" unique_id=1743145380 instance=ExtResource("5_v6yyo")]
+position = Vector2(780, 451)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform11" parent="Platforms" unique_id=2085789658 instance=ExtResource("5_v6yyo")]
-position = Vector2(773, 213)
+[node name="Platform12" parent="Platforms" unique_id=1946997205 instance=ExtResource("5_v6yyo")]
+position = Vector2(841, 451)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform10" parent="Platforms" unique_id=866534638 instance=ExtResource("5_v6yyo")]
-position = Vector2(697, 213)
+[node name="Platform13" parent="Platforms" unique_id=1900261198 instance=ExtResource("5_v6yyo")]
+position = Vector2(902, 451)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform9" parent="Platforms" unique_id=1725446448 instance=ExtResource("5_v6yyo")]
-position = Vector2(621, 213)
+[node name="Platform14" parent="Platforms" unique_id=1471497282 instance=ExtResource("5_v6yyo")]
+position = Vector2(963, 451)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform20" parent="Platforms" unique_id=2096711218 instance=ExtResource("5_v6yyo")]
-position = Vector2(545, 213)
+[node name="Platform15" parent="Platforms" unique_id=1295927020 instance=ExtResource("5_v6yyo")]
+position = Vector2(1023, 451)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform21" parent="Platforms" unique_id=1956009913 instance=ExtResource("5_v6yyo")]
-position = Vector2(469, 213)
+[node name="Platform20" parent="Platforms" unique_id=167044515 instance=ExtResource("5_v6yyo")]
+position = Vector2(1207, 558)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform8" parent="Platforms" unique_id=502755791 instance=ExtResource("5_v6yyo")]
-position = Vector2(394, 213)
+[node name="Platform21" parent="Platforms" unique_id=177002231 instance=ExtResource("5_v6yyo")]
+position = Vector2(1207, 498)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform6" parent="Platforms" unique_id=1236747807 instance=ExtResource("5_v6yyo")]
-position = Vector2(319, 212)
+[node name="Platform22" parent="Platforms" unique_id=1093224113 instance=ExtResource("5_v6yyo")]
+position = Vector2(1207, 438)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform7" parent="Platforms" unique_id=607229300 instance=ExtResource("5_v6yyo")]
-position = Vector2(319, 362)
+[node name="Platform23" parent="Platforms" unique_id=1726257265 instance=ExtResource("5_v6yyo")]
+position = Vector2(1207, 377)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform22" parent="Platforms" unique_id=166772682 instance=ExtResource("5_v6yyo")]
-position = Vector2(779, 438)
+[node name="Platform24" parent="Platforms" unique_id=1421140215 instance=ExtResource("5_v6yyo")]
+position = Vector2(1209, 195)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform34" parent="Platforms" unique_id=1956821233 instance=ExtResource("5_v6yyo")]
-position = Vector2(1385, 438)
+[node name="Platform25" parent="Platforms" unique_id=1247628298 instance=ExtResource("5_v6yyo")]
+position = Vector2(1209, 135)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform28" parent="Platforms" unique_id=1016213659 instance=ExtResource("5_v6yyo")]
-position = Vector2(1384, 363)
+[node name="Platform26" parent="Platforms" unique_id=736624941 instance=ExtResource("5_v6yyo")]
+position = Vector2(1209, 75)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform27" parent="Platforms" unique_id=995888280 instance=ExtResource("5_v6yyo")]
-position = Vector2(1384, 288)
+[node name="Platform27" parent="Platforms" unique_id=951123691 instance=ExtResource("5_v6yyo")]
+position = Vector2(1209, 14)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform26" parent="Platforms" unique_id=1439710530 instance=ExtResource("5_v6yyo")]
-position = Vector2(1082, 438)
+[node name="Platform28" parent="Platforms" unique_id=1920003092 instance=ExtResource("5_v6yyo")]
+position = Vector2(2468, 552)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform30" parent="Platforms" unique_id=192316203 instance=ExtResource("5_v6yyo")]
-position = Vector2(1310, 438)
+[node name="Platform29" parent="Platforms" unique_id=1949908627 instance=ExtResource("5_v6yyo")]
+position = Vector2(2468, 492)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform31" parent="Platforms" unique_id=555137138 instance=ExtResource("5_v6yyo")]
-position = Vector2(1234, 438)
+[node name="Platform30" parent="Platforms" unique_id=1360532156 instance=ExtResource("5_v6yyo")]
+position = Vector2(2468, 432)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform29" parent="Platforms" unique_id=1450246753 instance=ExtResource("5_v6yyo")]
-position = Vector2(1158, 438)
+[node name="Platform31" parent="Platforms" unique_id=913364800 instance=ExtResource("5_v6yyo")]
+position = Vector2(2468, 371)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform25" parent="Platforms" unique_id=1222163242 instance=ExtResource("5_v6yyo")]
-position = Vector2(1007, 438)
+[node name="Platform32" parent="Platforms" unique_id=2040291248 instance=ExtResource("5_v6yyo")]
+position = Vector2(2470, 189)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform24" parent="Platforms" unique_id=1542112558 instance=ExtResource("5_v6yyo")]
-position = Vector2(931, 438)
+[node name="Platform33" parent="Platforms" unique_id=243225506 instance=ExtResource("5_v6yyo")]
+position = Vector2(2470, 129)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform23" parent="Platforms" unique_id=102048583 instance=ExtResource("5_v6yyo")]
-position = Vector2(855, 438)
+[node name="Platform34" parent="Platforms" unique_id=986901605 instance=ExtResource("5_v6yyo")]
+position = Vector2(2470, 69)
+scale = Vector2(0.8, 0.8)
 
-[node name="Platform35" parent="Platforms" unique_id=405948509 instance=ExtResource("5_v6yyo")]
-position = Vector2(1831, 153)
-
-[node name="Platform36" parent="Platforms" unique_id=188350386 instance=ExtResource("5_v6yyo")]
-position = Vector2(7831.09, 1206.4075)
-scale = Vector2(5.5486107, 2.0123458)
-
-[node name="Platform37" parent="Platforms" unique_id=509898037 instance=ExtResource("5_v6yyo")]
-position = Vector2(1906, 153)
-
-[node name="Platform38" parent="Platforms" unique_id=2042626684 instance=ExtResource("5_v6yyo")]
-position = Vector2(1827, 444)
-
-[node name="Platform39" parent="Platforms" unique_id=815059643 instance=ExtResource("5_v6yyo")]
-position = Vector2(1905, 444)
-
-[node name="Platform41" parent="Platforms" unique_id=941796783 instance=ExtResource("5_v6yyo")]
-position = Vector2(2060, 444)
-
-[node name="Platform40" parent="Platforms" unique_id=866330609 instance=ExtResource("5_v6yyo")]
-position = Vector2(1983, 444)
+[node name="Platform35" parent="Platforms" unique_id=1477234890 instance=ExtResource("5_v6yyo")]
+position = Vector2(2470, 8)
+scale = Vector2(0.8, 0.8)
 
 [node name="Creatures" type="Node2D" parent="." unique_id=529217953 groups=["enemy"]]
 
-[node name="Crab" parent="Creatures" unique_id=423285791 instance=ExtResource("6_fhpi3")]
-position = Vector2(313, 577)
+[node name="LionsManeJellyfishPath2D" type="Path2D" parent="Creatures" unique_id=1420818506]
+curve = SubResource("Curve2D_wb0vq")
 
-[node name="Path2D" type="Path2D" parent="Creatures/Crab" unique_id=1632626695]
-position = Vector2(5.2663574, -3.5559998)
-curve = SubResource("Curve2D_6sh32")
+[node name="PathFollow2D" type="PathFollow2D" parent="Creatures/LionsManeJellyfishPath2D" unique_id=266311109]
+position = Vector2(191, 521)
 
-[node name="Jellyfish3" parent="Creatures" unique_id=1667724805 instance=ExtResource("7_db4wd")]
-position = Vector2(1823, 365)
-collision_mask = 5
+[node name="LionsManeJellyfish" parent="Creatures/LionsManeJellyfishPath2D/PathFollow2D" unique_id=875993688 instance=ExtResource("6_wb0vq")]
+position = Vector2(22, -4.0000305)
 
-[node name="Jellyfish2" parent="Creatures" unique_id=1362904855 instance=ExtResource("7_db4wd")]
-position = Vector2(2060, 362)
-collision_mask = 5
+[node name="WalrusPath2D" type="Path2D" parent="Creatures" unique_id=692745966]
+curve = SubResource("Curve2D_a82vw")
 
-[node name="Jellyfish" parent="Creatures" unique_id=2065138127 instance=ExtResource("7_db4wd")]
-position = Vector2(781, 324)
-collision_mask = 5
+[node name="PathFollow2D" type="PathFollow2D" parent="Creatures/WalrusPath2D" unique_id=548948215]
+position = Vector2(222, 268)
 
-[node name="Crab2" parent="Creatures" unique_id=1631220184 instance=ExtResource("6_fhpi3")]
-position = Vector2(471, 152)
+[node name="Walrus" parent="Creatures" unique_id=1695153777 instance=ExtResource("7_522sc")]
+position = Vector2(536, 238)
+PathFollowPath = NodePath("../WalrusPath2D/PathFollow2D")
 
-[node name="Path2D" type="Path2D" parent="Creatures/Crab2" unique_id=392053973]
-curve = SubResource("Curve2D_nfihu")
+[node name="LionsManeJellyfishPath2D2" type="Path2D" parent="Creatures" unique_id=373926622]
+curve = SubResource("Curve2D_t14x3")
 
-[node name="Crab3" parent="Creatures" unique_id=1287451485 instance=ExtResource("6_fhpi3")]
-position = Vector2(1219, 149)
+[node name="PathFollow2D" type="PathFollow2D" parent="Creatures/LionsManeJellyfishPath2D2" unique_id=1286818201]
+position = Vector2(1304, 33)
+rotation = 0.42539054
 
-[node name="Path2D" type="Path2D" parent="Creatures/Crab3" unique_id=1422009917]
-rotation = 6.2831855
-curve = SubResource("Curve2D_lgguw")
+[node name="LionsManeJellyfish" parent="Creatures/LionsManeJellyfishPath2D2/PathFollow2D" unique_id=2118136419 instance=ExtResource("6_wb0vq")]
 
-[node name="Crab4" parent="Creatures" unique_id=875993688 instance=ExtResource("6_fhpi3")]
-position = Vector2(1826, 94)
+[node name="LionsManeJellyfishPath2D3" type="Path2D" parent="Creatures" unique_id=36784223]
+curve = SubResource("Curve2D_ahaer")
 
-[node name="Path2D" type="Path2D" parent="Creatures/Crab4" unique_id=1361909368]
-position = Vector2(5.2663574, -3.5559998)
-curve = SubResource("Curve2D_6sh32")
+[node name="PathFollow2D" type="PathFollow2D" parent="Creatures/LionsManeJellyfishPath2D3" unique_id=2133853232]
+position = Vector2(2401, 33)
+rotation = -0.46486023
+rotates = false
 
-[node name="Crab5" parent="Creatures" unique_id=673738268 instance=ExtResource("6_fhpi3")]
-position = Vector2(1823, 558)
+[node name="LionsManeJellyfish" parent="Creatures/LionsManeJellyfishPath2D3/PathFollow2D" unique_id=1428266000 instance=ExtResource("6_wb0vq")]
+position = Vector2(25.490616, 0.4781189)
 
-[node name="Path2D" type="Path2D" parent="Creatures/Crab5" unique_id=848800376]
-position = Vector2(5.2663574, -3.5559998)
-curve = SubResource("Curve2D_jprdt")
+[node name="GreenlandSharkPath2D" type="Path2D" parent="Creatures" unique_id=1400746776]
+curve = SubResource("Curve2D_ojkn5")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Creatures/GreenlandSharkPath2D" unique_id=1442537772]
+position = Vector2(2685, 536)
+
+[node name="GreenlandShark" parent="Creatures" unique_id=1851426393 instance=ExtResource("8_hl16f")]
+position = Vector2(2628, 507)
+PathFollowPath = NodePath("../GreenlandSharkPath2D/PathFollow2D")
 
 [node name="TrashCans" type="Node2D" parent="." unique_id=1712659179 groups=["trashCan"]]
 
-[node name="plasticTrashCan" parent="TrashCans" unique_id=770737096 groups=["trashCan"] instance=ExtResource("8_yc51k")]
-position = Vector2(5302, 123)
+[node name="plasticTrashCan" parent="TrashCans" unique_id=770737096 instance=ExtResource("8_yc51k")]
+position = Vector2(4278, 132)
 
 [node name="glassTrashCan" parent="TrashCans" unique_id=2036630516 instance=ExtResource("9_ojkn5")]
-position = Vector2(5303, 197)
+position = Vector2(4279, 206)
 
 [node name="metalTrashCan" parent="TrashCans" unique_id=68889418 instance=ExtResource("10_6vxnv")]
-position = Vector2(5303, 275)
+position = Vector2(4279, 284)
 
 [node name="plasticTrashCan2" parent="TrashCans" unique_id=1170495162 instance=ExtResource("11_flme0")]
-position = Vector2(5303, 359)
+position = Vector2(4279, 368)
 
 [node name="plasticTrashCan3" parent="TrashCans" unique_id=327638420 instance=ExtResource("12_0qxt0")]
-position = Vector2(5302, 444)
+position = Vector2(4278, 453)
 
 [node name="Collectibles" type="Node2D" parent="." unique_id=1717791881]
 
 [node name="TrashItems" type="Node2D" parent="Collectibles" unique_id=1301508639]
 
-[node name="PlasticWaterBottle" parent="Collectibles/TrashItems" unique_id=1182270703 instance=ExtResource("13_lsxft")]
-position = Vector2(435, 505)
+[node name="Trash" parent="Collectibles/TrashItems" unique_id=1685426321 instance=ExtResource("12_ah4rv")]
+position = Vector2(596.00006, 528.00006)
 
-[node name="PlasticBag" parent="Collectibles/TrashItems" unique_id=1847477096 instance=ExtResource("14_rfqup")]
-position = Vector2(409, 326)
+[node name="Trash2" parent="Collectibles/TrashItems" unique_id=1673883928 instance=ExtResource("14_t14x3")]
+position = Vector2(1413.9999, 477)
 
-[node name="PlasticStraw" parent="Collectibles/TrashItems" unique_id=1613153103 instance=ExtResource("15_0y7c6")]
-position = Vector2(1939, 368)
+[node name="Trash3" parent="Collectibles/TrashItems" unique_id=159973827 instance=ExtResource("15_ahaer")]
+position = Vector2(1208.9999, 286.99997)
 
-[node name="PaperPage" parent="Collectibles/TrashItems" unique_id=1685426321 instance=ExtResource("16_d1mne")]
-position = Vector2(819.99994, 142.99998)
+[node name="Trash4" parent="Collectibles/TrashItems" unique_id=264663333 instance=ExtResource("16_ahaer")]
+position = Vector2(1850.0001, 277.00003)
 
-[node name="PaperNewspaper" parent="Collectibles/TrashItems" unique_id=1695040013 instance=ExtResource("17_ul42b")]
-position = Vector2(1285.9999, 334.99997)
+[node name="Trash5" parent="Collectibles/TrashItems" unique_id=1819092698 instance=ExtResource("18_v6yyo")]
+position = Vector2(3299, 57.000015)
 
-[node name="PaperBox" parent="Collectibles/TrashItems" unique_id=1992801606 instance=ExtResource("18_dc8aq")]
-position = Vector2(1906, 92)
+[node name="Trash6" parent="Collectibles/TrashItems" unique_id=1125229857 instance=ExtResource("19_fhpi3")]
+position = Vector2(3307, 542)
 
-[node name="Piece1" parent="Collectibles" unique_id=1801577733 groups=["machine_piece"] instance=ExtResource("19_5bnxw")]
-position = Vector2(5188, 289)
-input_pickable = false
-PartId = "part_3"
-NextScenePath = "res://scenes/levels/level4.tscn"
+[node name="Trash7" parent="Collectibles/TrashItems" unique_id=761549352 instance=ExtResource("20_db4wd")]
+position = Vector2(909, 378)
+
+[node name="Trash8" parent="Collectibles/TrashItems" unique_id=1406952999 instance=ExtResource("21_yc51k")]
+position = Vector2(2294.0002, 74)
+
+[node name="Piece1" parent="Collectibles" unique_id=1801577733 instance=ExtResource("16_wt4k6")]
+position = Vector2(4109, 313)
