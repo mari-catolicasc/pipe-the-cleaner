@@ -13,8 +13,13 @@ public partial class MainMenu : Node2D
     private Button _buttonFecharInstrucoes;
     private Button _buttonFecharCreditos;
 
+    private Label _progressLabel;
+
     public override void _Ready()
     {
+        _progressLabel = GetNode<Label>("UI/ProgressLabel");
+        UpdateProgressLabel();
+
         _buttonJogar = GetNode<Button>("UI/MenuButtons/ButtonJogar");
         _buttonInstrucoes = GetNode<Button>("UI/MenuButtons/ButtonInstrucoes");
         _buttonCreditos = GetNode<Button>("UI/MenuButtons/ButtonCreditos");
@@ -40,7 +45,7 @@ public partial class MainMenu : Node2D
 
     private void OnJogarPressed()
     {
-        GetTree().ChangeSceneToFile("res://scenes/levels/level1.tscn");
+        GetTree().ChangeSceneToFile("res://scenes/WorldMap.tscn");
     }
 
     private void OnInstrucoesPressed()
@@ -68,5 +73,14 @@ public partial class MainMenu : Node2D
     private void OnFecharCreditosPressed()
     {
         _panelCreditos.Visible = false;
+    }
+
+    private void UpdateProgressLabel()
+    {
+        if (_progressLabel == null) return;
+
+        int completed = GameManager.Instance?.HighestCompletedLevel ?? 0;
+        int total = GameManager.TotalLevels;
+        _progressLabel.Text = $"Progresso: {completed} / {total} fases";
     }
 }

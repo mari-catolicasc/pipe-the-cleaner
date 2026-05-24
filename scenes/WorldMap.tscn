@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw0r1mapcleanr"]
+
+[ext_resource type="Script" path="res://scripts/WorldMap.cs" id="1_wmap"]
+[ext_resource type="Texture2D" uid="uid://bvdrskxywet81" path="res://assets/creatures/pipe/pipe-idle.png" id="2_pipe"]
+
+[node name="WorldMap" type="Node2D"]
+script = ExtResource("1_wmap")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(680, 384)
+texture = null
+centered = true
+
+[node name="MapImage" type="TextureRect" parent="."]
+offset_right = 1360.0
+offset_bottom = 768.0
+texture = null
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Pipe" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(645, 82)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_pipe")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Title" type="Label" parent="UI"]
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 1320.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 32
+text = "ESCOLHA UMA FASE"
+horizontal_alignment = 1
+
+[node name="LevelLabel" type="Label" parent="UI"]
+offset_left = 40.0
+offset_top = 680.0
+offset_right = 1320.0
+offset_bottom = 720.0
+theme_override_font_sizes/font_size = 28
+text = "Fase 1"
+horizontal_alignment = 1
+
+[node name="HintLabel" type="Label" parent="UI"]
+offset_left = 40.0
+offset_top = 725.0
+offset_right = 1320.0
+offset_bottom = 760.0
+theme_override_font_sizes/font_size = 16
+text = "Setas: trocar fase    |    Enter / Espaço: jogar    |    Esc: voltar"
+horizontal_alignment = 1

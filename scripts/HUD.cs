@@ -1,11 +1,18 @@
 using Godot;
 using System.Collections.Generic;
-using System.Linq;
 
 public partial class HUD : CanvasLayer
 {
     private HBoxContainer _heartsContainer;
     private Label _trashLabel;
+    private Label _pointsLabel;
+
+    private Panel _levelCompletePanel;
+    private Label _levelCompletePoints;
+    private Label _star1;
+    private Label _star2;
+    private Label _star3;
+    private Button _nextButton;
 
     private static ImageTexture _heartTexture;
     private static ImageTexture _trashIconTexture;
@@ -16,134 +23,126 @@ public partial class HUD : CanvasLayer
     [Export] public Texture2D MetalIconTexture;
     [Export] public Texture2D OrganicIconTexture;
 
-    private TextureRect _plasticIconNode;
-    private Label _plasticCount;
+    [Export] public Texture2D SlotFrameEmptyTexture;
 
-    private Label _capacityLabel;
+    private const int InventorySlotCount = 3;
 
-    private TextureRect _paperIconNode;
-    private Label _paperCount;
+    private struct InventorySlotNodes
+    {
+        public TextureRect Frame;
+        public TextureRect Icon;
+        public Control SelectionOverlay;
+    }
 
-    private TextureRect _glassIconNode;
-    private Label _glassCount;
-
-    private TextureRect _metalIconNode;
-    private Label _metalCount;
-
-    private TextureRect _organicIconNode;
-    private Label _organicCount;
+    private readonly InventorySlotNodes[] _slots = new InventorySlotNodes[InventorySlotCount];
+    private readonly Dictionary<Trash.TrashType, Texture2D> _iconByType = new();
 
     public override void _Ready()
     {
         _heartsContainer = GetNodeOrNull<HBoxContainer>("HeartsContainer");
         _trashLabel = GetNodeOrNull<Label>("TrashContainer/TrashLabel");
+        _pointsLabel = GetNodeOrNull<Label>("PointsContainer/PointsLabel");
 
-        _plasticIconNode = GetNode<TextureRect>("Control/InventoryContainer/PlasticSlot/Icon");
-        _plasticCount    = GetNode<Label>("Control/InventoryContainer/PlasticSlot/Count");
+        _levelCompletePanel = GetNodeOrNull<Panel>("LevelCompletePanel");
+        _levelCompletePoints = GetNodeOrNull<Label>("LevelCompletePanel/VBox/PointsResult");
+        _star1 = GetNodeOrNull<Label>("LevelCompletePanel/VBox/StarsContainer/Star1");
+        _star2 = GetNodeOrNull<Label>("LevelCompletePanel/VBox/StarsContainer/Star2");
+        _star3 = GetNodeOrNull<Label>("LevelCompletePanel/VBox/StarsContainer/Star3");
+        _nextButton = GetNodeOrNull<Button>("LevelCompletePanel/VBox/NextButton");
 
-        _capacityLabel = GetNodeOrNull<Label>("Control/InventoryContainer/Capacity");
+        if (_levelCompletePanel != null)
+            _levelCompletePanel.Visible = false;
 
-        _paperIconNode = GetNode<TextureRect>("Control/InventoryContainer/PaperSlot/Icon");
-        _paperCount    = GetNode<Label>("Control/InventoryContainer/PaperSlot/Count");
+        if (_nextButton != null)
+            _nextButton.Pressed += OnNextLevelPressed;
 
-        _glassIconNode = GetNode<TextureRect>("Control/InventoryContainer/GlassSlot/Icon");
-        _glassCount    = GetNode<Label>("Control/InventoryContainer/GlassSlot/Count");
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.OnLevelEnded += OnLevelEnded;
+            GameManager.Instance.OnPointsChanged += UpdatePoints;
+        }
 
-        _metalIconNode = GetNode<TextureRect>("Control/InventoryContainer/MetalSlot/Icon");
-        _metalCount    = GetNode<Label>("Control/InventoryContainer/MetalSlot/Count");
+        for (int i = 0; i < InventorySlotCount; i++)
+        {
+            int slotNumber = i + 1;
+            _slots[i] = new InventorySlotNodes
+            {
+                Frame = GetNodeOrNull<TextureRect>($"InventoryContainer/Slot{slotNumber}/Frame"),
+                Icon = GetNodeOrNull<TextureRect>($"InventoryContainer/Slot{slotNumber}/Icon"),
+                SelectionOverlay = GetNodeOrNull<Control>($"InventoryContainer/Slot{slotNumber}/SelectionOverlay"),
+            };
+        }
 
-        _organicIconNode = GetNode<TextureRect>("Control/InventoryContainer/OrganicSlot/Icon");
-        _organicCount    = GetNode<Label>("Control/InventoryContainer/OrganicSlot/Count");
+        BuildIconLookup();
 
         if (_heartsContainer == null || _trashLabel == null ||
-            _plasticIconNode == null || _plasticCount == null ||
-            _paperIconNode == null || _paperCount == null ||
-            _glassIconNode == null || _glassCount == null ||
-            _metalIconNode == null || _metalCount == null ||
-            _organicIconNode == null || _organicCount == null)
+            _slots[0].Frame == null || _slots[1].Frame == null || _slots[2].Frame == null)
         {
             GD.PrintErr("HUD: estrutura da cena incorreta. Verifique os caminhos dos nós.");
             return;
         }
-
-        ApplyInventoryIcons();
 
         CreateHeartTexture();
         CreateTrashIconTexture();
         ApplyHeartTextures();
         ApplyTrashIcon();
 
-        UpdateInventory(new Dictionary<Trash.TrashType, int>());
+        UpdateInventory(new List<Trash.TrashType>(), -1, InventorySlotCount);
     }
 
-    private void ApplyInventoryIcons()
+    private void BuildIconLookup()
     {
-        _plasticIconNode.Texture = PlasticIconTexture ?? GD.Load<Texture2D>("res://assets/trash/plastic/plastic_bag_red.png");
-        _paperIconNode.Texture   = PaperIconTexture   ?? GD.Load<Texture2D>("res://assets/trash/paper/newspaper_blue.png");
-        _glassIconNode.Texture   = GlassIconTexture   ?? GD.Load<Texture2D>("res://assets/trash/glass/perfume_bottle_green.png");
-        _metalIconNode.Texture   = MetalIconTexture   ?? GD.Load<Texture2D>("res://assets/trash/metal/soda_can_yellow.png");
-        _organicIconNode.Texture = OrganicIconTexture ?? GD.Load<Texture2D>("res://assets/trash/organic/apple_brown.png");
+        _iconByType[Trash.TrashType.Plastic] = PlasticIconTexture
+            ?? GD.Load<Texture2D>("res://assets/trash/plastic/plastic_bag_red.png");
+        _iconByType[Trash.TrashType.Paper] = PaperIconTexture
+            ?? GD.Load<Texture2D>("res://assets/trash/paper/newspaper_blue.png");
+        _iconByType[Trash.TrashType.Glass] = GlassIconTexture
+            ?? GD.Load<Texture2D>("res://assets/trash/glass/glass_bottle_green.png");
+        _iconByType[Trash.TrashType.Metal] = MetalIconTexture
+            ?? GD.Load<Texture2D>("res://assets/trash/metal/soda_can_yellow.png");
+        _iconByType[Trash.TrashType.Organic] = OrganicIconTexture
+            ?? GD.Load<Texture2D>("res://assets/trash/organic/apple_brown.png");
     }
 
-    public void UpdateInventory(Dictionary<Trash.TrashType, int> inventory, int maxCapacity = 3)
+    public void UpdateInventory(IReadOnlyList<Trash.TrashType> slots, int selectedIndex, int maxCapacity = 3)
     {
-        int plastic = 0;
-        int paper = 0;
-        int glass = 0;
-        int metal = 0;
-        int organic = 0;
+        var emptyFrame = SlotFrameEmptyTexture
+            ?? GD.Load<Texture2D>("res://assets/ui/inventory_slot_empty.png");
 
-        if (inventory != null)
+        for (int i = 0; i < InventorySlotCount; i++)
         {
-            inventory.TryGetValue(Trash.TrashType.Plastic, out plastic);
-            inventory.TryGetValue(Trash.TrashType.Paper, out paper);
-            inventory.TryGetValue(Trash.TrashType.Glass, out glass);
-            inventory.TryGetValue(Trash.TrashType.Metal, out metal);
-            inventory.TryGetValue(Trash.TrashType.Organic, out organic);
-        }
+            bool hasItem = slots != null && i < slots.Count;
+            bool isSelected = hasItem && i == selectedIndex;
 
-        SetSlot(_plasticIconNode, _plasticCount, plastic);
-        SetSlot(_paperIconNode, _paperCount, paper);
-        SetSlot(_glassIconNode, _glassCount, glass);
-        SetSlot(_metalIconNode, _metalCount, metal);
-        SetSlot(_organicIconNode, _organicCount, organic);
+            var frame = _slots[i].Frame;
+            if (frame != null)
+            {
+                frame.Texture = emptyFrame;
+                frame.Modulate = hasItem ? Colors.White : new Color(1, 1, 1, 0.55f);
+            }
 
-        // Atualiza capacidade total
-        var total = plastic + paper + glass + metal + organic;
-        if (_capacityLabel != null)
-        {
-            _capacityLabel.Text = $"{total} / {maxCapacity}";
-            _capacityLabel.Modulate = total >= maxCapacity ? new Color(1, 0.4f, 0.4f) : Colors.White;
-        }
-    }
+            var icon = _slots[i].Icon;
+            if (icon != null)
+            {
+                if (hasItem && _iconByType.TryGetValue(slots[i], out var tex))
+                {
+                    icon.Texture = tex;
+                    icon.Visible = true;
+                    icon.Modulate = isSelected
+                        ? new Color(1f, 1f, 0.85f, 1f)
+                        : new Color(1f, 1f, 1f, 0.9f);
+                    icon.Scale = isSelected ? new Vector2(1.08f, 1.08f) : Vector2.One;
+                }
+                else
+                {
+                    icon.Texture = null;
+                    icon.Visible = false;
+                }
+            }
 
-    public void UpdateSelection(Trash.TrashType? selected)
-    {
-        HighlightSlot(_plasticIconNode, selected == Trash.TrashType.Plastic);
-        HighlightSlot(_paperIconNode, selected == Trash.TrashType.Paper);
-        HighlightSlot(_glassIconNode, selected == Trash.TrashType.Glass);
-        HighlightSlot(_metalIconNode, selected == Trash.TrashType.Metal);
-        HighlightSlot(_organicIconNode, selected == Trash.TrashType.Organic);
-    }
-
-    private void HighlightSlot(TextureRect icon, bool selected)
-    {
-        if (icon == null) return;
-
-        icon.Scale = selected ? new Vector2(1.3f, 1.3f) : new Vector2(1f, 1f);
-        icon.Modulate = selected ? Colors.White : new Color(1,1,1,0.5f);
-    }
-
-    private static void SetSlot(TextureRect icon, Label countLabel, int value)
-    {
-        if (icon != null)
-        {
-            icon.Modulate = value > 0 ? Colors.White : new Color(1, 1, 1, 0.35f);
-        }
-
-        if (countLabel != null)
-        {
-            countLabel.Text = value.ToString();
+            var overlay = _slots[i].SelectionOverlay;
+            if (overlay != null)
+                overlay.Visible = isSelected;
         }
     }
 
@@ -270,7 +269,7 @@ public partial class HUD : CanvasLayer
 
         if (trashPattern.Length != size * size)
         {
-            GD.PrintErr($"Heart pattern size inválido: {trashPattern.Length}, esperado: {size * size}");
+            GD.PrintErr($"Trash pattern size inválido: {trashPattern.Length}, esperado: {size * size}");
             return;
         }
 
@@ -326,5 +325,83 @@ public partial class HUD : CanvasLayer
     public void UpdateTrash(int discarded, int total)
     {
         _trashLabel.Text = $"{discarded} / {total}";
+    }
+
+    public void UpdatePoints(int points)
+    {
+        if (_pointsLabel != null)
+            _pointsLabel.Text = $"Pontos: {points}";
+    }
+
+    private void OnLevelEnded(int points, int maxPoints, int stars)
+    {
+        if (_levelCompletePanel == null)
+            return;
+
+        if (_levelCompletePoints != null)
+            _levelCompletePoints.Text = maxPoints > 0
+                ? $"Pontuação: {points} / {maxPoints}"
+                : $"Pontuação: {points}";
+
+        ResetStar(_star1);
+        ResetStar(_star2);
+        ResetStar(_star3);
+
+        _levelCompletePanel.Visible = true;
+        GetTree().Paused = true;
+
+        AnimateStar(_star1, stars >= 1, 0.10f);
+        AnimateStar(_star2, stars >= 2, 0.35f);
+        AnimateStar(_star3, stars >= 3, 0.60f);
+    }
+
+    private static void ResetStar(Label star)
+    {
+        if (star == null) return;
+        star.Text = "☆";
+        star.Modulate = new Color(0.4f, 0.4f, 0.45f, 1f);
+        star.Scale = new Vector2(0.1f, 0.1f);
+    }
+
+    private void AnimateStar(Label star, bool earned, float delay)
+    {
+        if (star == null) return;
+
+        var gold = new Color(1f, 0.85f, 0.2f, 1f);
+        var dim = new Color(0.35f, 0.35f, 0.4f, 1f);
+
+        var tween = star.CreateTween().SetProcessMode(Tween.TweenProcessMode.Idle);
+        tween.TweenInterval(delay);
+
+        tween.TweenCallback(Callable.From(() =>
+        {
+            star.Text = earned ? "★" : "☆";
+            star.Modulate = earned ? gold : dim;
+        }));
+
+        tween.TweenProperty(star, "scale", new Vector2(1.4f, 1.4f), 0.18f)
+            .SetTrans(Tween.TransitionType.Back).SetEase(Tween.EaseType.Out);
+        tween.TweenProperty(star, "scale", Vector2.One, 0.12f)
+            .SetTrans(Tween.TransitionType.Sine).SetEase(Tween.EaseType.InOut);
+    }
+
+    private void OnNextLevelPressed()
+    {
+        if (_levelCompletePanel != null)
+            _levelCompletePanel.Visible = false;
+
+        GetTree().Paused = false;
+        GameManager.Instance?.AdvanceToNextLevel();
+    }
+
+    public override void _ExitTree()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.OnLevelEnded -= OnLevelEnded;
+            GameManager.Instance.OnPointsChanged -= UpdatePoints;
+        }
+
+        base._ExitTree();
     }
 }

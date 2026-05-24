@@ -1,7 +1,20 @@
 {
   "permissions": {
     "allow": [
-      "Bash(dotnet build:*)"
+      "Bash(dotnet build:*)",
+      "Bash(ls \"C:/Users/vinic/Downloads/Gemini_Generated_Image_fzgbwlfzgbwlfzgb.png\" \"C:/Users/vinic/OneDrive/Documentos/Lightshot/Screenshot_36.png\" \"C:/Users/vinic/Downloads/10883814364800416938.jpg\" 2>&1)",
+      "Read(//c/Users/vinic/Downloads/**)",
+      "Bash(cp \"/c/Users/vinic/Downloads/cadeado_fase.jpg\" \"assets/cadeado_fase.jpg\" && ls assets/cadeado_fase*)",
+      "Bash(mkdir -p \"assets/ui\")",
+      "Bash(cp \"/c/Users/vinic/Downloads/Gemini_Generated_Image_fzgbwlfzgbwlfzgb.png\" \"assets/ui/inventory_slot_selected.png\")",
+      "Bash(cp \"/c/Users/vinic/OneDrive/Documentos/Lightshot/Screenshot_36.png\" \"assets/ui/inventory_slot_empty.png\")",
+      "Bash(python3 -c \"from PIL import Image; im=Image.open\\('assets/cadeado_fase.png'\\); print\\('mode:', im.mode, 'size:', im.size\\); print\\('has alpha:', 'A' in im.mode\\)\")",
+      "Bash(cat \"/c/Users/vinic/AppData/Roaming/Godot/app_userdata/PipeTheCleaner/progress.cfg\" 2>&1)",
+      "Read(//c/Users/vinic/AppData/Roaming/Godot/app_userdata/PipeTheCleaner/**)",
+      "Bash(git add *)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\vinic\\Downloads"
     ]
   }
 }

@@ -24,8 +24,10 @@ public partial class Player : CharacterBody2D
     private float _invincibleTimer = 0.0f;
     private const float InvincibleDuration = 1.5f;
 
-    private readonly Dictionary<Trash.TrashType, int> _inventory = new();
-    private Trash.TrashType? _selectedType = null;
+    // Ordered slots: each entry is one piece of trash the pipe is carrying.
+    // Slot index in the list maps 1:1 to the visual slot in the HUD.
+    private readonly List<Trash.TrashType> _inventorySlots = new();
+    private int _selectedSlotIndex = -1;
 
     private bool _levelCompleted = false;
     private bool _controlsEnabled = true;
@@ -54,68 +56,92 @@ public partial class Player : CharacterBody2D
 
         _hud.UpdateHearts(_currentHealth, MaxHealth);
         _hud.UpdateTrash(_trashDisposed, _trashTotal);
-        _hud.UpdateInventory(_inventory, MaxInventory);
+        RefreshInventoryHUD();
+        _hud.UpdatePoints(GameManager.Instance?.CurrentPoints ?? 0);
+    }
+
+    private void RefreshInventoryHUD()
+    {
+        _hud?.UpdateInventory(_inventorySlots, _selectedSlotIndex, MaxInventory);
     }
 
     private void CollectTrash(Trash trash)
     {
-        var totalItems = _inventory.Values.Sum();
-
-        if (totalItems >= MaxInventory)
+        if (_inventorySlots.Count >= MaxInventory)
         {
             GD.Print("Inventário cheio.");
             return;
         }
 
-        if (!_inventory.ContainsKey(trash.Type))
-            _inventory[trash.Type] = 0;
-
-        _inventory[trash.Type]++;
+        _inventorySlots.Add(trash.Type);
         _trashCollected++;
+
+        if (_selectedSlotIndex < 0)
+            _selectedSlotIndex = _inventorySlots.Count - 1;
 
         trash.Collect();
 
-        _hud?.UpdateInventory(_inventory, MaxInventory);
+        RefreshInventoryHUD();
 
-        if (_selectedType == null)
-        {
-            _selectedType = trash.Type;
-            _hud?.UpdateSelection(_selectedType);
-        }
-
-        GD.Print($"Coletado: {trash.Type}");
+        GD.Print($"Coletado: {trash.Type} (slot {_inventorySlots.Count - 1})");
     }
 
-    public void OnTrashDisposed(Trash.TrashType type)
+    public void OnTrashDisposed(Trash.TrashType type, bool correct)
     {
         _trashDisposed++;
 
+        int delta = correct ? GameManager.CorrectDiscardPoints : GameManager.IncorrectDiscardPoints;
+
+        if (GameManager.Instance != null)
+            GameManager.Instance.AddPoints(delta);
+
         _hud?.UpdateTrash(_trashDisposed, _trashTotal);
+        _hud?.UpdatePoints(GameManager.Instance?.CurrentPoints ?? 0);
 
-        GD.Print($"Descartado: {type} ({_trashDisposed}/{_trashTotal})");
+        SpawnFloatingPoints(delta, correct);
 
-        // Notify GameManager that one trash item was disposed for this level
+        GD.Print($"Descartado: {type} ({_trashDisposed}/{_trashTotal}) - {(correct ? "correto" : "incorreto")}");
+
         if (GameManager.Instance != null)
             GameManager.Instance.NotifyTrashCollected();
     }
 
+    private void SpawnFloatingPoints(int delta, bool correct)
+    {
+        var label = new Label();
+        label.Text = (delta >= 0 ? "+" : "") + delta;
+        label.AddThemeFontSizeOverride("font_size", 28);
+        label.AddThemeColorOverride("font_color", correct
+            ? new Color(0.3f, 1f, 0.4f, 1f)
+            : new Color(1f, 0.35f, 0.35f, 1f));
+        label.AddThemeColorOverride("font_shadow_color", new Color(0, 0, 0, 0.8f));
+        label.AddThemeConstantOverride("shadow_offset_x", 2);
+        label.AddThemeConstantOverride("shadow_offset_y", 2);
+        label.ZIndex = 100;
+        label.TopLevel = true;
+        label.Position = GlobalPosition + new Vector2(-20, -55);
+        label.MouseFilter = Control.MouseFilterEnum.Ignore;
+
+        AddChild(label);
+
+        var tween = label.CreateTween().SetParallel();
+        tween.TweenProperty(label, "position", label.Position + new Vector2(0, -50), 0.9f)
+            .SetTrans(Tween.TransitionType.Sine).SetEase(Tween.EaseType.Out);
+        tween.TweenProperty(label, "modulate:a", 0.0f, 0.9f)
+            .SetTrans(Tween.TransitionType.Sine).SetEase(Tween.EaseType.In);
+        tween.Chain().TweenCallback(Callable.From(label.QueueFree));
+    }
+
     public List<Trash.TrashType> GetInventory()
     {
-        var list = new List<Trash.TrashType>();
-
-        foreach (var kv in _inventory)
-        {
-            for (int i = 0; i < kv.Value; i++)
-                list.Add(kv.Key);
-        }
-
-        return list;
+        return new List<Trash.TrashType>(_inventorySlots);
     }
 
     public void ClearInventory()
     {
-        _inventory.Clear();
-        _hud?.UpdateInventory(_inventory, MaxInventory);
+        _inventorySlots.Clear();
+        _selectedSlotIndex = -1;
+        RefreshInventoryHUD();
     }
 
     private void CountTrash()
@@ -126,7 +152,6 @@ public partial class Player : CharacterBody2D
 
         _hud?.UpdateTrash(_trashDisposed, _trashTotal);
 
-        // Inform GameManager about total trash for this level
         if (GameManager.Instance != null)
         {
             GameManager.Instance.SetTotalTrash(_trashTotal);
@@ -138,70 +163,45 @@ public partial class Player : CharacterBody2D
         }
     }
 
-    private void SelectTrash(Trash.TrashType type)
+    private void CycleSelectedTrash()
     {
-        if (!_inventory.TryGetValue(type, out var count) || count <= 0)
+        if (_inventorySlots.Count == 0)
         {
-            GD.Print($"Não possui {type}");
+            _selectedSlotIndex = -1;
+            RefreshInventoryHUD();
+            GD.Print("Inventário vazio.");
             return;
         }
 
-        _selectedType = type;
-        _hud?.UpdateSelection(_selectedType);
+        int start = _selectedSlotIndex < 0 ? -1 : _selectedSlotIndex;
+        _selectedSlotIndex = (start + 1) % _inventorySlots.Count;
+        RefreshInventoryHUD();
+        GD.Print($"Selecionado: slot {_selectedSlotIndex} ({_inventorySlots[_selectedSlotIndex]})");
     }
 
     public Trash.TrashType? GetSelectedTrash()
     {
-        return _selectedType;
+        if (_selectedSlotIndex < 0 || _selectedSlotIndex >= _inventorySlots.Count)
+            return null;
+        return _inventorySlots[_selectedSlotIndex];
     }
 
-    public void UseSelectedTrash()
+    public bool DepositSelectedTrash(out Trash.TrashType depositedType)
     {
-        if (_selectedType == null) return;
+        depositedType = default;
 
-        var type = _selectedType.Value;
-
-        if (!_inventory.TryGetValue(type, out var count) || count <= 0)
-            return;
-
-        if (count <= 1)
-        {
-            _inventory.Remove(type);
-            _selectedType = null;
-        }
-        else
-        {
-            _inventory[type] = count - 1;
-        }
-
-        if (!_inventory.ContainsKey(type))
-            _selectedType = null;
-
-        _hud?.UpdateInventory(_inventory, MaxInventory);
-        _hud?.UpdateSelection(_selectedType);
-    }
-
-    public bool RemoveOneTrash(Trash.TrashType type)
-    {
-        if (!_inventory.TryGetValue(type, out var count) || count <= 0)
+        if (_selectedSlotIndex < 0 || _selectedSlotIndex >= _inventorySlots.Count)
             return false;
 
-        if (count <= 1)
-        {
-            _inventory.Remove(type);
-            _selectedType = null;
-        }
-        else
-        {
-            _inventory[type] = count - 1;
-        }
+        depositedType = _inventorySlots[_selectedSlotIndex];
+        _inventorySlots.RemoveAt(_selectedSlotIndex);
 
-        if (!_inventory.ContainsKey(type))
-            _selectedType = null;
+        if (_inventorySlots.Count == 0)
+            _selectedSlotIndex = -1;
+        else if (_selectedSlotIndex >= _inventorySlots.Count)
+            _selectedSlotIndex = _inventorySlots.Count - 1;
 
-        _hud?.UpdateInventory(_inventory, MaxInventory);
-        _hud?.UpdateSelection(_selectedType);
-
+        RefreshInventoryHUD();
         return true;
     }
 
@@ -210,7 +210,7 @@ public partial class Player : CharacterBody2D
         if (!_controlsEnabled)
             return;
 
-        Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
+        Vector2 direction = Input.GetVector("move_left", "move_right", "move_up", "move_down");
         Vector2 velocity = Velocity;
 
         velocity.X = direction.X * Speed;
@@ -232,20 +232,8 @@ public partial class Player : CharacterBody2D
             }
         }
 
-        if (Input.IsActionJustPressed("select_plastic"))
-            SelectTrash(Trash.TrashType.Plastic);
-
-        if (Input.IsActionJustPressed("select_paper"))
-            SelectTrash(Trash.TrashType.Paper);
-
-        if (Input.IsActionJustPressed("select_glass"))
-            SelectTrash(Trash.TrashType.Glass);
-
-        if (Input.IsActionJustPressed("select_metal"))
-            SelectTrash(Trash.TrashType.Metal);
-
-        if (Input.IsActionJustPressed("select_organic"))
-            SelectTrash(Trash.TrashType.Organic);
+        if (Input.IsActionJustPressed("cycle_inventory"))
+            CycleSelectedTrash();
 
         Velocity = velocity;
 
@@ -267,7 +255,6 @@ public partial class Player : CharacterBody2D
 
     private void OnHurtboxAreaEntered(Area2D area)
     {
-        // Coletar lixo
         if (area is Trash areaTrash)
         {
             CollectTrash(areaTrash);
@@ -287,7 +274,6 @@ public partial class Player : CharacterBody2D
         if (_isInvincible)
             return;
 
-        // Dano
         if (area.IsInGroup("enemy") || area.GetParent()?.IsInGroup("enemy") == true)
             TakeDamage();
     }

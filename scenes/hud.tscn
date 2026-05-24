@@ -1,14 +1,34 @@
 [gd_scene format=3 uid="uid://qhliutounhxp"]
 
 [ext_resource type="Script" uid="uid://bmj7jel4cur7x" path="res://scripts/HUD.cs" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://8rtx6jd7s47l" path="res://assets/trash/plastic/water_bottle_red.png" id="2_047uy"]
-[ext_resource type="Texture2D" uid="uid://540c7d06ropx" path="res://assets/trash/metal/soda_can_yellow.png" id="3_5pdws"]
-[ext_resource type="Texture2D" uid="uid://dtg2o3pno3iq4" path="res://assets/trash/organic/apple_brown.png" id="4_hd3ao"]
-[ext_resource type="Texture2D" uid="uid://dm70h37p07vdr" path="res://assets/trash/glass/glass_bottle_green.png" id="5_0i1j5"]
-[ext_resource type="Texture2D" uid="uid://fowo8vhbfadj" path="res://assets/trash/paper/newspaper_blue.png" id="6_mphia"]
+[ext_resource type="Texture2D" uid="uid://8rtx6jd7s47l" path="res://assets/trash/plastic/water_bottle_red.png" id="2_plastic"]
+[ext_resource type="Texture2D" uid="uid://540c7d06ropx" path="res://assets/trash/metal/soda_can_yellow.png" id="3_metal"]
+[ext_resource type="Texture2D" uid="uid://dtg2o3pno3iq4" path="res://assets/trash/organic/apple_brown.png" id="4_organic"]
+[ext_resource type="Texture2D" uid="uid://dm70h37p07vdr" path="res://assets/trash/glass/glass_bottle_green.png" id="5_glass"]
+[ext_resource type="Texture2D" uid="uid://fowo8vhbfadj" path="res://assets/trash/paper/newspaper_blue.png" id="6_paper"]
+[ext_resource type="Texture2D" path="res://assets/ui/inventory_slot_empty.png" id="8_slot_empty"]
+[ext_resource type="Texture2D" path="res://assets/ui/cycle_q_wheel.png" id="9_cycle_wheel"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gold_border"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0.84, 0.2, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [node name="HUD" type="CanvasLayer" unique_id=1829445259]
 script = ExtResource("1_script")
+PlasticIconTexture = ExtResource("2_plastic")
+PaperIconTexture = ExtResource("6_paper")
+GlassIconTexture = ExtResource("5_glass")
+MetalIconTexture = ExtResource("3_metal")
+OrganicIconTexture = ExtResource("4_organic")
+SlotFrameEmptyTexture = ExtResource("8_slot_empty")
 
 [node name="HeartsContainer" type="HBoxContainer" parent="." unique_id=425670268]
 offset_left = 25.0
@@ -58,73 +78,262 @@ theme_override_font_sizes/font_size = 24
 text = "0 / 0"
 vertical_alignment = 1
 
-[node name="Control" type="Control" parent="." unique_id=1380056850]
-layout_mode = 3
-anchor_top = 0.064
-anchor_bottom = 0.064
-offset_left = 398.0
-offset_top = 42.848
-offset_right = 400.0
-offset_bottom = 69.848
+[node name="InventoryContainer" type="HBoxContainer" parent="." unique_id=1380056850]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -190.0
+offset_top = 30.0
+offset_right = 190.0
+offset_bottom = 130.0
+grow_horizontal = 2
+theme_override_constants/separation = 14
+alignment = 1
 
-[node name="InventoryContainer" type="HBoxContainer" parent="Control" unique_id=1425397670]
+[node name="Slot1" type="Control" parent="InventoryContainer" unique_id=846390666]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="Frame" type="TextureRect" parent="InventoryContainer/Slot1" unique_id=1619559581]
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("8_slot_empty")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Icon" type="TextureRect" parent="InventoryContainer/Slot1" unique_id=1693243805]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+visible = false
+expand_mode = 1
+stretch_mode = 5
+pivot_offset = Vector2(28, 28)
+
+[node name="SelectionOverlay" type="Panel" parent="InventoryContainer/Slot1" unique_id=1693243806]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+visible = false
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gold_border")
+
+[node name="Slot2" type="Control" parent="InventoryContainer" unique_id=2139250960]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="Frame" type="TextureRect" parent="InventoryContainer/Slot2" unique_id=780483302]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("8_slot_empty")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Icon" type="TextureRect" parent="InventoryContainer/Slot2" unique_id=1246627459]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+visible = false
+expand_mode = 1
+stretch_mode = 5
+pivot_offset = Vector2(28, 28)
+
+[node name="SelectionOverlay" type="Panel" parent="InventoryContainer/Slot2" unique_id=1246627460]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+visible = false
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gold_border")
+
+[node name="Slot3" type="Control" parent="InventoryContainer" unique_id=707796162]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="Frame" type="TextureRect" parent="InventoryContainer/Slot3" unique_id=625789993]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("8_slot_empty")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Icon" type="TextureRect" parent="InventoryContainer/Slot3" unique_id=2033888344]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+visible = false
+expand_mode = 1
+stretch_mode = 5
+pivot_offset = Vector2(28, 28)
+
+[node name="SelectionOverlay" type="Panel" parent="InventoryContainer/Slot3" unique_id=2033888345]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+visible = false
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gold_border")
+
+[node name="CycleHint" type="Control" parent="InventoryContainer" unique_id=50584426]
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+
+[node name="Wheel" type="TextureRect" parent="InventoryContainer/CycleHint" unique_id=1486388140]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("9_cycle_wheel")
+expand_mode = 1
+stretch_mode = 5
+modulate = Color(1, 1, 1, 0.9)
+
+[node name="QLetter" type="Label" parent="InventoryContainer/CycleHint" unique_id=417458012]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 28
+text = "Q"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PointsContainer" type="HBoxContainer" parent="." unique_id=1872004001]
+offset_left = 25.0
+offset_top = 120.0
+offset_right = 305.0
+offset_bottom = 160.0
+theme_override_constants/separation = 8
+
+[node name="PointsLabel" type="Label" parent="PointsContainer" unique_id=1872004002]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.95, 0.3, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 28
+text = "Pontos: 0"
+vertical_alignment = 1
+
+[node name="LevelCompletePanel" type="Panel" parent="." unique_id=1872004100]
+visible = false
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 270.50003
-offset_top = -40.5
-offset_right = 875.5
-offset_bottom = 118.5
-grow_vertical = 2
-scale = Vector2(0.5, 0.5)
+offset_left = -260.0
+offset_top = -180.0
+offset_right = 260.0
+offset_bottom = 180.0
+self_modulate = Color(0.05, 0.1, 0.18, 0.95)
 
-[node name="PlasticSlot" type="VBoxContainer" parent="Control/InventoryContainer" unique_id=846390666]
-layout_mode = 2
+[node name="VBox" type="VBoxContainer" parent="LevelCompletePanel" unique_id=1872004101]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+theme_override_constants/separation = 18
+alignment = 1
 
-[node name="Icon" type="TextureRect" parent="Control/InventoryContainer/PlasticSlot" unique_id=1619559581]
+[node name="Title" type="Label" parent="LevelCompletePanel/VBox" unique_id=1872004102]
 layout_mode = 2
-texture = ExtResource("2_047uy")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 40
+text = "Nível Concluído!"
+horizontal_alignment = 1
 
-[node name="Count" type="Label" parent="Control/InventoryContainer/PlasticSlot" unique_id=1693243805]
+[node name="PointsResult" type="Label" parent="LevelCompletePanel/VBox" unique_id=1872004103]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.95, 0.3, 1)
+theme_override_font_sizes/font_size = 30
+text = "Pontuação: 0"
+horizontal_alignment = 1
 
-[node name="MetalSlot" type="VBoxContainer" parent="Control/InventoryContainer" unique_id=2139250960]
+[node name="StarsContainer" type="HBoxContainer" parent="LevelCompletePanel/VBox" unique_id=1872004104]
 layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
 
-[node name="Icon" type="TextureRect" parent="Control/InventoryContainer/MetalSlot" unique_id=780483302]
+[node name="Star1" type="Label" parent="LevelCompletePanel/VBox/StarsContainer" unique_id=1872004105]
 layout_mode = 2
-texture = ExtResource("3_5pdws")
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.35, 0.35, 0.4, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 72
+text = "☆"
+horizontal_alignment = 1
+vertical_alignment = 1
+pivot_offset = Vector2(28, 50)
 
-[node name="Count" type="Label" parent="Control/InventoryContainer/MetalSlot" unique_id=1246627459]
+[node name="Star2" type="Label" parent="LevelCompletePanel/VBox/StarsContainer" unique_id=1872004106]
 layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.35, 0.35, 0.4, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 92
+text = "☆"
+horizontal_alignment = 1
+vertical_alignment = 1
+pivot_offset = Vector2(36, 64)
 
-[node name="OrganicSlot" type="VBoxContainer" parent="Control/InventoryContainer" unique_id=707796162]
+[node name="Star3" type="Label" parent="LevelCompletePanel/VBox/StarsContainer" unique_id=1872004107]
 layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.35, 0.35, 0.4, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 72
+text = "☆"
+horizontal_alignment = 1
+vertical_alignment = 1
+pivot_offset = Vector2(28, 50)
 
-[node name="Icon" type="TextureRect" parent="Control/InventoryContainer/OrganicSlot" unique_id=625789993]
+[node name="NextButton" type="Button" parent="LevelCompletePanel/VBox" unique_id=1872004108]
+custom_minimum_size = Vector2(220, 50)
 layout_mode = 2
-texture = ExtResource("4_hd3ao")
-
-[node name="Count" type="Label" parent="Control/InventoryContainer/OrganicSlot" unique_id=2033888344]
-layout_mode = 2
-
-[node name="GlassSlot" type="VBoxContainer" parent="Control/InventoryContainer" unique_id=50584426]
-layout_mode = 2
-
-[node name="Icon" type="TextureRect" parent="Control/InventoryContainer/GlassSlot" unique_id=1486388140]
-layout_mode = 2
-texture = ExtResource("5_0i1j5")
-
-[node name="Count" type="Label" parent="Control/InventoryContainer/GlassSlot" unique_id=417458012]
-layout_mode = 2
-
-[node name="PaperSlot" type="VBoxContainer" parent="Control/InventoryContainer" unique_id=1173046159]
-layout_mode = 2
-
-[node name="Icon" type="TextureRect" parent="Control/InventoryContainer/PaperSlot" unique_id=1895310220]
-layout_mode = 2
-texture = ExtResource("6_mphia")
-
-[node name="Count" type="Label" parent="Control/InventoryContainer/PaperSlot" unique_id=86171651]
-layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 22
+text = "Próximo Nível"

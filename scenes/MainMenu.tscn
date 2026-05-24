@@ -48,6 +48,15 @@ text = "SAIR"
 offset_right = 40.0
 offset_bottom = 23.0
 
+[node name="ProgressLabel" type="Label" parent="UI"]
+offset_left = 530.0
+offset_top = 625.0
+offset_right = 830.0
+offset_bottom = 655.0
+theme_override_font_sizes/font_size = 18
+text = "Progresso: 0 / 5 fases"
+horizontal_alignment = 1
+
 [node name="PanelInstrucoes" type="Panel" parent="UI" unique_id=1515749369]
 visible = false
 self_modulate = Color(0.011764706, 0.011764706, 0.011764706, 1)

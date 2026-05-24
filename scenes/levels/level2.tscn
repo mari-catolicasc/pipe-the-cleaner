@@ -32,7 +32,7 @@ size = Vector2(38, 703)
 size = Vector2(40, 697)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwgg1"]
-size = Vector2(577.0817, 66)
+size = Vector2(3201.5, 66)
 
 [sub_resource type="Curve2D" id="Curve2D_sqrei"]
 _data = {
@@ -95,21 +95,19 @@ shape = SubResource("RectangleShape2D_wall_left")
 position = Vector2(4261, 306)
 shape = SubResource("RectangleShape2D_wall_right")
 
-[node name="Floor" type="Sprite2D" parent="." unique_id=1919712305]
+[node name="Floor" type="Node2D" parent="." unique_id=1919712305]
 position = Vector2(1600.5, 490)
-scale = Vector2(5.546875, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Floor" unique_id=925957859]
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=848317820]
-position = Vector2(0, 126.99997)
-scale = Vector2(0.9999999, 0.99999964)
+position = Vector2(0, 127)
 shape = SubResource("RectangleShape2D_dwgg1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor/StaticBody2D" unique_id=22353003]
-position = Vector2(94.01692, 0)
-scale = Vector2(1.3264477, 0.99999994)
+position = Vector2(521.5, 0)
+scale = Vector2(7.357, 1)
 texture = ExtResource("4_g04qb")
 
 [node name="Platforms" type="Node2D" parent="." unique_id=864672386]
@@ -238,8 +236,10 @@ position = Vector2(2391, 297)
 [node name="Trash7" parent="Collectibles/TrashItems" unique_id=1174329036 instance=ExtResource("12_ida7w")]
 position = Vector2(3268, 293.00003)
 
-[node name="Piece2" parent="Collectibles" unique_id=96528494 instance=ExtResource("11_gycjm")]
+[node name="Piece2" parent="Collectibles" unique_id=96528494 groups=["machine_piece"] instance=ExtResource("11_gycjm")]
 position = Vector2(3986, 318)
+PartId = "part_2"
+NextScenePath = "res://scenes/levels/level3.tscn"
 
 [node name="Creatures" type="Node2D" parent="." unique_id=529217953 groups=["enemy"]]
 
