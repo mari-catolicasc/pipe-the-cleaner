@@ -19,10 +19,10 @@ public partial class WorldMap : Node2D
     private static readonly LevelInfo[] Levels =
     {
         new("Fase 1 - Atlântico", "res://scenes/levels/level1.tscn", new Vector2(645, 82)),
-        new("Fase 2 - África",    "res://scenes/levels/level2.tscn", new Vector2(511, 329)),
-        new("Fase 3 - Pacífico",  "res://scenes/levels/level3.tscn", new Vector2(152, 418)),
-        new("Fase 4 - Antártico", "res://scenes/levels/level4.tscn", new Vector2(667, 602)),
-        new("Fase 5 - Índico",    "res://scenes/levels/level5.tscn", new Vector2(948, 496)),
+        new("Fase 2 - Pacífico",  "res://scenes/levels/level2.tscn", new Vector2(511, 329)),
+        new("Fase 3 - Ártico",    "res://scenes/levels/level3.tscn", new Vector2(152, 418)),
+        new("Fase 4 - Índico",    "res://scenes/levels/level4.tscn", new Vector2(667, 602)),
+        new("Fase 5 - Antártico", "res://scenes/levels/level5.tscn", new Vector2(948, 496)),
     };
 
     private const string MapTexturePath = "res://assets/backgrounds/world_map.jpg";

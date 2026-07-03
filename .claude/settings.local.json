@@ -11,7 +11,8 @@
       "Bash(python3 -c \"from PIL import Image; im=Image.open\\('assets/cadeado_fase.png'\\); print\\('mode:', im.mode, 'size:', im.size\\); print\\('has alpha:', 'A' in im.mode\\)\")",
       "Bash(cat \"/c/Users/vinic/AppData/Roaming/Godot/app_userdata/PipeTheCleaner/progress.cfg\" 2>&1)",
       "Read(//c/Users/vinic/AppData/Roaming/Godot/app_userdata/PipeTheCleaner/**)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $imgs = @\\(\"sand_1.png\"\\); $base=\"c:\\\\Users\\\\vinic\\\\OneDrive\\\\Área de Trabalho\\\\faculdade\\\\pipe-the-cleaner\\\\assets\\\\backgrounds\\\\grounds\\\\sand_1.png\",\"c:\\\\Users\\\\vinic\\\\OneDrive\\\\Área de Trabalho\\\\faculdade\\\\pipe-the-cleaner\\\\assets\\\\backgrounds\\\\oceans\\\\indico.png\",\"c:\\\\Users\\\\vinic\\\\OneDrive\\\\Área de Trabalho\\\\faculdade\\\\pipe-the-cleaner\\\\assets\\\\backgrounds\\\\oceans\\\\antartico.png\"; foreach\\($p in $base\\){ $i=[System.Drawing.Image]::FromFile\\($p\\); Write-Output \"$p => $\\($i.Width\\) x $\\($i.Height\\)\"; $i.Dispose\\(\\) })"
     ],
     "additionalDirectories": [
       "C:\\Users\\vinic\\Downloads"

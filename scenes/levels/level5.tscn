@@ -1,27 +1,34 @@
 [gd_scene format=3 uid="uid://8jq3vjwn7pk7"]
 
-[ext_resource type="Texture2D" uid="uid://bbxpynpex1hl7" path="res://assets/backgrounds/oceans/antartico.png" id="1_fmais"]
-[ext_resource type="PackedScene" uid="uid://cy5ela7qvlwf6" path="res://scenes/player.tscn" id="2_72xjh"]
-[ext_resource type="PackedScene" uid="uid://qhliutounhxp" path="res://scenes/hud.tscn" id="3_xrw0o"]
-[ext_resource type="Texture2D" uid="uid://dgb58tanbyxx5" path="res://assets/backgrounds/grounds/sand_1.png" id="4_4r5lo"]
-[ext_resource type="PackedScene" uid="uid://d1sf6gvpi4q4t" path="res://scenes/platform.tscn" id="5_po1mw"]
-[ext_resource type="PackedScene" uid="uid://cg7osukeopd46" path="res://scenes/enemies/crab.tscn" id="6_ngf84"]
-[ext_resource type="PackedScene" uid="uid://c6m0csjq24qad" path="res://scenes/enemies/jellyfish.tscn" id="7_d75b2"]
-[ext_resource type="PackedScene" uid="uid://d2d083dnhd5m4" path="res://scenes/trash_cans/plasticTrashCan.tscn" id="8_snswl"]
-[ext_resource type="PackedScene" uid="uid://dhagc1j7fxdh8" path="res://scenes/trash_cans/glassTrashCan.tscn" id="9_vyr3h"]
-[ext_resource type="PackedScene" uid="uid://daxqghlepcgsd" path="res://scenes/trash_cans/metalTrashCan.tscn" id="10_hph83"]
-[ext_resource type="PackedScene" uid="uid://tun35bvqrcb1" path="res://scenes/trash_cans/organicTrashCan.tscn" id="11_pxqp1"]
-[ext_resource type="PackedScene" uid="uid://b52bxh2swqccc" path="res://scenes/trash_cans/paperTrashCan.tscn" id="12_idwux"]
-[ext_resource type="PackedScene" uid="uid://eutuwgypkxm2" path="res://scenes/trash/plastic/plasticWaterBottle.tscn" id="13_nhdg1"]
-[ext_resource type="PackedScene" uid="uid://dyba3npsmiuj2" path="res://scenes/trash/plastic/plasticBag.tscn" id="14_wd10u"]
-[ext_resource type="PackedScene" uid="uid://c6mwhtqoe6ory" path="res://scenes/trash/plastic/plasticStraw.tscn" id="15_r571g"]
-[ext_resource type="PackedScene" uid="uid://cq3hjo1oca6rt" path="res://scenes/trash/paper/paperPage.tscn" id="16_pxgjg"]
-[ext_resource type="PackedScene" uid="uid://ipjy2jmco55l" path="res://scenes/trash/paper/paperNewspaper.tscn" id="17_gdo0w"]
-[ext_resource type="PackedScene" uid="uid://cgwbkrve5xg8e" path="res://scenes/trash/paper/paperBox.tscn" id="18_lxeoi"]
-[ext_resource type="PackedScene" uid="uid://w1dj6vdc2k7m" path="res://scenes/machine/piece1.tscn" id="19_q3cny"]
+[ext_resource type="Texture2D" uid="uid://bbxpynpex1hl7" path="res://assets/backgrounds/oceans/antartico.png" id="1_bg"]
+[ext_resource type="PackedScene" uid="uid://cy5ela7qvlwf6" path="res://scenes/player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://qhliutounhxp" path="res://scenes/hud.tscn" id="3_hud"]
+[ext_resource type="Texture2D" uid="uid://dgb58tanbyxx5" path="res://assets/backgrounds/grounds/sand_1.png" id="4_sand"]
+[ext_resource type="PackedScene" uid="uid://d1sf6gvpi4q4t" path="res://scenes/platform.tscn" id="5_plat"]
+[ext_resource type="PackedScene" uid="uid://bi8vq0fqyfbw8" path="res://scenes/enemies/lionsManeJellyfish.tscn" id="6_lmj"]
+[ext_resource type="PackedScene" uid="uid://t3mbodvp7t5i" path="res://scenes/enemies/walrus.tscn" id="7_walrus"]
+[ext_resource type="PackedScene" uid="uid://bp8b7ktr4m2x2" path="res://scenes/enemies/greenlandShark.tscn" id="8_shark"]
+[ext_resource type="PackedScene" uid="uid://cqlevrwd6suet" path="res://scenes/enemies/seawasp.tscn" id="9_seawasp"]
+[ext_resource type="PackedScene" uid="uid://c6m0csjq24qad" path="res://scenes/enemies/jellyfish.tscn" id="10_jelly"]
+[ext_resource type="PackedScene" uid="uid://d2d083dnhd5m4" path="res://scenes/trash_cans/plasticTrashCan.tscn" id="11_canP"]
+[ext_resource type="PackedScene" uid="uid://dhagc1j7fxdh8" path="res://scenes/trash_cans/glassTrashCan.tscn" id="12_canG"]
+[ext_resource type="PackedScene" uid="uid://daxqghlepcgsd" path="res://scenes/trash_cans/metalTrashCan.tscn" id="13_canM"]
+[ext_resource type="PackedScene" uid="uid://tun35bvqrcb1" path="res://scenes/trash_cans/organicTrashCan.tscn" id="14_canO"]
+[ext_resource type="PackedScene" uid="uid://b52bxh2swqccc" path="res://scenes/trash_cans/paperTrashCan.tscn" id="15_canPa"]
+[ext_resource type="PackedScene" uid="uid://eutuwgypkxm2" path="res://scenes/trash/plastic/plasticWaterBottle.tscn" id="16_tBottle"]
+[ext_resource type="PackedScene" uid="uid://dyba3npsmiuj2" path="res://scenes/trash/plastic/plasticBag.tscn" id="17_tBag"]
+[ext_resource type="PackedScene" uid="uid://c6mwhtqoe6ory" path="res://scenes/trash/plastic/plasticStraw.tscn" id="18_tStraw"]
+[ext_resource type="PackedScene" uid="uid://c2aymlv1cj7qb" path="res://scenes/trash/glass/glassJar.tscn" id="19_tJar"]
+[ext_resource type="PackedScene" uid="uid://bsw6jk65ed1vv" path="res://scenes/trash/glass/glassBottle.tscn" id="20_tGlassBottle"]
+[ext_resource type="PackedScene" uid="uid://cat481duor1yk" path="res://scenes/trash/metal/metalCan.tscn" id="21_tMetalCan"]
+[ext_resource type="PackedScene" uid="uid://plruf0ub3qe3" path="res://scenes/trash/metal/metalSodaCan.tscn" id="22_tSoda"]
+[ext_resource type="PackedScene" uid="uid://feg344svaehn" path="res://scenes/trash/organic/organicApple.tscn" id="23_tApple"]
+[ext_resource type="PackedScene" uid="uid://utihnvwr1pjy" path="res://scenes/trash/organic/organicFish.tscn" id="24_tFish"]
+[ext_resource type="PackedScene" uid="uid://cgwbkrve5xg8e" path="res://scenes/trash/paper/paperBox.tscn" id="25_tBox"]
+[ext_resource type="PackedScene" uid="uid://bxq524fvet2xh" path="res://scenes/machine/piece3.tscn" id="26_piece"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ceiling"]
-size = Vector2(5405, 40)
+size = Vector2(4600, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_left"]
 size = Vector2(38, 703)
@@ -29,302 +36,328 @@ size = Vector2(38, 703)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_right"]
 size = Vector2(40, 697)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwgg1"]
-size = Vector2(3201.5, 66)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
+size = Vector2(4700, 66)
 
-[sub_resource type="Curve2D" id="Curve2D_6sh32"]
+[sub_resource type="Curve2D" id="Curve2D_lmj1"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -16.266357, 1.5559998, 0, 0, 0, 0, 64.23364, 3.5559998)
-}
-point_count = 2
-
-[sub_resource type="Curve2D" id="Curve2D_nfihu"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -80.5, -3.5, 0, 0, 0, 0, 185.5, -3.5)
-}
-point_count = 2
-
-[sub_resource type="Curve2D" id="Curve2D_lgguw"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 10, 1.5, 0, 0, 0, 0, -187.5, 1.5000305, 0, 0, 0, 0, 82.5, 1.4999847)
+"points": PackedVector2Array(0, 0, 0, 0, 500, 250, 0, 0, 0, 0, 900, 250, 0, 0, 0, 0, 500, 250)
 }
 point_count = 3
 
-[sub_resource type="Curve2D" id="Curve2D_jprdt"]
+[sub_resource type="Curve2D" id="Curve2D_lmj2"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -16.266357, 1.5559998, 0, 0, 0, 0, 126.23364, 0.55599976)
+"points": PackedVector2Array(0, 0, 0, 0, 1400, 200, 0, 0, 0, 0, 1800, 200, 0, 0, 0, 0, 1400, 200)
 }
-point_count = 2
+point_count = 3
 
-[node name="Main" type="Node2D" unique_id=1680725934]
+[sub_resource type="Curve2D" id="Curve2D_lmj3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2600, 300, 0, 0, 0, 0, 3000, 300, 0, 0, 0, 0, 2600, 300)
+}
+point_count = 3
 
-[node name="background_1" type="Sprite2D" parent="." unique_id=1941059699]
-position = Vector2(2694.7407, 316.2389)
-scale = Vector2(1.8471348, 1.8110807)
-texture = ExtResource("1_fmais")
+[sub_resource type="Curve2D" id="Curve2D_sw1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1100, 460, 0, 0, 0, 0, 1100, 180, 0, 0, 0, 0, 1100, 460)
+}
+point_count = 3
 
-[node name="Player" parent="." unique_id=1622332219 groups=["player"] instance=ExtResource("2_72xjh")]
+[sub_resource type="Curve2D" id="Curve2D_sw2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3400, 440, 0, 0, 0, 0, 3400, 180, 0, 0, 0, 0, 3400, 440)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_walrus1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 700, 520, 0, 0, 0, 0, 1300, 520, 0, 0, 0, 0, 700, 520)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_walrus2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3100, 520, 0, 0, 0, 0, 3700, 520, 0, 0, 0, 0, 3100, 520)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_shark1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1800, 520, 0, 0, 0, 0, 2600, 520, 0, 0, 0, 0, 1800, 520)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_shark2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2400, 200, 0, 0, 0, 0, 3200, 200, 0, 0, 0, 0, 2400, 200)
+}
+point_count = 3
+
+[node name="Main" type="Node2D"]
+
+[node name="background_1" type="Sprite2D" parent="."]
+position = Vector2(2300, 313)
+scale = Vector2(1.5748033, 1.8110807)
+texture = ExtResource("1_bg")
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("2_player")]
 position = Vector2(113, 258)
 collision_mask = 5
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=68315889]
-visible = false
+[node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(458, 69)
 limit_left = 0
 limit_top = 0
-limit_right = 3220
+limit_right = 4600
 limit_bottom = 656
 
-[node name="HUD" parent="." unique_id=1014100817 instance=ExtResource("3_xrw0o")]
+[node name="HUD" parent="." instance=ExtResource("3_hud")]
 
-[node name="ScenarioCollision" type="StaticBody2D" parent="." unique_id=487419694]
+[node name="ScenarioCollision" type="StaticBody2D" parent="."]
 collision_layer = 4
 collision_mask = 0
 
-[node name="CeilingCollision" type="CollisionShape2D" parent="ScenarioCollision" unique_id=2009864262]
-position = Vector2(2702.5, -20)
+[node name="CeilingCollision" type="CollisionShape2D" parent="ScenarioCollision"]
+position = Vector2(2300, -20)
 shape = SubResource("RectangleShape2D_ceiling")
 
-[node name="WallLeftCollision" type="CollisionShape2D" parent="ScenarioCollision" unique_id=456428845]
+[node name="WallLeftCollision" type="CollisionShape2D" parent="ScenarioCollision"]
 position = Vector2(-21, 301.5)
 shape = SubResource("RectangleShape2D_wall_left")
 
-[node name="WallRightCollision" type="CollisionShape2D" parent="ScenarioCollision" unique_id=1478190564]
-position = Vector2(5405, 315)
+[node name="WallRightCollision" type="CollisionShape2D" parent="ScenarioCollision"]
+position = Vector2(4601, 315)
 shape = SubResource("RectangleShape2D_wall_right")
 
-[node name="Floor" type="Node2D" parent="." unique_id=1919712305]
-position = Vector2(1600.5, 490)
+[node name="Floor" type="Node2D" parent="."]
+position = Vector2(2300, 490)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Floor" unique_id=925957859]
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor"]
 collision_layer = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=848317820]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D"]
 position = Vector2(0, 127)
-shape = SubResource("RectangleShape2D_dwgg1")
+shape = SubResource("RectangleShape2D_floor")
 
-[node name="Sprite2D" type="Sprite2D" parent="Floor/StaticBody2D" unique_id=22353003]
-position = Vector2(1092.6, 0)
-scale = Vector2(9.34, 1)
-texture = ExtResource("4_4r5lo")
+[node name="Sprite2D" type="Sprite2D" parent="Floor/StaticBody2D"]
+position = Vector2(0, 94)
+scale = Vector2(7.9861112, 1)
+texture = ExtResource("4_sand")
 
-[node name="Platforms" type="Node2D" parent="." unique_id=864672386]
+[node name="Platforms" type="Node2D" parent="."]
 
-[node name="Platform33" parent="Platforms" unique_id=214444400 instance=ExtResource("5_po1mw")]
-position = Vector2(7831.09, 1206.4075)
-scale = Vector2(5.5486107, 2.0123458)
+[node name="Platform1" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(300, 490)
 
-[node name="Platform32" parent="Platforms" unique_id=855299278 instance=ExtResource("5_po1mw")]
-position = Vector2(6976.6035, 1206.4075)
-scale = Vector2(5.5486107, 2.0123458)
+[node name="Platform2" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(380, 490)
 
-[node name="Platform" parent="Platforms" unique_id=234876704 instance=ExtResource("5_po1mw")]
-position = Vector2(319, 437)
+[node name="Platform3" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(460, 490)
 
-[node name="Platform2" parent="Platforms" unique_id=1469759951 instance=ExtResource("5_po1mw")]
-position = Vector2(548, 437)
+[node name="Platform4" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(700, 410)
 
-[node name="Platform3" parent="Platforms" unique_id=282610809 instance=ExtResource("5_po1mw")]
-position = Vector2(471, 437)
+[node name="Platform5" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(700, 340)
 
-[node name="Platform4" parent="Platforms" unique_id=1335837271 instance=ExtResource("5_po1mw")]
-position = Vector2(396, 437)
+[node name="Platform6" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(1050, 300)
 
-[node name="Platform5" parent="Platforms" unique_id=1151446375 instance=ExtResource("5_po1mw")]
-position = Vector2(319, 287)
+[node name="Platform7" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(1130, 300)
 
-[node name="Platform19" parent="Platforms" unique_id=1807471702 instance=ExtResource("5_po1mw")]
-position = Vector2(1384, 213)
+[node name="Platform8" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(1500, 380)
 
-[node name="Platform18" parent="Platforms" unique_id=406268840 instance=ExtResource("5_po1mw")]
-position = Vector2(1307, 213)
+[node name="Platform9" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(1580, 380)
 
-[node name="Platform17" parent="Platforms" unique_id=1665117234 instance=ExtResource("5_po1mw")]
-position = Vector2(1231, 213)
+[node name="Platform10" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(1900, 460)
 
-[node name="Platform16" parent="Platforms" unique_id=32602045 instance=ExtResource("5_po1mw")]
-position = Vector2(1154, 213)
+[node name="Platform11" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(1900, 390)
 
-[node name="Platform15" parent="Platforms" unique_id=372027309 instance=ExtResource("5_po1mw")]
-position = Vector2(1078, 213)
+[node name="Platform12" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(1900, 320)
 
-[node name="Platform14" parent="Platforms" unique_id=2143073129 instance=ExtResource("5_po1mw")]
-position = Vector2(1001, 213)
+[node name="Platform13" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(2300, 260)
 
-[node name="Platform13" parent="Platforms" unique_id=215215178 instance=ExtResource("5_po1mw")]
-position = Vector2(925, 213)
+[node name="Platform14" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(2380, 260)
 
-[node name="Platform12" parent="Platforms" unique_id=1662902029 instance=ExtResource("5_po1mw")]
-position = Vector2(849, 213)
+[node name="Platform15" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(2750, 420)
 
-[node name="Platform11" parent="Platforms" unique_id=2085789658 instance=ExtResource("5_po1mw")]
-position = Vector2(773, 213)
+[node name="Platform16" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(2830, 420)
 
-[node name="Platform10" parent="Platforms" unique_id=866534638 instance=ExtResource("5_po1mw")]
-position = Vector2(697, 213)
+[node name="Platform17" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(3150, 470)
 
-[node name="Platform9" parent="Platforms" unique_id=1725446448 instance=ExtResource("5_po1mw")]
-position = Vector2(621, 213)
+[node name="Platform18" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(3150, 400)
 
-[node name="Platform20" parent="Platforms" unique_id=2096711218 instance=ExtResource("5_po1mw")]
-position = Vector2(545, 213)
+[node name="Platform19" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(3550, 280)
 
-[node name="Platform21" parent="Platforms" unique_id=1956009913 instance=ExtResource("5_po1mw")]
-position = Vector2(469, 213)
+[node name="Platform20" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(3630, 280)
 
-[node name="Platform8" parent="Platforms" unique_id=502755791 instance=ExtResource("5_po1mw")]
-position = Vector2(394, 213)
+[node name="Platform21" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(3950, 440)
 
-[node name="Platform6" parent="Platforms" unique_id=1236747807 instance=ExtResource("5_po1mw")]
-position = Vector2(319, 212)
+[node name="Platform22" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(4030, 440)
 
-[node name="Platform7" parent="Platforms" unique_id=607229300 instance=ExtResource("5_po1mw")]
-position = Vector2(319, 362)
+[node name="Platform23" parent="Platforms" instance=ExtResource("5_plat")]
+position = Vector2(4110, 440)
 
-[node name="Platform22" parent="Platforms" unique_id=166772682 instance=ExtResource("5_po1mw")]
-position = Vector2(779, 438)
+[node name="Creatures" type="Node2D" parent="." groups=["enemy"]]
 
-[node name="Platform34" parent="Platforms" unique_id=1956821233 instance=ExtResource("5_po1mw")]
-position = Vector2(1385, 438)
+[node name="LionsManePath1" type="Path2D" parent="Creatures"]
+curve = SubResource("Curve2D_lmj1")
 
-[node name="Platform28" parent="Platforms" unique_id=1016213659 instance=ExtResource("5_po1mw")]
-position = Vector2(1384, 363)
+[node name="PathFollow2D" type="PathFollow2D" parent="Creatures/LionsManePath1"]
+position = Vector2(500, 250)
 
-[node name="Platform27" parent="Platforms" unique_id=995888280 instance=ExtResource("5_po1mw")]
-position = Vector2(1384, 288)
+[node name="LionsManeJellyfish" parent="Creatures/LionsManePath1/PathFollow2D" instance=ExtResource("6_lmj")]
 
-[node name="Platform26" parent="Platforms" unique_id=1439710530 instance=ExtResource("5_po1mw")]
-position = Vector2(1082, 438)
+[node name="LionsManePath2" type="Path2D" parent="Creatures"]
+curve = SubResource("Curve2D_lmj2")
 
-[node name="Platform30" parent="Platforms" unique_id=192316203 instance=ExtResource("5_po1mw")]
-position = Vector2(1310, 438)
+[node name="PathFollow2D" type="PathFollow2D" parent="Creatures/LionsManePath2"]
+position = Vector2(1400, 200)
 
-[node name="Platform31" parent="Platforms" unique_id=555137138 instance=ExtResource("5_po1mw")]
-position = Vector2(1234, 438)
+[node name="LionsManeJellyfish" parent="Creatures/LionsManePath2/PathFollow2D" instance=ExtResource("6_lmj")]
 
-[node name="Platform29" parent="Platforms" unique_id=1450246753 instance=ExtResource("5_po1mw")]
-position = Vector2(1158, 438)
+[node name="LionsManePath3" type="Path2D" parent="Creatures"]
+curve = SubResource("Curve2D_lmj3")
 
-[node name="Platform25" parent="Platforms" unique_id=1222163242 instance=ExtResource("5_po1mw")]
-position = Vector2(1007, 438)
+[node name="PathFollow2D" type="PathFollow2D" parent="Creatures/LionsManePath3"]
+position = Vector2(2600, 300)
 
-[node name="Platform24" parent="Platforms" unique_id=1542112558 instance=ExtResource("5_po1mw")]
-position = Vector2(931, 438)
+[node name="LionsManeJellyfish" parent="Creatures/LionsManePath3/PathFollow2D" instance=ExtResource("6_lmj")]
 
-[node name="Platform23" parent="Platforms" unique_id=102048583 instance=ExtResource("5_po1mw")]
-position = Vector2(855, 438)
+[node name="SeaWaspPath1" type="Path2D" parent="Creatures"]
+curve = SubResource("Curve2D_sw1")
 
-[node name="Platform35" parent="Platforms" unique_id=405948509 instance=ExtResource("5_po1mw")]
-position = Vector2(1831, 153)
+[node name="PathFollow2D" type="PathFollow2D" parent="Creatures/SeaWaspPath1"]
+position = Vector2(1100, 460)
 
-[node name="Platform36" parent="Platforms" unique_id=188350386 instance=ExtResource("5_po1mw")]
-position = Vector2(7831.09, 1206.4075)
-scale = Vector2(5.5486107, 2.0123458)
+[node name="SeaWasp" parent="Creatures/SeaWaspPath1/PathFollow2D" instance=ExtResource("9_seawasp")]
 
-[node name="Platform37" parent="Platforms" unique_id=509898037 instance=ExtResource("5_po1mw")]
-position = Vector2(1906, 153)
+[node name="SeaWaspPath2" type="Path2D" parent="Creatures"]
+curve = SubResource("Curve2D_sw2")
 
-[node name="Platform38" parent="Platforms" unique_id=2042626684 instance=ExtResource("5_po1mw")]
-position = Vector2(1827, 444)
+[node name="PathFollow2D" type="PathFollow2D" parent="Creatures/SeaWaspPath2"]
+position = Vector2(3400, 440)
 
-[node name="Platform39" parent="Platforms" unique_id=815059643 instance=ExtResource("5_po1mw")]
-position = Vector2(1905, 444)
+[node name="SeaWasp" parent="Creatures/SeaWaspPath2/PathFollow2D" instance=ExtResource("9_seawasp")]
 
-[node name="Platform41" parent="Platforms" unique_id=941796783 instance=ExtResource("5_po1mw")]
-position = Vector2(2060, 444)
+[node name="Walrus1Path" type="Path2D" parent="Creatures"]
+curve = SubResource("Curve2D_walrus1")
 
-[node name="Platform40" parent="Platforms" unique_id=866330609 instance=ExtResource("5_po1mw")]
-position = Vector2(1983, 444)
+[node name="PathFollow2D" type="PathFollow2D" parent="Creatures/Walrus1Path"]
+position = Vector2(700, 520)
 
-[node name="Creatures" type="Node2D" parent="." unique_id=529217953 groups=["enemy"]]
+[node name="Walrus1" parent="Creatures" instance=ExtResource("7_walrus")]
+position = Vector2(700, 520)
+PathFollowPath = NodePath("../Walrus1Path/PathFollow2D")
 
-[node name="Crab" parent="Creatures" unique_id=423285791 instance=ExtResource("6_ngf84")]
-position = Vector2(313, 577)
+[node name="Walrus2Path" type="Path2D" parent="Creatures"]
+curve = SubResource("Curve2D_walrus2")
 
-[node name="Path2D" type="Path2D" parent="Creatures/Crab" unique_id=1632626695]
-position = Vector2(5.2663574, -3.5559998)
-curve = SubResource("Curve2D_6sh32")
+[node name="PathFollow2D" type="PathFollow2D" parent="Creatures/Walrus2Path"]
+position = Vector2(3100, 520)
 
-[node name="Jellyfish3" parent="Creatures" unique_id=1667724805 instance=ExtResource("7_d75b2")]
-position = Vector2(1823, 365)
+[node name="Walrus2" parent="Creatures" instance=ExtResource("7_walrus")]
+position = Vector2(3100, 520)
+PathFollowPath = NodePath("../Walrus2Path/PathFollow2D")
+
+[node name="Shark1Path" type="Path2D" parent="Creatures"]
+curve = SubResource("Curve2D_shark1")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Creatures/Shark1Path"]
+position = Vector2(1800, 520)
+
+[node name="GreenlandShark1" parent="Creatures" instance=ExtResource("8_shark")]
+position = Vector2(1800, 520)
+PathFollowPath = NodePath("../Shark1Path/PathFollow2D")
+
+[node name="Shark2Path" type="Path2D" parent="Creatures"]
+curve = SubResource("Curve2D_shark2")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Creatures/Shark2Path"]
+position = Vector2(2400, 200)
+
+[node name="GreenlandShark2" parent="Creatures" instance=ExtResource("8_shark")]
+position = Vector2(2400, 200)
+PathFollowPath = NodePath("../Shark2Path/PathFollow2D")
+
+[node name="Jellyfish1" parent="Creatures" instance=ExtResource("10_jelly")]
+position = Vector2(2000, 400)
 collision_mask = 5
 
-[node name="Jellyfish2" parent="Creatures" unique_id=1362904855 instance=ExtResource("7_d75b2")]
-position = Vector2(2060, 362)
+[node name="Jellyfish2" parent="Creatures" instance=ExtResource("10_jelly")]
+position = Vector2(3600, 350)
 collision_mask = 5
 
-[node name="Jellyfish" parent="Creatures" unique_id=2065138127 instance=ExtResource("7_d75b2")]
-position = Vector2(781, 324)
-collision_mask = 5
+[node name="TrashCans" type="Node2D" parent="." groups=["trashCan"]]
 
-[node name="Crab2" parent="Creatures" unique_id=1631220184 instance=ExtResource("6_ngf84")]
-position = Vector2(471, 152)
+[node name="plasticTrashCan" parent="TrashCans" instance=ExtResource("11_canP")]
+position = Vector2(4430, 123)
 
-[node name="Path2D" type="Path2D" parent="Creatures/Crab2" unique_id=392053973]
-curve = SubResource("Curve2D_nfihu")
+[node name="glassTrashCan" parent="TrashCans" instance=ExtResource("12_canG")]
+position = Vector2(4430, 197)
 
-[node name="Crab3" parent="Creatures" unique_id=1287451485 instance=ExtResource("6_ngf84")]
-position = Vector2(1219, 149)
+[node name="metalTrashCan" parent="TrashCans" instance=ExtResource("13_canM")]
+position = Vector2(4430, 275)
 
-[node name="Path2D" type="Path2D" parent="Creatures/Crab3" unique_id=1422009917]
-rotation = 6.2831855
-curve = SubResource("Curve2D_lgguw")
+[node name="organicTrashCan" parent="TrashCans" instance=ExtResource("14_canO")]
+position = Vector2(4430, 359)
 
-[node name="Crab4" parent="Creatures" unique_id=875993688 instance=ExtResource("6_ngf84")]
-position = Vector2(1826, 94)
+[node name="paperTrashCan" parent="TrashCans" instance=ExtResource("15_canPa")]
+position = Vector2(4430, 444)
 
-[node name="Path2D" type="Path2D" parent="Creatures/Crab4" unique_id=1361909368]
-position = Vector2(5.2663574, -3.5559998)
-curve = SubResource("Curve2D_6sh32")
+[node name="Collectibles" type="Node2D" parent="."]
 
-[node name="Crab5" parent="Creatures" unique_id=673738268 instance=ExtResource("6_ngf84")]
-position = Vector2(1823, 558)
+[node name="TrashItems" type="Node2D" parent="Collectibles"]
 
-[node name="Path2D" type="Path2D" parent="Creatures/Crab5" unique_id=848800376]
-position = Vector2(5.2663574, -3.5559998)
-curve = SubResource("Curve2D_jprdt")
+[node name="PlasticWaterBottle" parent="Collectibles/TrashItems" instance=ExtResource("16_tBottle")]
+position = Vector2(400, 540)
 
-[node name="TrashCans" type="Node2D" parent="." unique_id=1712659179 groups=["trashCan"]]
+[node name="PlasticBag" parent="Collectibles/TrashItems" instance=ExtResource("17_tBag")]
+position = Vector2(900, 250)
 
-[node name="plasticTrashCan" parent="TrashCans" unique_id=770737096 groups=["trashCan"] instance=ExtResource("8_snswl")]
-position = Vector2(5302, 123)
+[node name="PlasticStraw" parent="Collectibles/TrashItems" instance=ExtResource("18_tStraw")]
+position = Vector2(1500, 420)
 
-[node name="glassTrashCan" parent="TrashCans" unique_id=2036630516 instance=ExtResource("9_vyr3h")]
-position = Vector2(5303, 197)
+[node name="GlassJar" parent="Collectibles/TrashItems" instance=ExtResource("19_tJar")]
+position = Vector2(1800, 200)
 
-[node name="metalTrashCan" parent="TrashCans" unique_id=68889418 instance=ExtResource("10_hph83")]
-position = Vector2(5303, 275)
+[node name="GlassBottle" parent="Collectibles/TrashItems" instance=ExtResource("20_tGlassBottle")]
+position = Vector2(2200, 500)
 
-[node name="plasticTrashCan2" parent="TrashCans" unique_id=1170495162 instance=ExtResource("11_pxqp1")]
-position = Vector2(5303, 359)
+[node name="MetalCan" parent="Collectibles/TrashItems" instance=ExtResource("21_tMetalCan")]
+position = Vector2(2600, 300)
 
-[node name="plasticTrashCan3" parent="TrashCans" unique_id=327638420 instance=ExtResource("12_idwux")]
-position = Vector2(5302, 444)
+[node name="MetalSodaCan" parent="Collectibles/TrashItems" instance=ExtResource("22_tSoda")]
+position = Vector2(3000, 470)
 
-[node name="Collectibles" type="Node2D" parent="." unique_id=1717791881]
+[node name="OrganicApple" parent="Collectibles/TrashItems" instance=ExtResource("23_tApple")]
+position = Vector2(3300, 200)
 
-[node name="TrashItems" type="Node2D" parent="Collectibles" unique_id=1301508639]
+[node name="OrganicFish" parent="Collectibles/TrashItems" instance=ExtResource("24_tFish")]
+position = Vector2(3700, 520)
 
-[node name="PlasticWaterBottle" parent="Collectibles/TrashItems" unique_id=1182270703 instance=ExtResource("13_nhdg1")]
-position = Vector2(435, 505)
+[node name="PaperBox" parent="Collectibles/TrashItems" instance=ExtResource("25_tBox")]
+position = Vector2(4000, 300)
 
-[node name="PlasticBag" parent="Collectibles/TrashItems" unique_id=1847477096 instance=ExtResource("14_wd10u")]
-position = Vector2(409, 326)
-
-[node name="PlasticStraw" parent="Collectibles/TrashItems" unique_id=1613153103 instance=ExtResource("15_r571g")]
-position = Vector2(1939, 368)
-
-[node name="PaperPage" parent="Collectibles/TrashItems" unique_id=1685426321 instance=ExtResource("16_pxgjg")]
-position = Vector2(819.99994, 142.99998)
-
-[node name="PaperNewspaper" parent="Collectibles/TrashItems" unique_id=1695040013 instance=ExtResource("17_gdo0w")]
-position = Vector2(1285.9999, 334.99997)
-
-[node name="PaperBox" parent="Collectibles/TrashItems" unique_id=1992801606 instance=ExtResource("18_lxeoi")]
-position = Vector2(1906, 92)
-
-[node name="Piece1" parent="Collectibles" unique_id=1801577733 groups=["machine_piece"] instance=ExtResource("19_q3cny")]
-position = Vector2(5188, 289)
+[node name="Piece" parent="Collectibles" groups=["machine_piece"] instance=ExtResource("26_piece")]
+position = Vector2(4320, 300)
 input_pickable = false
 PartId = "part_5"
 NextScenePath = "res://scenes/MainMenu.tscn"
