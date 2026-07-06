@@ -6,8 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://dtg2o3pno3iq4" path="res://assets/trash/organic/apple_brown.png" id="4_organic"]
 [ext_resource type="Texture2D" uid="uid://dm70h37p07vdr" path="res://assets/trash/glass/glass_bottle_green.png" id="5_glass"]
 [ext_resource type="Texture2D" uid="uid://fowo8vhbfadj" path="res://assets/trash/paper/newspaper_blue.png" id="6_paper"]
-[ext_resource type="Texture2D" path="res://assets/ui/inventory_slot_empty.png" id="8_slot_empty"]
-[ext_resource type="Texture2D" path="res://assets/ui/cycle_q_wheel.png" id="9_cycle_wheel"]
+[ext_resource type="Texture2D" uid="uid://dnksyp2klevxj" path="res://assets/ui/inventory_slot_empty.png" id="8_slot_empty"]
+[ext_resource type="PackedScene" uid="uid://oojohjna2t50" path="res://scenes/PauseButton.tscn" id="9_0i1j5"]
+[ext_resource type="Texture2D" uid="uid://b10s2sfd0ug2k" path="res://assets/ui/cycle_q_wheel.png" id="9_cycle_wheel"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gold_border"]
 bg_color = Color(0, 0, 0, 0)
@@ -58,9 +59,9 @@ anchor_left = 1.0
 anchor_top = 0.052
 anchor_right = 1.0
 anchor_bottom = 0.052
-offset_left = -185.0
+offset_left = -230.0
 offset_top = 35.064
-offset_right = -25.0
+offset_right = -70.0
 offset_bottom = 75.063995
 grow_horizontal = 0
 theme_override_constants/separation = 8
@@ -79,11 +80,9 @@ text = "0 / 0"
 vertical_alignment = 1
 
 [node name="InventoryContainer" type="HBoxContainer" parent="." unique_id=1380056850]
-anchors_preset = -1
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.0
 anchor_right = 0.5
-anchor_bottom = 0.0
 offset_left = -190.0
 offset_top = 30.0
 offset_right = 190.0
@@ -101,11 +100,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("8_slot_empty")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Icon" type="TextureRect" parent="InventoryContainer/Slot1" unique_id=1693243805]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -114,17 +116,20 @@ offset_left = 20.0
 offset_top = 20.0
 offset_right = -20.0
 offset_bottom = -20.0
-visible = false
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(28, 28)
 expand_mode = 1
 stretch_mode = 5
-pivot_offset = Vector2(28, 28)
 
 [node name="SelectionOverlay" type="Panel" parent="InventoryContainer/Slot1" unique_id=1693243806]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-visible = false
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gold_border")
 
@@ -137,11 +142,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("8_slot_empty")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Icon" type="TextureRect" parent="InventoryContainer/Slot2" unique_id=1246627459]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -150,17 +158,20 @@ offset_left = 20.0
 offset_top = 20.0
 offset_right = -20.0
 offset_bottom = -20.0
-visible = false
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(28, 28)
 expand_mode = 1
 stretch_mode = 5
-pivot_offset = Vector2(28, 28)
 
 [node name="SelectionOverlay" type="Panel" parent="InventoryContainer/Slot2" unique_id=1246627460]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-visible = false
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gold_border")
 
@@ -173,11 +184,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("8_slot_empty")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Icon" type="TextureRect" parent="InventoryContainer/Slot3" unique_id=2033888344]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -186,17 +200,20 @@ offset_left = 20.0
 offset_top = 20.0
 offset_right = -20.0
 offset_bottom = -20.0
-visible = false
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(28, 28)
 expand_mode = 1
 stretch_mode = 5
-pivot_offset = Vector2(28, 28)
 
 [node name="SelectionOverlay" type="Panel" parent="InventoryContainer/Slot3" unique_id=2033888345]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-visible = false
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gold_border")
 
@@ -205,20 +222,24 @@ custom_minimum_size = Vector2(72, 72)
 layout_mode = 2
 
 [node name="Wheel" type="TextureRect" parent="InventoryContainer/CycleHint" unique_id=1486388140]
+modulate = Color(1, 1, 1, 0.9)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("9_cycle_wheel")
 expand_mode = 1
 stretch_mode = 5
-modulate = Color(1, 1, 1, 0.9)
 
 [node name="QLetter" type="Label" parent="InventoryContainer/CycleHint" unique_id=417458012]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
 theme_override_constants/shadow_offset_x = 2
@@ -246,8 +267,9 @@ text = "Pontos: 0"
 vertical_alignment = 1
 
 [node name="LevelCompletePanel" type="Panel" parent="." unique_id=1872004100]
-visible = false
 process_mode = 3
+visible = false
+self_modulate = Color(0.05, 0.1, 0.18, 0.95)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -257,10 +279,9 @@ offset_left = -260.0
 offset_top = -180.0
 offset_right = 260.0
 offset_bottom = 180.0
-self_modulate = Color(0.05, 0.1, 0.18, 0.95)
 
 [node name="VBox" type="VBoxContainer" parent="LevelCompletePanel" unique_id=1872004101]
-anchors_preset = 15
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 20.0
@@ -294,7 +315,6 @@ alignment = 1
 
 [node name="Star1" type="Label" parent="LevelCompletePanel/VBox/StarsContainer" unique_id=1872004105]
 layout_mode = 2
-size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.35, 0.35, 0.4, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
 theme_override_constants/shadow_offset_x = 3
@@ -303,11 +323,9 @@ theme_override_font_sizes/font_size = 72
 text = "☆"
 horizontal_alignment = 1
 vertical_alignment = 1
-pivot_offset = Vector2(28, 50)
 
 [node name="Star2" type="Label" parent="LevelCompletePanel/VBox/StarsContainer" unique_id=1872004106]
 layout_mode = 2
-size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.35, 0.35, 0.4, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
 theme_override_constants/shadow_offset_x = 3
@@ -316,11 +334,9 @@ theme_override_font_sizes/font_size = 92
 text = "☆"
 horizontal_alignment = 1
 vertical_alignment = 1
-pivot_offset = Vector2(36, 64)
 
 [node name="Star3" type="Label" parent="LevelCompletePanel/VBox/StarsContainer" unique_id=1872004107]
 layout_mode = 2
-size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.35, 0.35, 0.4, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
 theme_override_constants/shadow_offset_x = 3
@@ -329,7 +345,6 @@ theme_override_font_sizes/font_size = 72
 text = "☆"
 horizontal_alignment = 1
 vertical_alignment = 1
-pivot_offset = Vector2(28, 50)
 
 [node name="NextButton" type="Button" parent="LevelCompletePanel/VBox" unique_id=1872004108]
 custom_minimum_size = Vector2(220, 50)
@@ -337,3 +352,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 22
 text = "Próximo Nível"
+
+[node name="PauseButton" parent="." unique_id=1301912383 instance=ExtResource("9_0i1j5")]
+offset_top = 38.0
+offset_bottom = 102.0

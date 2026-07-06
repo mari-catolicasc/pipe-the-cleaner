@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="PipeTheCleaner"
-run/main_scene="uid://d2amnmhso88wp"
+run/main_scene="uid://cvkmcctnlgee6"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
+PauseButton="*uid://oojohjna2t50"
 GameManager="*uid://cxw7ktp1w3ldy"
 
 [display]
